@@ -8,16 +8,12 @@
     list-style: none;
 }
 
-body{
-    font-family: 'Poppins',sans-serif;
-}
-
-.container {
+.container-index {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.header {
+.header-index {
     background-image: linear-gradient(
       rgba(217, 217, 219, 0),
       rgba(0, 0, 1, 0.7)
@@ -32,7 +28,7 @@ body{
     justify-content: space-between;
   }
   
-  .menu-container {
+  .menu-container-index {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,25 +37,26 @@ body{
     box-sizing: border-box;
   }
   
-  .logo-img {
+  .logo-img-index {
     width: 80px; /* Ajusta el tamaño del logo según sea necesario */
     height: auto; 
     margin-left: 200px; /* Añade un margen de 30px a la izquierda */
     margin-top: 20px;
 }
   
-  .nav {
+  .nav-index {
     display: flex;
     align-items: center;
   }
   
-  .nav .btn {
+  /* boton de sing in  */
+  .btn-sing-in-index {
     font-size: 16px; /* Reducir el tamaño de la fuente */
     padding: 8px 18px; /* Ajustar el padding para hacer los botones más pequeños */
     margin-left: 15px; /* Espacio entre los botones */
-    color: #dfa78d;
+    color: #ffffff;
     background-color: transparent;
-    border: 2px solid  #dfa78d;
+    border: 2px solid  #ffffff;
     border-radius: 85px;
     cursor: pointer;
     text-transform: uppercase;
@@ -68,18 +65,41 @@ body{
     margin-right: 10px;
 }
   
-  .nav .btn:hover {
+  .btn-sing-in-index:hover {
+    border: 1px solid #503B31;
     background-color: #9b817529;
+    color: #503B31;
+  }
+
+  /* boton de sing up */
+  .btn-sing-up-index {
+    font-size: 16px; /* Reducir el tamaño de la fuente */
+    padding: 8px 18px; /* Ajustar el padding para hacer los botones más pequeños */
+    margin-left: 15px; /* Espacio entre los botones */
     color: #ffffff;
+    background-color: transparent;
+    border: 2px solid  #ffffff;
+    border-radius: 85px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    height: 40px; /* Reducir la altura del botón */
+    margin-right: 10px;
+}
+  
+.btn-sing-up-index:hover {
+    border: 1px solid #503B31;
+    background-color: #9b817529;
+    color: #503B31;
   }
   
-  .header-content {
+.header-content-index {
     text-align: center;
     margin-top: auto; /* Empuja el contenido hacia abajo para centrarlo verticalmente */
     margin-bottom: auto; /* Empuja el contenido hacia arriba para centrarlo verticalmente */
   }
   
-  .header-content h1 {
+.titulo-index {
     font-size: 75px;
     line-height: 80px;
     color: white;
@@ -88,7 +108,7 @@ body{
     
   }
   
-  .header-content p {
+.parrafo-inicial-index {
     font-size: 20px;
     color: #ffffff;
     padding: 0 250px;
@@ -96,73 +116,70 @@ body{
   }
   
 
-
-
-
 /* Seccion de book */
 
-.book{
+.section-important-index{
     padding: 100px 0;
     background-color: #E1E2E6;
     position: relative;
     
 }
 
-.book-content{
-    text-align: center;
+.content-important-index{
+    text-align: left; /* Alinea el contenido hacia la izquierda */
+    max-width: 1200px; /* Limita el ancho del contenedor para mejor control */
+    margin: 0 auto; 
 }
 
-.book-content h2{
-    font-size: 55px;
+.title-group-index{
+    font-size: 35px;
     line-height: 70px;
     color: #323337;
     text-transform: uppercase;
     padding: 0 250px;
     margin-bottom: 15px;
+    text-transform: uppercase;
+    margin: 0 auto 15px auto; /* Centra el título horizontalmente sin padding */
+    max-width: 100%; /* Asegura que el título ocupe todo el ancho disponible */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Oculta cualquier desbordamiento de texto */
+    text-overflow: ellipsis;
 }
 
-.txt-p{
-    font-size: 16px;
-    color: #414247;
-    padding: 0 250px;
-    margin-bottom: 35px;
+
+.text-gruop-index {
+    margin: 0;
+    margin-top: 10px;
+    font-size: 22px; /* Reducimos un poco el tamaño del texto */
+    line-height: 1.5em; /* Espaciado de línea */
+    max-width: 500px; /* Limita el ancho máximo del texto */
+    margin: 0 auto; /* Centra el párrafo horizontalmente */
+    padding: 0 10px;
 }
 
-.book-1 p {
-    margin: 0; /* Eliminamos el margen para evitar espacio extra */
-    margin-top: 10px; /* Asegura que haya un espacio de 10px entre el título y el texto */
-    font-size: 18px;
-}
-
-.book-group {
+.group-import-index {
     display: flex;
-    justify-content: space-between;
-    gap: 30px; /* Espacio entre los elementos */
+    justify-content: center;
+    gap: 30px;
     margin-bottom: 20px;
-    /* Eliminamos el margen negativo y padding que afecta la alineación */
-    margin-left: 0;
-    padding: 0;
 }
 
-.book-1 {
+.group-index {
     text-align: center; /* Asegura que el texto esté centrado debajo de la imagen */
     margin-right: 0; /* Eliminamos el margen derecho para un mejor control con gap */
 }
 
-.book-1 img {
+.img-group-index {
     width: 200px;
-    margin-bottom: 12px; /* Espacio de 10px entre la imagen y el texto */
+    margin-bottom: 12px; 
+    
 }
 
-.book-1 h3 {
-    color:#503B31;
-    font-size: 20px;
-    margin-bottom: 10px; /* Espacio de 10px entre el título y el párrafo */
-}
+
 
 /* main */
 
-.services{
+.services-index{
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.7),
         rgba(0, 0, 0, 0.7)),
@@ -174,10 +191,6 @@ body{
     padding: 100px 0;
 }
 
-.services-content{
-    text-align: center;
-}
-
 .services-content h2{
     font-size: 55px;
     line-height: 70px;
@@ -186,7 +199,7 @@ body{
     margin-bottom: 50px;
 }
 
-.services p {
+.parrafo-services-index {
     font-size: 16px;
     color: #ffffff;
     margin: 50px auto 0;
@@ -203,16 +216,16 @@ body{
     margin-bottom: 50px;
 }
 
-.services-1{
+.services-tipo-index{
     text-align: center; /* Centra el contenido dentro de cada bloque */
 }
 
-.services-1 img{
+.img-services-index{
     width: 100px; /* Ajusta el tamaño de las imágenes si es necesario */
     margin-bottom: 15px;
 }
 
-.services-1 h3{
+.title-services-index{
     color: #E1E2E6;
     font-size: 18px;
 }
@@ -220,18 +233,18 @@ body{
 
 /* general */
 
-.general{
+.general-index{
     display: flex;
 }
 
-.general-1 {
+.general-1-index {
     width: 50%;
     padding: 100px 50px; /* Ajusta el padding según sea necesario */
     background-color: #E1E2E6;
     box-sizing: border-box; /* Asegura que el padding no afecte el ancho del contenedor */
 }
 
-.general-2 {
+.general-2-index {
     background-image: url(static/img/escritores.jpg);
     background-position: center center;;
     background-repeat: no-repeat;
@@ -239,7 +252,7 @@ body{
     width: 50%;
 }
 
-.general-3 {
+.general-3-index {
     background-image: url(static/img/libro-genero.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -247,29 +260,29 @@ body{
     width: 50%;
 }
 
-h2{
-    font-size: 55px;
-    line-height: 70px;
+.title-general-index{
+    font-size: 40px;
+    line-height: 50px;
     color: #323337;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
 
-p{
-    font-size: 16px;
+.text-general-index{
+    font-size: 18px;
     color: #414247;
-    margin: 25px 0 45px 0;
+    margin: 25px 0 -25px 0;
 }
 
-.modal-title{
+/* .modal-title{
     text-align: center;
     position: relative;
     left: 40%;
     font-size: 30px ;
     font-weight: 700px;
-}
+} */
 
-.modal-dialogL{
+/* .modal-dialogL{
     top: 130px;
     
 }
@@ -281,8 +294,8 @@ p{
 .modal-body{
     margin-top: 10px;
 
-}
-.modal-footer .btn{ 
+} */
+/* .modal-footer .btn{ 
     border: 2px solid #503B31;
    color:#503B31;
     
@@ -309,65 +322,67 @@ p{
 }
 .modal-header{
     border-bottom: 1px solid #000;
-}
+} */
 
 /* footer */
 
-.footer {
+.footer-index {
     padding: 50px 0;
     background-color: #E6E6E6;
     /* margin-top: 50px; Ajusta este valor para el margen deseado */
 }
 
-.footer-content {
+.footer-content-index {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.footer-section {
+.footer-section-index {
     width: 24%; /* Ajusta el ancho según el número de secciones */
     margin-bottom: 30px;
 }
 
-.footer-section h3 {
+.title-footer-index {
     font-size: 18px;
     color:#503B31;
     margin-bottom: 15px;
 }
 
-.footer-section p {
+.text-footer-index {
     font-size: 16px;
     color: #414247;
     margin-bottom: 15px;
 }
 
-.footer-section ul {
+.ul-footer-index {
     list-style-type: none;
     padding: 0;
 }
 
-.footer-section ul li {
+.ul-footer-index, .li-footer-index {
     margin-bottom: 10px;
 }
 
-.footer-section a {
+.link-footer-index {
     font-size: 16px;
     color: #414247;
     text-decoration: none;
 }
 
-.footer-section a:hover {
+.link-footer-index :hover {
     text-decoration: underline;
 }
 
+.red-link-index {
+    font-size: 16px;
+    color: #414247;
+    text-decoration: none;
+}
 
-
-
-
-
-
-
+.red-link-index :hover {
+    text-decoration: underline;
+}
 
 
  /* Responsive */
