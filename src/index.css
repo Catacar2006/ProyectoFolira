@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+/* CSS INDEX */
 *{
     margin: 0;
     padding: 0;
@@ -115,7 +115,6 @@
     margin-bottom: 25px;
   }
   
-
 /* Seccion de book */
 
 .section-important-index{
@@ -146,9 +145,7 @@
     text-overflow: ellipsis;
 }
 
-
 .text-gruop-index {
-    margin: 0;
     margin-top: 10px;
     font-size: 22px; /* Reducimos un poco el tamaño del texto */
     line-height: 1.5em; /* Espaciado de línea */
@@ -166,7 +163,7 @@
 
 .group-index {
     text-align: center; /* Asegura que el texto esté centrado debajo de la imagen */
-    margin-right: 0; /* Eliminamos el margen derecho para un mejor control con gap */
+    margin: -50px -130px -50px -130px; /* Eliminamos el margen derecho para un mejor control con gap */
 }
 
 .img-group-index {
@@ -174,8 +171,6 @@
     margin-bottom: 12px; 
     
 }
-
-
 
 /* main */
 
@@ -208,7 +203,6 @@
     text-align: center;
 }
 
-
 .services-group{
     display: flex;
     justify-content: center; /* Centra las imágenes horizontalmente */
@@ -229,7 +223,6 @@
     color: #E1E2E6;
     font-size: 18px;
 }
-
 
 /* general */
 
@@ -273,56 +266,6 @@
     color: #414247;
     margin: 25px 0 -25px 0;
 }
-
-/* .modal-title{
-    text-align: center;
-    position: relative;
-    left: 40%;
-    font-size: 30px ;
-    font-weight: 700px;
-} */
-
-/* .modal-dialogL{
-    top: 130px;
-    
-}
-.modal-footer{
-    justify-content: center;
-    border-top: none;
-
-}
-.modal-body{
-    margin-top: 10px;
-
-} */
-/* .modal-footer .btn{ 
-    border: 2px solid #503B31;
-   color:#503B31;
-    
-
-}
-.modal-footer .btn:hover{ 
- background-color: #503B31;
-   color:#ffffff;
-    
-
-}
-.modal.show .modal-dialog {
-    position: relative;
-    bottom: 10px;
-    border-radius: 15px;
-}
-.form-control{
-    border-radius: 20PX;
-    border: 1px solid #000;
-    margin-bottom: 5px !important;
-}
-.modal-content{
-    color:rgb(0, 0, 0);
-}
-.modal-header{
-    border-bottom: 1px solid #000;
-} */
 
 /* footer */
 
@@ -385,109 +328,530 @@
 }
 
 
- /* Responsive */
+/* Responsive INDEX*/
 
- @media(max-width:991px){
-
-    .menu{
-        padding: 30px;
+@media(max-width: 991px) {
+    /* Header */
+    .header-index {
+        background-size: cover; /* Ajusta el tamaño de fondo para pantallas pequeñas */
+        min-height: auto; /* Permite que el alto mínimo se ajuste automáticamente */
     }
 
-    .menu label{
-        display: initial;
+    .logo-img-index {
+        width: 60px; /* Ajusta el tamaño del logo en pantallas más pequeñas */
+        margin-left: 20px; /* Reduce el margen izquierdo para que el logo se ajuste mejor */
     }
 
-    .menu .nav{
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: #323337;
-        display: none;
+    .nav-index {
+        flex-direction: column; /* Cambia la dirección del flex para adaptarse mejor en pantallas pequeñas */
+        align-items: flex-start; /* Alinea los elementos del menú a la izquierda */
     }
 
-    .menu .nav ul li{
-        width: 100%;
+    .header-content-index {
+        padding: 20px; /* Añade algo de padding para que el texto no esté tan pegado a los bordes */
     }
 
-    #menu:checked ~ .nav{
-        display: initial;
+    .titulo-index {
+        font-size: 50px; /* Reduce el tamaño de fuente del título */
+        line-height: 55px; /* Ajusta el line-height para que se ajuste mejor */
+        margin-bottom: 20px; /* Reduce el margen inferior */
     }
 
-    .header{
-        min-height: 0vh;
+    .parrafo-inicial-index {
+        font-size: 18px; /* Reduce el tamaño de fuente del párrafo */
+        padding: 0 20px; /* Ajusta el padding para adaptarse mejor a pantallas pequeñas */
+        margin-bottom: 15px; /* Ajusta el margen inferior */
     }
 
-    .header-content{
-        padding: 100px 30px;
+    /* Sección de book */
+    .section-important-index {
+        padding: 50px 20px; /* Reduce el padding para pantallas más pequeñas */
     }
 
-    .header-content p{
-        padding: 0;
+    .content-important-index {
+        text-align: center; /* Centra el contenido en pantallas más pequeñas */
     }
 
-    .book{
-        padding: 30px;
+    .title-group-index {
+        font-size: 22px; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+        line-height: 30px; /* Ajusta el line-height */
+        padding: 0; /* Elimina el padding horizontal */
     }
 
-    .book-content h2{
-        padding: 0;
+    .text-gruop-index {
+        font-size: 18px; /* Reduce el tamaño de fuente del texto */
+        max-width: 50%; /* Asegura que el texto ocupe todo el ancho disponible */
+        padding: 0 10px; /* Añade un poco de padding */
     }
 
-    .txt-p{
-        padding: 0;
+    .group-import-index {
+        flex-direction: column; /* Cambia la dirección del flex para pantallas más pequeñas */
+        align-items: center; /* Centra los elementos dentro del grupo */
+        gap: 20px; 
+        margin-top: -50px;
     }
 
-    .book-group{
-        flex-direction: column;
-        margin-bottom: 0;
+    .img-group-index {
+        width: 130px;
+        margin-top: 100px;
+
     }
 
-    .services{
-        padding: 30px;
+    /* Main */
+    .services-index {
+        padding: 50px 20px; /* Reduce el padding para pantallas más pequeñas */
     }
 
-    .services-content p{
-        padding: 0;
+    .parrafo-services-index {
+        font-size: 14px; /* Reduce el tamaño de la fuente del párrafo */
+        padding: 0 10px; /* Añade padding para ajustar el texto a pantallas pequeñas */
     }
 
-    .services-group{
-        flex-direction: column;
-        margin-bottom: 0;
+    .services-group {
+        flex-direction: column; /* Cambia la dirección del flex para pantallas más pequeñas */
+        gap: 20px; /* Reduce el espacio entre los elementos */
     }
 
-    .services-1{
-        margin-bottom: 25px;
+    .img-services-index {
+        width: 80px; /* Ajusta el tamaño de las imágenes de servicios */
     }
 
-    .general{
-        flex-direction: column;
+    .title-services-index {
+        font-size: 16px; /* Ajusta el tamaño de la fuente del título */
     }
 
-    .general-1{
-        width: 100%;
-        padding: 30px;
-        text-align: center;
+    /* General */
+    .general-index {
+        flex-direction: column; /* Cambia la dirección del flex para pantallas más pequeñas */
     }
 
-    .generl-2, .general-3{
-        display: none;
+    .general-1-index {
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        padding: 30px; /* Ajusta el padding */
+        text-align: center; /* Centra el texto */
     }
 
-    .book-content{
-        flex-direction: column;
+    .general-2-index, .general-3-index {
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        background-size: cover; /* Ajusta el tamaño de fondo para pantallas pequeñas */
     }
 
-    .book-1{
-        padding: 0;
+    .title-general-index {
+        font-size: 30px; /* Ajusta el tamaño de la fuente del título */
+        line-height: 40px; /* Ajusta el line-height */
     }
 
-    .footer{
-        padding: 30px;
+    .text-general-index {
+        font-size: 16px; /* Ajusta el tamaño de la fuente del texto */
+        margin: 15px 0; /* Ajusta el margen */
     }
 
-    .footer-content{
-        flex-direction: column;
-        text-align: center;
+    /* Footer */
+    .footer-index {
+        padding: 30px 20px; /* Reduce el padding para pantallas más pequeñas */
+    }
+
+    .footer-content-index {
+        flex-direction: column; /* Cambia la dirección del flex para pantallas más pequeñas */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .footer-section-index {
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        text-align: center; /* Centra el texto */
+        margin-bottom: 20px; /* Ajusta el margen inferior */
+    }
+
+    .title-footer-index {
+        font-size: 16px; /* Ajusta el tamaño de la fuente del título */
+    }
+
+    .text-footer-index {
+        font-size: 14px; /* Ajusta el tamaño de la fuente del texto */
+    }
+
+    .link-footer-index {
+        font-size: 14px; /* Ajusta el tamaño de la fuente del enlace */
+    }
+
+    .red-link-index {
+        font-size: 14px; /* Ajusta el tamaño de la fuente del enlace */
     }
 }
+/* FIN CSS INDEX */
+/* -------------------------------------------------------------------------------------------------------------------------- */
+
+/* INICIO DEL CSS DEL NAV */
+.icon__menu{
+    width: 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(10px);
+}
+
+button{
+
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    border: 2px solid #f6f6f6;
+    background-color: #fff;
+    z-index: 10;
+}
+
+.burger img{
+    width: 40%;
+    align-items: center;
+}
+
+.fixed-top {
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    width: auto;
+    margin-left: 20px;
+    border-radius: 36px;
+    margin-bottom: 34px;
+    height: 76px;
+    box-shadow: 0 16px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+ }
+
+
+ .nav-icon{
+    height: 30px !important;
+    width: 30px !important;
+  }
+
+  
+
+/* FIN DEL CSS DEL NAV */
+
+
+
+
+/* ESTILOS USUARIO */
+/* AMIGOS----------------------------------------------------------------------------------------------------------------- */
+
+ 
+.main-amigos {
+    background-color: #fff;
+    margin-top: 115px;
+    max-height: 80%;
+    width: 75%;
+    height: 1182px;
+    max-width: 95%;
+    margin-left: 16%; 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 0.5px solid #22223B;
+    padding: 20px; /* Añade padding si necesitas separar el contenido de los bordes */
+}
+
+ 
+/* titulo de la seccion */
+.title-encabezado-amigo{
+    padding: 30px;
+    color: #503B31;
+    margin-left: -10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+}
+
+.text-section-amigo {
+    color: #000000;
+    margin-left: 20px;
+    font-size: 25px;
+    /* font-weight: 500; */
+    margin-top: 20px;
+    bottom: 10px;;
+    width: 92%;
+}
+
+/* seccion amigos 3 */
+.title-amigo-section { 
+    color: #503B31;
+    margin-top: 60px; 
+    margin-left: -540px;
+    font-size: 33px;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left; 
+}
+
+/* estilos del link */
+.ver-mas{
+    position: relative;
+    left: 87%;
+    top: -3vh;
+    font-size: 20px;
+    border: 1px solid  #503B31;
+    padding: 8px 15px 8px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #503B31;
+}
+
+.ver-mas:hover{
+    background-color:  #503b311a;
+}
+
+
+/* Estilos del modal */
+.modal {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 50%;
+    max-width: 450px;
+    position: relative;
+}
+
+/* Estilo del título dentro del modal */
+.modal-content .title-modal {
+    color: black;
+    text-align: center;
+    margin: 0; 
+}
+
+/* Estilos de la lista de amigos dentro del modal */
+.modal-amigos-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    max-height: 500px; 
+    overflow-y: scroll; /* Espaciado entre amigos */
+    margin-top: 30px;
+    scrollbar-width: thin; /* Para navegadores como Firefox */
+    scrollbar-color: #503b31 #f5f5f5;
+}
+
+
+/* Estilo de cada amigo dentro del modal */
+.modal-amigos {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaciado entre la imagen y el nombre */
+}
+
+/* Estilo de las imágenes dentro del modal */
+.modal-img-amigo {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    height: 80px; /* Ajusta el tamaño si es necesario */
+    width: 80px; /* Ajusta el tamaño si es necesario */
+    object-fit: cover;
+}
+
+/* Estilo de los nombres de usuario dentro del modal */
+.modal-title-amigo {
+    color: black;
+    font-size: 18px; /* Ajusta el tamaño del texto si es necesario */
+    text-decoration: none; /* Elimina el subrayado en los enlaces */
+}
+
+.modal-title-amigo:hover {
+    text-decoration: underline; /* Subraya el nombre al pasar el mouse */
+}
+
+/* Estilo del botón de cerrar */
+.close-amigo {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 34px;
+    text-decoration: none;
+    color: #503b31; /* Color del botón de cerrar */
+    cursor: pointer;
+}
+
+/* Estilo al abrir el modal */
+:target.modal {
+    display: flex;
+}
+
+
+/* estilos de las imagenes ------------------------ */
+.amigos-container {
+    display: flex;
+    flex-wrap: wrap; 
+    margin: 75px 0 120px 45px;
+    gap: 100px; 
+}
+
+.amigos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 150px; /* Ancho fijo para todos los contenedores */
+}
+
+.title-amigo {
+    color: black;
+    margin-top: 10px; /* Espacio entre la imagen y el título */
+    font-size: 20px; /* Ajusta el tamaño del texto según tus necesidades */
+    width: 100%; /* Ajusta el ancho para que coincida con el contenedor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+/* amigos que te pueden gustar --------------*/
+.title-amigo-gustar{
+    color: black;
+    margin-top: 60px; 
+    margin-left: -390px;
+    font-size: 33px;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left; 
+}
+
+.amigos-gustar-container{
+    display: flex;
+    flex-wrap: wrap; 
+    margin: 75px 0 20px 45px;
+    gap: 100px; 
+}
+
+/* estilos directos imagenes */
+.img-amigo {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    margin-top: -70px;
+    margin-bottom: 20px;
+    
+}
+
+/* Estilos del Modal 2 */
+.modal-gustar {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido del Modal 2 */
+.modal-gustar-content {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 50%;
+    max-width: 450px;
+    position: relative;
+}
+
+/* Estilo del título dentro del Modal 2 */
+.modal-gustar-content .amigos-modal {
+    color: #503B31;
+    text-align: center;
+    margin: 0;
+    font-size: 28px;
+    word-wrap: break-word; /* o overflow-wrap: break-word; */
+    width: 100%;
+}
+
+/* Contenedor de los amigos dentro del Modal 2 */
+.modal-gustar-amigos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 500px;
+    overflow-y: scroll;
+    margin-top: 30px;
+    scrollbar-width: thin;
+    scrollbar-color: #503b31 #f5f5f5;
+}
+
+/* Para WebKit (Chrome, Safari, Edge) */
+.modal-amigos-container::-webkit-scrollbar {
+    width: 6px; /* Ancho de la barra de desplazamiento */
+}
+
+.modal-amigos-container::-webkit-scrollbar-track {
+    background: transparent; /* Fondo de la pista de desplazamiento */
+}
+
+.modal-amigos-container::-webkit-scrollbar-thumb {
+    background-color: #503b31; /* Color del "thumb" */
+    border-radius: 10px; /* Radio de borde para el "thumb" */
+}
+
+/* Estilo de cada amigo dentro del Modal 2 */
+.modal2-amigos {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Estilo de las imágenes dentro del Modal 2 */
+.modal2-img-amigo {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+}
+
+/* Estilo de los nombres de usuario dentro del Modal 2 */
+.modal2-title-amigo {
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.modal2-title-amigo:hover {
+    text-decoration: underline; /* Subraya el nombre al pasar el mouse */
+   
+}
+
+/* Estilo del botón de cerrar en el Modal 2 */
+.close-gustar {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 34px;
+    text-decoration: none;
+    color: #503b31;
+    cursor: pointer;
+}
+
+/* Estilo al abrir el Modal 2 */
+:target.modal-gustar {
+    display: flex;
+}
+
+

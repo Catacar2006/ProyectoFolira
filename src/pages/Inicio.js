@@ -10,7 +10,7 @@ import denuncia2 from  "../static/icons/denuncia2.png";
 import Logo_white from "../static/img/folira-logo-blanco.png";
 import LoginModal from '../components/layout/LoginModal';
 
-
+ 
 
 function Inicio() {
     return(
@@ -34,7 +34,7 @@ function Inicio() {
       </p>
     </div>
   </header>
-    
+     
     <section className="section-important-index"> 
       <div className="content-important-index container-index">
           <div className="group-import-index">
