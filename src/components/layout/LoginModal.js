@@ -9,7 +9,7 @@ function LoginModal() {
 
   return (
     <>
-      <button type="button" className="btn btn-primary" onClick={openModal}>
+      <button type="button" className="btn-sing-in-index" onClick={openModal}>
         SING IN
       </button>
 

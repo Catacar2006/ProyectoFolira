@@ -9,7 +9,7 @@ function RegisterModal() {
 
   return (
     <>
-      <button type="button" className="btn btn-primary" onClick={openModal}>
+      <button type="button" className="btn-sing-up-index" onClick={openModal}>
         SING UP
       </button>
 
