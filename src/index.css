@@ -482,32 +482,94 @@
 /* -------------------------------------------------------------------------------------------------------------------------- */
 
 /* INICIO DEL CSS DEL NAV */
-.icon__menu{
+
+
+header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    background-color: #ccc;
+  }
+  .icon__menu{
     width: 50px;
     height: 100%;
     justify-content: center;
     align-items: center;
     transform: translateX(10px);
-}
-
-button{
-
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    border: 2px solid #f6f6f6;
-    background-color: #fff;
-    z-index: 10;
-}
-
-.burger img{
+  }
+  button{
+  
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      border: 2px solid #f6f6f6;
+      background-color: #fff;
+      z-index: 10;
+  }
+  .burger img{
     width: 40%;
     align-items: center;
-}
+  }
 
-.fixed-top {
+
+/*clases para usar javascript*/
+.body_move{
+    margin-left: 250px;
+  }
+  
+  .menu__side_move{
+    width: auto;
+  }
+  .name_move_trasparent{
+    margin-left: -50px;
+    font-size: 27px;
+    color: #000000;
+    position: relative;
+    left: 30px;
+  
+  }
+  .burger_move{
+    z-index: 10;
+    transform: translateX(120px);
+  }
+  
+  .foto_move{
+    position: relative;
+    left: 10px;
+    width: 163px !important;
+    height: 121px;
+    margin-bottom: 5px;
+  }
+  .nav-icon{
+    height: 30px !important;
+    width: 30px !important;
+  }
+  
+  .app-logo{
+    width: 50px;
+    margin-left: 20px;
+  }
+  
+  .center-item{
+    justify-content: center;
+    position: relative;
+    left: 450px;
+  }
+  .nav_move{
+    width: auto !important;
+  }
+  
+  .center-item-move{
+    left: 368px;
+  }
+  
+  .fixed-top {
     position: sticky;
     top: 0;
     right: 0;
@@ -520,22 +582,202 @@ button{
     height: 76px;
     box-shadow: 0 16px 6px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
- }
-
-
- .nav-icon{
-    height: 30px !important;
-    width: 30px !important;
   }
-
+  
+  .btn-search{
+    color:transparent;
+    cursor: default !important;
+  }
+  
+  #openModalBtn{
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Estilos del modal */
+  .modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro con opacidad */
+  }
+  
+  /* Mostrar el modal cuando se hace clic en el enlace */
+  .modal:target {
+    display: block;
+  }
+  
+  /* Contenido del modal */
+  .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  /* Botón para cerrar el modal */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Estilos del input de búsqueda */
+  .search-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #756149;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  /* Botón de búsqueda */
+  .search-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #5e4f3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
   
 
 /* FIN DEL CSS DEL NAV */
+/* ----------------------------------------------------------------------------------------------------------------------------------- */
+
+/* INICIO CSS MENU LATERAL */
+
+.menu__side{
+    width: 80px;
+    height: 100%;
+    background: #503B31;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #22223B;
+    font-size: 18px;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-right: 20px solid #503B31;
+    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  
+  }
+  /*ocultar scroll*/
+  .menu__side::-webkit-scrollbar{
+    display: none;
+  }
+  
+  .menu__side{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .name__page{
+    padding: 100px 30px;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .name__page img {
+    width: 50px;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+  
+  .options__menu{
+    padding: 30px 0px;
+    position: absolute;
+  
+  }
+  .name{
+    color: transparent;
+    font-size: 1px;
+  }
+  .options__menu a{
+    color: white;
+    cursor: default;
+    display: flex;
+    position: relative;
+    transition: 200ms;
+  }
+  .options__menu a:hover{
+    color: #000000;
+  }
+  
+  .options__menu .items-op{
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .options__menu .items-opp{
+    padding: 70px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .options__menu .items-opp img {
+    width: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  .options__menu .items-op img{
+    width: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .options__menu .items-op h6{
+    display: ruby;
+    cursor: pointer;
+  }
+  
+  a.selected{
+    color: #fff;
+  }
+  
+  .selected:before{
+    content: '';
+    width: 3px;
+    height: 80%;
+    background-color: white;
+    position: absolute;
+    top: 10%;
+    left: -30px;
+  }
+  .foto{
+    width: 100px;
+    position: relative;
+    right: 20px;
+  }
+/* FINAL CSS MENU LATERAL */
+
+/* INCIO MEDIA DEL MENU Y NAV */
 
 
+/* FIN MEDIA DEL MENU Y NAV */
 
+  
 
 /* ESTILOS USUARIO */
+
 /* AMIGOS----------------------------------------------------------------------------------------------------------------- */
 
  
@@ -854,4 +1096,2666 @@ button{
     display: flex;
 }
 
+/* ------------------------------------------------------------------------------------------------------------------------- */
+/* INICIO ESTILOS FEED AUTOR*/
 
+
+.main-feedautores {
+    background-color: #fff;
+    margin-top: 115px;
+    max-height: 80%;
+    width: 81.6%;
+    max-width: 95%;
+    margin-left: 16%; 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 0.5px solid #50505e;
+}
+
+
+.title-feed-autores{
+    padding: 30px;
+    color: #503B31;
+    margin-left: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 450;
+    
+}
+
+/* titulo de las secciones */
+.title-section-feedautores{
+    padding: 40px;
+    color: #503B31;
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-feed-autores{
+    color: #000000;
+    font-size: 24px;
+    width: 90%;
+    margin-top: 1%;
+    margin-left: 50px;
+}
+
+/* estilos del link */
+.ver-mas{
+    position: relative;
+    left: 87%;
+    top: -6vh;
+    font-size: 20px;
+    border: 1px solid  #503B31;
+    padding: 8px 15px 8px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #503B31;
+}
+
+.ver-mas:hover{
+    background-color:  #503b311a;
+}
+
+/* ---- */
+/* Estilos del overlay del modal */
+.modal-overlay-autores {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Contenido del modal */
+.modal-content-autores {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 50%;
+    max-width: 450px;
+    position: relative;
+}
+
+/* Estilo del título dentro del modal */
+.title-modal-feedUsuariio {
+    color: #503b31;
+    text-align: center;
+    margin: 0; 
+}
+
+/* Contenedor de la lista de amigos dentro del modal */
+.modal-autores-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    max-height: 500px; 
+    overflow-y: scroll; /* Scroll para amigos */
+    margin-top: 30px;
+    scrollbar-width: thin; /* Para navegadores como Firefox */
+    scrollbar-color: #503b31 #f5f5f5;
+}
+
+/* Estilo de cada amigo dentro del modal */
+.modal-autor-item {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaciado entre la imagen y el nombre */
+}
+
+/* Estilo de las imágenes dentro del modal */
+.modal-img-autores {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    height: 80px; /* Ajusta el tamaño si es necesario */
+    width: 80px; /* Ajusta el tamaño si es necesario */
+    object-fit: cover;
+}
+
+/* Estilo de los nombres de usuario dentro del modal */
+.modal-title-autores {
+    color: black;
+    font-size: 18px; /* Ajusta el tamaño del texto si es necesario */
+    text-decoration: none; /* Elimina el subrayado en los enlaces */
+}
+
+.modal-title-autores:hover {
+    text-decoration: underline; /* Subraya el nombre al pasar el mouse */
+}
+
+/* Estilo del botón de cerrar */
+.close-autores {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 34px;
+    text-decoration: none;
+    color: #503b31; /* Color del botón de cerrar */
+    cursor: pointer;
+}
+
+/* Estilo al abrir el modal */
+.modal-overlay-autores:target {
+    display: flex;
+}
+/* ------ */
+/* autores */
+
+.container-autores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 110px; /* Espacio de 10px entre las imágenes */
+    margin: 10px 0 40px 80px;
+    /* margin-top: 10px; */
+}
+
+.img-autor {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    margin-top: -30px;
+    
+}
+
+
+
+.autor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 150px; /* Ancho fijo para todos los contenedores */
+}
+
+.title-autor {
+    color: black;
+    margin-top: 10px; /* Espacio entre la imagen y el título */
+    font-size: 20px; /* Ajusta el tamaño del texto según tus necesidades */
+    width: 100%; /* Ajusta el ancho para que coincida con el contenedor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+/* otros */
+/* Estilos del overlay del modal */
+.modal-overlay-autor {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Contenido del modal */
+.modal-content-autor {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 50%;
+    max-width: 450px;
+    position: relative;
+}
+
+/* Estilo del título dentro del modal */
+.title-modal-feedUsuariio {
+    color: #503b31;
+    text-align: center;
+    margin: 0; 
+}
+
+/* Contenedor de la lista de amigos dentro del modal */
+.modal-autor-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    max-height: 500px; 
+    overflow-y: scroll; /* Scroll para amigos */
+    margin-top: 30px;
+    scrollbar-width: thin; /* Para navegadores como Firefox */
+    scrollbar-color: #503b31 #f5f5f5;
+}
+ 
+/* Estilo de cada amigo dentro del modal */
+.modal-autor2-item {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaciado entre la imagen y el nombre */
+}
+
+/* Estilo de las imágenes dentro del modal */
+.modal-img-autor {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    height: 80px; /* Ajusta el tamaño si es necesario */
+    width: 80px; /* Ajusta el tamaño si es necesario */
+    object-fit: cover;
+}
+
+/* Estilo de los nombres de usuario dentro del modal */
+.modal-title-autor {
+    color: black;
+    font-size: 18px; /* Ajusta el tamaño del texto si es necesario */
+    text-decoration: none; /* Elimina el subrayado en los enlaces */
+}
+
+.modal-title-autor:hover {
+    text-decoration: underline; /* Subraya el nombre al pasar el mouse */
+}
+
+/* Estilo del botón de cerrar */
+.close-autor {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 34px;
+    text-decoration: none;
+    color: #503b31; /* Color del botón de cerrar */
+    cursor: pointer;
+}
+
+/* Estilo al abrir el modal */
+.modal-overlay-autor:target {
+    display: flex;
+}
+
+/* INICIO MEDIA AUTORES*/
+
+/* FIN MEDIA AUTORES */
+/* FIN ESTILOS FEED AUTOR */
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* INICIO DE CSS FEED LIBRO */
+
+
+.main-libros {
+    background-color: #fff;
+    margin-top: 115px;
+    max-height: 80%;
+    width: 81.6%;
+    max-width: 95%;
+    margin-left: 14.5%; 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px; 
+    border: 0.5px solid #50505e;
+}
+ 
+.title-libro{
+    padding: 30px;
+    color: #503B31;
+    margin-left: 20px; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 450;
+    font-size: 45px;  
+}
+
+.text-section-libro{
+    color: #000000;
+    margin-left: 60px;
+    font-size: 25px;
+    width: 95%;
+    margin-top: 0.5%;
+    margin-left: 50px;
+}
+
+.title-section-libro{
+    padding: 30px;
+    color: #503B31;
+    margin-left: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;  
+}
+
+/* estilos del link */
+.ver-mas{
+    position: relative;
+    left: 87%;
+    top: -7vh;
+    font-size: 20px;
+    border: 1px solid  #503B31;
+    padding: 8px 15px 8px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #503B31;
+}
+
+.ver-mas:hover{
+    background-color:  #503b311a;
+}
+
+
+
+.libro-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px; /* Espacio de 10px entre los elementos */
+    justify-content: center;
+    margin: 30px 30px 70px 30px;
+}
+
+.libro-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 190px; /* Ancho fijo para todos los contenedores */
+    min-height: 350px; /* Altura mínima fija para todos los contenedores */
+    margin-top: -30px;
+}
+
+/* no poner cuidado a book_comunity */
+
+.libro-comunity-perso{
+    width: 150px; /* Ajusta el tamaño según tus necesidades */
+    height: 240px;
+    border-radius: 20px; /* Ajusta según el estilo deseado */
+    border: 1px solid #22223B;
+}
+
+.title-libro-section {
+    color: black;
+    margin-top: 10%; /* Espacio entre la imagen y el título */
+    font-size: 20px; /* Ajusta el tamaño del texto según tus necesidades */
+    width: 100%; /* Ajusta el ancho para que coincida con el contenedor */
+    height: 50px; /* Altura fija para asegurar alineación */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.rating-libro {
+    color: #22223B;
+    font-size: 16px; /* Ajusta el tamaño según tus necesidades */
+    margin-top: 10px; /* Espacio entre el título y la calificación */
+    display: flex;
+    justify-content: center;
+}
+
+.rating-libro img {
+    width: 25px; /* Ajusta el tamaño de las estrellas según tus necesidades */
+    height: auto;
+    margin: 0 2px; /* Espacio entre las estrellas */
+}
+/* FIN CSS FEED LIBROS */
+
+/* INICIO MEDIA FEED LIBROS */
+
+/* FIN MEDIA FEED LIBROS */
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/* INICIO CSS FEED USUARIO */
+/* libros */
+.main-usuario {
+    background-color: #fff;
+    margin-top: 115px;
+    max-height: 80%;
+    width: 81.6%;
+    max-width: 95%;
+    margin-left: 14.5%; 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 0.5px solid #50505e;
+}
+
+.title-usuario {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 550;
+    padding: 30px;
+    color:  #503B31;
+    margin-left: 20px;
+}
+
+.add-comunity {
+    border-radius: 50px;
+    border: 1px solid  #503B31;
+    padding: 10px 10px 10px 10px;
+    width: 4%;
+    margin-top: 10px;
+    margin-left: 55px;
+    
+}
+
+.section-usuario {
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    color:  #503B31;
+    margin-top: 60px;
+    margin-left: 47px;
+}
+
+.usuario-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px; /* Espacio de 10px entre los elementos */
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.usuario-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 190px; /* Ancho fijo para todos los contenedores */
+    min-height: 350px; /* Altura mínima fija para todos los contenedores */
+}
+
+.usuario-book {
+    width: 150px; /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+    border-radius: 20px; /* Ajusta según el estilo deseado */
+    border: 1px solid #22223B;
+}
+
+.title-book-usuario {
+    color: black;
+    margin-top: 10px; /* Espacio entre la imagen y el título */
+    font-size: 20px; /* Ajusta el tamaño del texto según tus necesidades */
+    width: 100%; /* Ajusta el ancho para que coincida con el contenedor */
+    height: 50px; /* Altura fija para asegurar alineación */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.rating-usuario {
+    color:  #503B31;
+    font-size: 16px; /* Ajusta el tamaño según tus necesidades */
+    margin-top: 10px; /* Espacio entre el título y la calificación */
+    display: flex;
+    justify-content: center;
+}
+
+.rating-usuario img {
+    width: 25px; /* Ajusta el tamaño de las estrellas según tus necesidades */
+    height: auto;
+    margin: 0 2px; /* Espacio entre las estrellas */
+}
+
+
+
+/* autores */
+
+.img-autor {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    
+}
+
+.container-autores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 160px; /* Espacio de 10px entre las imágenes */
+    margin-left: 160px;
+    margin-top: 50px;
+}
+
+.autor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 150px; /* Ancho fijo para todos los contenedores */
+}
+
+.title-autor {
+    color: black;
+    margin-top: 10px; /* Espacio entre la imagen y el título */
+    font-size: 20px; /* Ajusta el tamaño del texto según tus necesidades */
+    width: 100%; /* Ajusta el ancho para que coincida con el contenedor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+/* FIN CSS FEED USURIO */
+
+/* INICIO MEDI FEED USUARIO */
+
+/* FIN MEDIA FEED USUARIO */
+
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+
+/* INICIO CSS FICHA AUTOR */
+/* Estilos para el contenedor principal */
+.main-ficha-autores {
+    background-color: #fff;
+    margin-top: 115px;
+    max-height: 80%;
+    width: 75%;
+    max-width: 95%;
+    margin-left: 16%; 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 0.5px solid #22223B;
+    padding: 20px; /* Añade padding si necesitas separar el contenido de los bordes */
+}
+
+
+/* Estilo para el contenedor .container */
+.container-ficha-autores {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    width: 100%;
+}
+
+/* Estilo para la sección de información del autor */
+.Info-ficha-autor {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.img-ficha-autor{
+    width: 520px;
+    height: 520px;
+    margin: 40px 20px 20px 30px;
+    border-radius: 50%;
+    border: 1px solid #22223B;
+}
+
+/* Estilo para .detalles-autor */
+.detalles-ficha-autor {
+    margin: 30px 30px 30px 70px;
+    color: black;
+    font-size: 30px; 
+}
+
+/* Estilo para los párrafos dentro de .detalles-autor */
+.info-detalle-ficha-autor{
+    margin: 0; /* Ajusta el margen si es necesario */
+    padding: 0; /* Ajusta el padding si es necesario */
+    line-height: 1.2; /* Ajusta la altura de línea si es necesario */
+}
+
+/* Estilo para el contenedor .descripcion-autor */
+.descripcion-ficha-autor {
+    color: black;
+    font-size: 20px;
+    width: 97%; /* Usa el ancho completo del contenedor principal */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+    padding: 0 15px; /* Agrega padding para evitar que el texto toque los bordes */
+    margin: -20px 50px 20px 30px;
+}
+
+/* Espacio debajo del título en .descripcion-autor */
+.descripcion-autor {
+    color: #503b31;
+    margin-bottom: 20px; /* Espacio debajo del título */
+    margin-top: 100px;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif; /* Aplica la fuente importada */
+    
+}
+
+/* Estilo para los párrafos dentro de .descripcion-autor */
+.text-descripcion-autor {
+    color: black;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5; /* Ajusta según tu diseño */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+    font-size: 25.5px;
+}
+
+/* Contenedor para los botones */
+.gustos-container-ficha-autor {
+    display: flex; /* Usa Flexbox para alinear los botones en línea */
+    gap: 40px; /* Espacio de 20px entre los botones */
+    margin-top: 40px; /* Espacio encima del contenedor de los botones */
+    justify-content: center; /* Centra los botones horizontalmente */
+    margin-left: 1250px;
+}
+
+
+/* Estilos para los botones */
+.gustos-boton-ficha-autor {
+    background: none; /* Elimina el fondo del botón para que solo se vea la imagen */
+    border: 2px solid #503b31; /* Añade un borde de 2px de grosor y color negro al botón */
+    border-radius: 30px; /* Borde redondeado para los botones */
+    padding: 0; /* Elimina el padding del botón */
+    margin: 0; /* Elimina el margen del botón */
+    display: flex; /* Usa Flexbox para alinear la imagen en el centro */
+    align-items: center; /* Centra la imagen verticalmente */
+    justify-content: center; /* Centra la imagen horizontalmente */
+    width: 65px; /* Ancho del botón */
+    height: 65px; /* Alto del botón */
+    margin-top: 30px;
+}
+
+/* Efecto hover para el botón */
+.gustos-boton-ficha-autor:hover {
+    background-color: #503b311a; /* Color de fondo del botón en hover */
+    
+}
+
+/* Estilos para las imágenes dentro de los botones */
+.img-gusto-ficha-autor {
+    width: 40px; /* Ancho de la imagen */
+    height: 40px; /* Alto de la imagen */
+    display: block; /* Asegura que la imagen se comporte como un bloque, eliminando el espacio adicional debajo */
+    
+}
+
+/* recomendacion */
+.title-section-ficha-autor{
+    color: #503b31;
+    font-family: 'Poppins', sans-serif; /* Aplica la fuente importada */
+    font-size: 50px;
+}
+
+
+/* Ajusta la sección de libros reconocidos */
+.recognized-recomendacion-ficha-autor {
+    background-color: #c5c2c022;
+    height: auto; /* Ajusta la altura automáticamente */
+    max-width: 95%; /* Asegura que no exceda el ancho máximo */
+    margin: 0 auto; /* Centra la sección horizontalmente */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    padding: 20px; /* Espacio alrededor del contenido */
+    border-radius: 10px;
+    color: #22223B;
+    border: 1px solid #22223B;
+    margin-top: 60px;
+}
+
+
+/* Ajusta el contenedor de los libros */
+.recomendacion-libros-autor {
+    display: flex;
+    justify-content: space-between; /* Alinea los libros con espacio entre ellos */
+    gap: 40px;/* Espacio de 30px entre los libros */
+   margin-top: 40px;
+   
+}
+
+/* Estilo para cada libro */
+.libros-ficha-autores {
+    text-align: center; 
+    /* position:fixed; */
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    border-radius: 30px;
+  
+}
+
+/* Estilo para las imágenes de los libros */
+.img-libro-ficha-autor {
+    width: 200px;
+    height: 300px;
+    display: block;
+    margin: 0 auto 10px; /* Centra la imagen y agrega un margen abajo */
+    border-radius: 20px;
+    margin-left: -10px;
+    border: 1px solid #503b31;
+}
+ 
+/* Estilo para el texto debajo de las imágenes */
+.name-title-ficha-autor {
+    margin: 0;
+    color: #503b31;
+    font-size: 22px;
+    width: 200px; /* Asegura que el ancho del texto coincida con el ancho de la imagen */
+    text-align: center; /* Centra el texto */
+    line-height: 1.2; /* Ajusta la altura de línea para mejorar la legibilidad */
+    word-wrap: break-word; /* Permite que el texto se rompa si es necesario */
+    font-weight: 500 ; /* Aplica negrita al texto */
+}
+/* FIN CSS FICHA AUTOR */
+
+ /* INICIO MEDIA FICHA AUTOR */
+
+ /* FIN MEDIA FICHA AUTOR */
+
+ /* ---------------------------------------------------------------------------------------------------------------------- */
+
+ /* INICIO CSS FICHA LIBRO */
+
+ .main-ficha-libro {
+    background-color: #fff;
+    margin-top: 115px;
+    width: 75%;
+    max-width: 95%;
+    margin-left: 16%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 0.5px solid #22223B;
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+
+.libro-container {
+    padding: 20px;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.infor-ficha-libro {
+    display: flex;
+    flex-wrap: wrap; 
+    margin-bottom: 20px;
+    line-height: 1.8; 
+    font-size: 23px;
+    margin-left: 0; 
+}
+
+.img-ficha-libro {
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+    border-radius: 20px;
+    border: 0.1px solid #503b31;
+    margin-right: 20px;
+}
+
+.ficha-libro-details {
+    flex: 1; 
+    margin-left: 40px;
+}
+
+.text-details-ficha-libro {
+    margin: 10px 0;
+    color: black;
+    text-align: justify; 
+}
+
+.container-sinopsis-ficha-libro {
+    width: 100%; 
+    box-sizing: border-box; 
+    margin-top: 20px; 
+}
+
+.sinopsis-libro-ficha {
+    line-height: 1.6; 
+    font-size: 22px; 
+    color: black; 
+}
+
+.parrafo-ficha-libro{
+    width: 95%;
+}
+
+/* selecto biblioteca */
+.ficha-libro-locations {
+    margin-bottom: 20px; 
+    color: #503b31; 
+}
+
+.text-location-libro {
+    font-size: 25px; 
+   margin: -160px 30px 30px 30px;
+}
+
+.locations-list-ficha-libro {
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+.location-item-ficha-libro {
+    display: flex; 
+    align-items: center; 
+}
+
+.store-ficha-libro {
+    margin: 0; 
+    margin-right: 10px; 
+    font-size: 23px; 
+    margin-left: 25px;
+}
+
+.img-flecha-libro {
+    width: 20px; 
+    height: auto; 
+}
+
+/* Gustos */
+.gustos-container-ficha-libro {
+    display: flex;
+    gap: 40px; 
+    margin: 30px 0 30px 1150px; 
+    justify-content: center; 
+    
+
+}
+
+/* Estilos para los botones */
+ .gustos-boton {
+    background: none; 
+    border: 2px solid #503b31; 
+    border-radius: 30px; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 65px; 
+    height: 65px; 
+    margin-top: 30px;
+}
+
+.gustos-boton:hover{
+    background-color: #503b311a;
+}
+
+/* Estilos para las imágenes dentro de los botones */
+.img-boton-gusto {
+    width: 40px; 
+    height: 40px; 
+    display: block; 
+}
+
+.agregar-boton{
+    background: none; 
+    border: 2px solid #503b31; 
+    border-radius: 30px; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 65px; 
+    height: 65px; 
+    margin-top: 30px;
+}
+
+.agregar-boton:hover{
+    background-color: #503b311a;
+}
+.img-boton-agregar {
+    width: 40px; 
+    height: 40px; 
+    display: block; 
+}
+
+/* cuadros de escritura */
+.book-reviews-ficha-libro {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el área de texto y el botón */
+    justify-content: space-between; /* Alinea el área de texto a la izquierda y el botón a la derecha */
+    gap: 10px; /* Espacio entre el área de texto y el botón */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
+    margin-bottom: 10px; /* Espacio entre los inputs y las reseñas */
+}
+
+.area-text-ficha-libro {
+    width: calc(100% - 150px); /* Deja espacio suficiente para el botón */
+    height: 60px;
+    margin: 50px 0; 
+    padding: 12px 0 10px 20px; 
+    border-radius: 10px;
+    border: 2px solid #503b31; 
+    flex-grow: 1;
+    font-size: 20px;
+}
+
+/* boton de enviar */
+.boton-enviar-ficha{
+    padding: 12px 20px; /* Añadido padding a la derecha */
+    border: 2px solid #503b31; 
+    border-radius: 5px; 
+    background-color: #ffffff; 
+    font-size: 22px;
+    color: #503b31; 
+    cursor: pointer; 
+    margin: 0; /* Elimina el margen que desalineaba el botón */
+    flex-shrink: 0;
+}
+
+.boton-enviar-ficha:hover {
+    background-color: #503b311a;
+}
+
+/* estilos del link */
+/* Estilo para el botón "Ver más" */
+.ver-mas-ficha-libro {
+    background-color: #ffffff;
+    color: #503b31;
+    border: 1px solid #503b31;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    margin: -10px 0 10px 0;
+    border-radius: 5px;
+}
+
+.ver-mas-ficha-libro{
+    color: #503b31;
+    text-decoration: none;
+}
+
+.ver-mas-ficha-libro:hover {
+    background-color: #503b3133;
+}
+
+/* Estilo general para el modal */
+.modal-ficha-libro {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+}
+
+/* Estilo para el contenido del modal */
+.modal-content-ficha-libro {
+    background-color: #fefefe;
+    position: absolute;
+    top: 50%; /* Centro vertical del modal */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    max-height: calc(80vh - 40px);
+    overflow-y: auto;
+    scrollbar-width: thin; /* Estilo para navegadores como Firefox */
+    scrollbar-color: #503b31 #f5f5f5; /* Estilo para la barra de desplazamiento */
+    margin-bottom: 50px;
+}
+
+/* Estilo para la cruz de cierre */
+.modal-close-ficha-libro {
+    position: absolute;
+    top: 10px; /* Espacio desde el borde superior */
+    right: 10px; /* Espacio desde el borde derecho */
+    font-size: 34px; /* Tamaño de la fuente para el icono de cierre */
+    color: #503b31; /* Color del icono de cierre */
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.modal-close-ficha-libro:hover,
+.modal-close-ficha-libro:focus {
+    color: #503b31;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo para el contenido de la reseña dentro del modal */
+.modal-review-ficha-libro {
+    border: 1px solid #503b31;
+    margin: 40px 10px 10px 10px;
+    padding: 20px 10px 10px 20px;
+    border-radius: 15px;
+    text-align: left;
+    
+}
+
+.modal-name-usuario-ficha {
+    color: #503b31;
+    font-size: 18px;
+}
+
+.modal-reseña-ficha-librousu {
+    color: #000;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.modal-rating-container-ficha-libro {
+    margin-top: 10px;
+}
+
+.modal-rating {
+    display: flex;
+    align-items: center;
+}
+
+.modal-puntaje-ficha-libro {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+ 
+/* Mostrar el modal cuando se hace clic en el enlace */
+#Modal-agregar-libro:target {
+    display: block;
+}
+
+/* fin modal --- */
+
+/* reseñas */
+.review-ficha-libro {
+    background-color: #F9F9F9;
+    padding: 15px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    border: 1px solid #503b31;
+    max-width: 100%;
+    
+}
+
+.name-usuario-ficha {
+    margin: 5px 0; 
+    color: black;
+    font-size: 21px;
+    margin-top: 15px;
+    margin-left: 15px;
+    
+}
+
+.reseña-ficha-librousu{
+    color: black;
+    font-size: 21px;
+    margin-top: 15px;
+    margin-left: 15px;
+    white-space: nowrap; /* Evita el salto de línea */
+    overflow: hidden; /* Oculta el texto que se desborda */
+    text-overflow: ellipsis;
+}
+
+.rating-container {
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-end;
+    
+}
+
+.rating-ficha-libro {
+    display: flex; 
+    gap: 2px; 
+    margin-right: 15px;
+}
+
+.puntaje-ficha-libro {
+    width: 20px; 
+    height: auto; 
+}
+
+ /* FIN CSS FICHA LIBRO */
+
+ /* INICIO MEDIA FICHA LIBRO */
+
+ /* FIN MEDIA FICHA LIBRO */
+
+ /* ---------------------------------------------------------------------------------------------- */
+
+ /* INICIO CSS MI PERFIL */
+.body-miperfil {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+}
+
+.main-miperfil {
+    background-color: #fff;
+    margin-top: 50px;
+    max-height: 80%;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-left: 16%; 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 0.5px solid #22223B;
+    transition: margin-left 0.3s ease;
+    padding: 0; 
+}
+
+/* Cuando el menú lateral está abierto */
+.sidebar.active ~ .main-miperfil.shifted {
+    margin-left: 250px; /* Ajusta el valor según el ancho de tu menú lateral */
+}
+
+
+/* Banner */
+
+.banner-container-miperfil {
+    position: relative; /* This will help to position the profile photo on top */
+    width: 100%;
+    height: 30vh; /* Reduce la altura en pantallas pequeñas */
+    overflow: visible; /* Permite que el contenido se desborde fuera del contenedor */
+    margin-bottom: 20px;
+}
+
+
+.banner-miperfil {
+    width: 100%;
+    height: 40vh; /* Ajusta la altura según sea necesario */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
+    overflow: hidden; /* Evita que el contenido dentro del banner se desborde */
+}
+
+.banner-image-miperfil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Foto usuario */
+
+/* este es el div */
+.foto-usuario-miperfil {
+    position: absolute; /* Permite la posición fuera del flujo normal del documento */
+    bottom: -50px; /* Mueve la foto de perfil hacia abajo para que sobresalga del banner */
+    left: 12%;
+    top: 30%;
+    transform: translateX(-50%); /* Centra horizontalmente la foto de perfil */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10; /* Asegura que la foto se muestre por encima del banner */
+}
+
+.profile-photo-miperfil {
+    width: 22vh; /* Size of the profile photo */
+    height: 22vh;
+    border-radius: 50%; /* Circular photo */
+    border: 4px ; /* Optional: border around the profile photo */
+    object-fit: cover;
+    margin-right: 10px;
+    margin-bottom: 10px; /* Space between the photo and the username */
+    position: relative; /* Allows it to overlap other content */
+    top: 120px; /* Adjust to move the photo up */
+}
+
+.name-miperfil {
+    color: #000000;
+    margin: 0;
+    margin-top: 120px;
+    align-items: center;
+    
+}
+
+
+/* boton de ditar  */
+.editar-btn-miperfil {
+    margin-top: -13vh;
+    margin-left: 280vh; /* Espacio de 50px a la derecha de la foto de perfil */
+    padding: 5px 30px;
+    background-color: #ffffff; /* Cambia el color según tu necesidad */
+    color: #503B31;
+    border: 1px solid #22223B;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.editar-btn-miperfil:hover {
+    background-color: #503b3133; /* Color al pasar el mouse */
+}
+
+/* Estilo base para el modal */
+.modal-miperfil-usuario {
+    display: none; /* Esconder el modal por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    overflow: auto;
+}
+
+/* Mostrar el modal cuando el enlace apunta a su id */
+#editModal:target {
+    display: block;
+}
+
+.modal-content-miperfil-usuario {
+    background-color: #ffffff;
+    margin: auto;
+    padding: 0;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80%;
+    overflow-y: auto;
+    position: relative;
+    top: 65px;
+    color: #503B31;
+    scrollbar-width: thin; /* Para navegadores como Firefox */
+    scrollbar-color: #503b31 #f5f5f5;
+}
+
+.header-miperfil-usuario {
+    position: sticky;
+    top: 0;
+    z-index: 9999; /* Asegura que el header esté por encima del contenido al hacer scroll */
+    background-color: #ffffff; /* Color de fondo del header */
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 1.5px solid #503B31;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.close-miperfil-usuario {
+    color: #503B31;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none; /* Asegura que no haya subrayado */
+    position: absolute; /* Posiciona el botón */
+    top: -2px; /* Ajusta según sea necesario */
+    left: 10px; /* Ajusta según sea necesario */
+    padding: 10px; /* Aumenta el área clicable */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+  }
+
+  /* Opcional: Estilos para cuando se pasa el cursor sobre el botón */
+.close-miperfil-usuario:hover {
+    color: black; /* Cambia el color cuando se pasa el cursor */
+  }
+
+.title-editar-miperfil-usuario {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: -40vh;
+    padding: 0;
+    flex-grow: 1;
+    text-align: center;
+    color: #503B31;
+    font-weight: 600;
+}
+
+.guardar-cambios-btn-miperfil-usuario {
+    background-color: #ffffff;
+    color: #503B31;
+    border: none;
+    padding: 8px 16px;
+    border: 1px solid #503B31;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.guardar-cambios-btn-miperfil-usuario:hover {
+    background-color: #503b311a;
+}
+
+/* Estilo para el contenido del modal */
+.modal-content-body-miperfil-usuario {
+    padding: 10px 20px 20px 20px;
+}
+
+/* Estilo para el formulario */
+.edit-form {
+    /* Puedes agregar estilos adicionales aquí si es necesario */
+}
+
+/* Estilo para los labels */
+.edit-form-label {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #503B31;
+    font-weight: 600;
+}
+
+/* Estilo para los inputs */
+.edit-form-input, .edit-form-select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #ffffff;
+    border: 1px solid #503B31;
+    border-radius: 5px;
+    color: #000000;
+}
+
+/* Estilo para el textarea */
+.edit-form-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #ffffff;
+    border: 1px solid #503B31;
+    border-radius: 5px;
+    color: #000000;
+    resize: none;
+    height: 80px;
+}
+
+/* Estilo cuando los elementos están en foco */
+.edit-form-input:focus, .edit-form-textarea:focus, .edit-form-select:focus {
+    outline: none;
+    border-color: #000000;
+}
+
+/* Estilo adicional para placeholders */
+.edit-form-input::placeholder, .edit-form-textarea::placeholder {
+    color: #503B31;
+}
+
+/* genero modal */
+
+.genre-checkbox {
+    display: none; /* Oculta el checkbox */
+  }
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .genre-label {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .genre-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+  
+  .genre-checkbox:checked + .genre-label {
+    border-color: #000;
+    background-color: #f0f0f0;
+    color: #000;
+  }
+  
+  .genre-label:hover {
+    border-color: #888;
+    background-color: #f7f7f7;
+  }
+
+
+/* Informacion */
+
+.informacion-miperfil {
+    margin-top: 35vh;
+    margin-left: 9vh;
+    font-size: 16px;
+    color: #000; /* Cambia a negro */
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.item-miperfil {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    margin-top: 1vh; /* Espacio entre cada línea */
+}
+
+.label-miperfil {
+    font-weight: 600;
+    margin-right: 10px; /* Espacio entre la etiqueta y el valor */
+}
+
+.value-miperfil {
+    font-weight: 400;
+}
+
+/* Linea */
+
+.line-container-miperfil {
+    position: relative;
+    width: 100%; /* Ajusta según necesites */
+    margin: -74px 0;
+    height: 50px; /* Asegura que el contenedor tenga al menos la altura de la línea */
+}
+  
+.line-miperfil {
+    position: absolute;
+    top: -16.5vh; /* Ajusta para mover la línea verticalmente si es necesario */
+    left: 45%; /* Ajusta para mover la línea horizontalmente si es necesario */
+    transform: translateX(-50%); /* Centra la línea en el contenedor */
+    width: 2px; /* Grosor de la línea */
+    height: 24vh; /* Altura de la línea */
+    background-color: black; /* Color de la línea */
+}
+  
+
+/* biografia */
+
+.biografia-miperfil {
+    max-width: 75vh; /* Ajusta según el espacio disponible */
+    margin-top: -25vh; /* Opcional: agrega un margen superior para separar del contenedor */
+    margin-left: 85vh;
+    margin-right: 8vh;
+}
+  
+.text-briografia-miperfil {
+    margin: 0; /* Elimina márgenes por defecto del párrafo */
+    color: #000;
+    font-size: 20px;
+    word-wrap: break-word; /* Permite que el texto se ajuste al contenedor */
+    overflow: hidden; /* Oculta el texto que exceda el contenedor */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos si el texto es demasiado largo */
+}
+  
+
+/* generos */
+
+.generos-miperfil {
+    margin-top: 20vh;
+    margin-left: 9vh;
+}
+
+.title-generos-miperfil {
+    font-weight: 600;
+    color: #000;
+}
+
+.tipo-generos-miperfil {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si es necesario */
+    gap: 30px; /* Espacio entre los elementos */
+}
+
+.genero-miperfil {
+    color: #000;
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos dentro del span */
+    padding: 7px 15px; /* Aumenta el padding vertical y horizontal */
+    border: 1px solid #22223B;
+    border-radius: 20px;
+    background-color: #ffffff; /* Color de fondo para resaltar */
+    white-space: nowrap; /* Evita el desbordamiento del texto en una sola línea */
+    font-size: 20px; /* Ajusta el tamaño de la fuente si es necesario */
+    line-height: 1.5; /* Ajusta la altura de línea para mejorar la alineación vertical */
+}
+
+.img-genero-miperfil{
+    width: 24px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 24px; /* Ajusta el tamaño de la imagen según sea necesario */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+/* secciond e libros guardados */
+
+.libros-aguardados-miperfil {
+    margin-top: 15vh;
+    margin-left: 9vh;
+    position: relative; /* Necesario para posicionar el botón en relación con este contenedor */
+}
+
+.div-ver-mas-libro-miperfil{
+    position: absolute;
+    top: 25px; /* Ajusta este valor según sea necesario */
+    right: 0;
+    margin-right: 80px; /* Espacio desde el borde derecho */
+}
+
+.boton-ver-mas-libro-miperfil {
+    background-color: #ffffff; /* Color de fondo del botón */
+    color: #503B31; /* Color del texto del botón */
+    border: 0.2px solid  #503B31; /* Sin borde */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 9px 16px; /* Espaciado interno del botón */
+    cursor: pointer; /* Cambia el cursor cuando pasa sobre el botón */
+    font-size: 16px; /* Tamaño de la fuente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el botón */
+    text-decoration: none;
+}
+
+.boton-ver-mas-libro-miperfil:hover {
+    background-color: #503b311a; /* Color de fondo del botón cuando se pasa el mouse */
+}
+
+.seccion-title-libro-miperfil {
+    font-weight: 600;
+    color: #000;
+    margin-top: -30px; /* Asegura espacio suficiente debajo del botón */
+}
+
+.seccion-libro-miperfil {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si es necesario */
+    gap: 15px; /* Espacio entre las fotos de perfil */
+    margin-left: -8vh;
+    justify-content: center; /* Centra las fotos en la pantalla */
+}
+
+.foto-libro-miperfil {
+    display: flex;
+    flex-direction: column; /* Alinea la imagen y el texto verticalmente */
+    align-items: center; /* Centra la imagen y el texto horizontalmente */
+    width: 23vh; /* Tamaño del contenedor */
+    position: relative; /* Para posicionar el texto correctamente */
+}
+
+.img-libro-miperfil {
+    width: 80%; /* Ajusta el ancho de la imagen al tamaño del contenedor */
+    height: 30vh; /* Tamaño fijo para la altura */
+    border: 1px solid #22223B;
+    border-radius: 5%; /* Foto circular */
+    object-fit: cover; /* Mantiene la imagen dentro del contenedor sin distorsión */
+    margin-top: 50px; /* Ajusta este valor según sea necesario */
+    margin-left: -8vh;
+}
+
+/* MODAL DE LOS LIBROS */
+
+/* Estilos del Modal */
+.modal-overlay-libro-miperfil {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1000; /* En la parte superior */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: hidden; /* Desplazamiento si es necesario */
+    background-color: rgba(0,0,0,0.4); /* Fondo oscuro con opacidad */
+    
+  }
+
+  
+  
+  .modal-content-libro-miperfil {
+    position: relative; /* Posicionamiento relativo para el contenido del modal */
+    background-color: #fefefe;
+    margin: 5% auto; /* Centramos el modal */
+    padding: 0; /* Sin relleno interno aquí */
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 320px; /* Ancho máximo */
+    height: 80vh; /* Altura del modal */
+    overflow: hidden; /* Ocultar el desbordamiento del modal */
+    border-radius: 8px; /* Bordes redondeados */
+  
+   
+  }
+
+  
+  
+  .modal-header-libro-miperfil {
+    position: sticky; /* Fijo dentro del contenedor del modal */
+    top: 0; /* Pegado a la parte superior del modal */
+    background-color: #fefefe; /* Fondo para el título */
+    padding: 10px; /* Espaciado alrededor del título */
+    border-bottom: 1px solid #888; /* Línea debajo del título */
+    z-index: 1001; /* Asegura que esté encima del contenido del modal */
+  }
+  
+  .modal-close-libro-miperfil {
+    float: right;
+    color: #503B31;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    margin: -4px 10px 10px 0;
+  }
+  
+  .modal-title-libro-miperfil {
+    margin: 5px ; 
+    font-size: 25px;
+    text-align: center;
+  }
+  
+  .modal-books-container-libro-miperfil {
+    display: flex;
+    flex-direction: column; /* Alinea los libros verticalmente */
+    gap: 15px; /* Espaciado entre elementos */
+    margin-top: 10px;
+    padding: 5px 5px 30px 30px; /* Espaciado alrededor del contenido */
+    overflow-y: auto; /* Desplazamiento vertical si es necesario */
+    height: calc(100% - 40px); /* Ajusta la altura para el contenido desplazable */
+    scrollbar-width: thin; /* Para navegadores como Firefox */
+    scrollbar-color: #503b31 #f5f5f5;
+  }
+  
+  .modal-book-item-libro-miperfil {
+    display: flex;
+    align-items: center; /* Alinea verticalmente la imagen y el texto */
+    gap: 10px; /* Espaciado entre imagen y texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+  }
+  
+  .modal-book-img-libro-miperfil {
+    width: 60px; /* Ancho de la imagen */
+    height: auto; /* Mantener la proporción de la imagen */
+    border-radius: 5px; /* Bordes redondeados */
+  }
+  
+  .modal-book-title-libro-miperfil {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  /* Mostrar el modal cuando el enlace apunta al ID del modal */
+  #modal-libro-miperfil:target {
+    display: block;
+  }
+  /* finmodal -libro-miperfil */
+
+
+
+/* amigos */
+
+.amigos-miperfil {
+    margin-top: 10vh;
+    margin-left: 9vh;
+    position: relative; /* Necesario para posicionar el botón en relación con este contenedor */
+}
+
+.div-ver-mas-miperfil{
+    position: absolute;
+    top: 30px; /* Ajusta este valor según sea necesario */
+    right: 0;
+    margin-right: 80px; /* Espacio desde el borde derecho */
+}
+
+.boton-ver-mas-miperfil {
+    background-color: #ffffff; /* Color de fondo del botón */
+    color: #503B31; /* Color del texto del botón */
+    border: 0.2px solid  #503B31; /* Sin borde */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 9px 16px; /* Espaciado interno del botón */
+    cursor: pointer; /* Cambia el cursor cuando pasa sobre el botón */
+    font-size: 16px; /* Tamaño de la fuente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el botón */
+    text-decoration: none;
+    
+}
+
+.boton-ver-mas-miperfil:hover {
+    background-color: #503b311a; /* Color de fondo del botón cuando se pasa el mouse */
+}
+
+/* seccion amigos */
+.seccion-title-amigos-miperfil {
+    font-weight: 600;
+    color: #000;
+    margin-top: 40px; /* Asegura espacio suficiente debajo del botón */
+}
+
+.seccion-amigos-miperfil {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si es necesario */
+    gap: 15px; /* Espacio entre las fotos de perfil */
+    margin-left: -8vh;
+    justify-content: center; /* Centra las fotos en la pantalla */
+}
+
+.foto-amigo-miperfil {
+    display: flex;
+    flex-direction: column; /* Alinea la imagen y el texto verticalmente */
+    align-items: center; /* Centra la imagen y el texto horizontalmente */
+    width: 23vh; /* Tamaño del contenedor */
+    position: relative; /* Para posicionar el texto correctamente */
+}
+
+.img-amigos-miperfil {
+    width: 80%; /* Ajusta el ancho de la imagen al tamaño del contenedor */
+    height: 18vh; /* Tamaño fijo para la altura */
+    border: 1px solid #22223B;
+    border-radius: 50%; /* Foto circular */
+    object-fit: cover; /* Mantiene la imagen dentro del contenedor sin distorsión */
+    margin-top: 50px; /* Ajusta este valor según sea necesario */
+    margin-left: -8vh;
+}
+
+.name-amigo-miperfil {
+    position: absolute;
+    bottom: -17vh; /* Ajusta este valor para posicionar el texto debajo de la imagen */
+    left: 38%; /* Centra el texto horizontalmente */
+    transform: translateX(-50%); /* Ajusta el texto para que esté centrado */
+    margin-bottom: 120px;
+    font-size: 20px; /* Tamaño de la fuente del nombre */
+    color: #000;
+    text-align: center; /* Centra el texto */
+    top: 27vh;
+}
+
+
+/* Modal AMIgos */
+
+/* Estilos del enlace que abre el modal */
+.modal-open {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #503b31; /* Color de fondo del botón */
+    text-decoration: none;
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  /* Estilo para el enlace cuando se pasa el mouse por encima */
+  .modal-open:hover {
+    background-color: #402a1f; /* Color de fondo en hover */
+  }
+  
+  /* Estilos del Modal */
+  .modal-amigos-miperfil {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1000; /* En la parte superior */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: hidden; /* Desplazamiento si es necesario */
+    background-color: rgba(0,0,0,0.4); /* Fondo oscuro con opacidad */
+  }
+  
+  .modal-content-amigos-miperfil {
+    position: relative; /* Posicionamiento relativo para el contenido del modal */
+    background-color: #fefefe;
+    margin: 5% auto; /* Centramos el modal */
+    padding: 0; /* Sin relleno interno aquí */
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 290px; /* Ancho máximo */
+    height: 80vh; /* Altura del modal */
+    overflow: hidden; /* Ocultar el desbordamiento del modal */
+    border-radius: 8px; /* Bordes redondeados */
+   
+  }
+  
+  /* Contenedor del encabezado del Modal */
+.modal-header-amigos-miperfil {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el contenido */
+    justify-content: space-between; /* Espacio entre el título y el botón de cerrar */
+    padding: -5px; /* Espaciado interno */
+    border-bottom: 2px solid #ccc; /* Borde inferior */
+  }
+  
+  /* Botón de cerrar */
+  .modal-close-amigos-miperfil {
+    float: right;
+    color: #503B31;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 2px 10px 10px 0;
+  }
+  
+  /* Título del Modal */
+  .modal-title-amigos-miperfil {
+    margin: 8px 0 1px 100px; 
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Contenedor de amigos del Modal */
+  .modal-amigos-container-amigos-miperfil {
+    display: flex;
+    flex-direction: column; /* Alinea los amigos verticalmente */
+    gap: 15px; /* Espaciado entre elementos */
+    margin-top: 10px;
+    padding: 5px 5px 30px 30px; /* Espaciado alrededor del contenido */
+    overflow-y: auto; /* Desplazamiento vertical si es necesario */
+    height: calc(100% - 40px); /* Ajusta la altura para el contenido desplazable */
+    scrollbar-width: thin; /* Ancho de la barra de desplazamiento (delgada) */
+    scrollbar-color: #503b31 #f5f5f5; /* Color del deslizador y del fondo */
+  }
+  
+  /* Elemento de amigo del Modal */
+  .modal-amigos-amigos-miperfil {
+    display: flex;
+    align-items: center; /* Alinea verticalmente la imagen y el texto */
+    gap: 10px; /* Espaciado entre imagen y texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+  }
+  
+  /* Imagen del amigo del Modal */
+  .modal-img-amigo-amigos-miperfil {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    height: 60px; /* Ajusta el tamaño si es necesario */
+    width: 60px; /* Ajusta el tamaño si es necesario */
+    object-fit: cover;
+  }
+  
+  /* Nombre del amigo del Modal */
+  .modal-name-amigo-amigos-miperfil {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  /* Mostrar el modal cuando el enlace apunta al ID del modal */
+  #modal-amigos-miperfil:target {
+    display: block;
+  }
+  
+/* fin modla amigos */
+
+
+/* comunidades */
+
+.comunidades-miperfil {
+    margin-top: 15vh;
+    margin-left: 9vh;
+    position: relative; /* Necesario para posicionar el botón en relación con este contenedor */
+}
+
+.seccion-title-comunidades-miperfil {
+    font-weight: 600;
+    color: #000;
+    margin-top: 100px; /* Asegura espacio suficiente debajo del botón */
+
+}
+
+.seccion-comunidad-miperfil {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si es necesario */
+    gap: 15px; /* Espacio entre las fotos de perfil */
+    margin-left: -8vh;
+    justify-content: center; /* Centra las fotos en la pantalla */
+}
+
+.foto-comunidad-miperfil {
+    display: flex;
+    flex-direction: column; /* Alinea la imagen y el texto verticalmente */
+    align-items: center; /* Centra la imagen y el texto horizontalmente */
+    width: 23vh; /* Tamaño del contenedor */
+    position: relative; /* Para posicionar el texto correctamente */
+}
+
+.img-comunidad-miperfil {
+    width: 80%; /* Ajusta el ancho de la imagen al tamaño del contenedor */
+    height: 18vh; /* Tamaño fijo para la altura */
+    border: 1px solid #22223B;
+    border-radius: 50%; /* Foto circular */
+    object-fit: cover; /* Mantiene la imagen dentro del contenedor sin distorsión */
+    margin-top: 50px; /* Ajusta este valor según sea necesario */
+    margin-left: -8vh;
+}
+
+.name-comunidad-miperfil{
+    position: absolute;
+    bottom: -17vh; /* Ajusta este valor para posicionar el texto debajo de la imagen */
+    left: 38%; /* Centra el texto horizontalmente */
+    transform: translateX(-50%); /* Ajusta el texto para que esté centrado */
+    margin-bottom: 120px;
+    font-size: 20px; /* Tamaño de la fuente del nombre */
+    color: #000;
+    text-align: center; /* Centra el texto */
+    top: 27vh;
+    text-decoration: none;
+}
+
+/* modal de comunidades */
+
+/* Estilos del Modal */
+.modal-comunidades-miperfil {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1000; /* En la parte superior */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: hidden; /* Desplazamiento si es necesario */
+    background-color: rgba(0,0,0,0.4); /* Fondo oscuro con opacidad */
+  }
+  
+  .modal-content-comunidades-miperfil {
+    position: relative; /* Posicionamiento relativo para el contenido del modal */
+    background-color: #fefefe;
+    margin: 5% auto; /* Centramos el modal */
+    padding: 0; /* Sin relleno interno aquí */
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 290px; /* Ancho máximo */
+    height: 80vh; /* Altura del modal */
+    overflow: hidden; /* Ocultar el desbordamiento del modal */
+    border-radius: 8px; /* Bordes redondeados */
+  }
+  
+  /* Contenedor del encabezado del Modal */
+  .modal-header-comunidades-miperfil {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el contenido */
+    justify-content: space-between; /* Espacio entre el título y el botón de cerrar */
+    padding: 10px; /* Espaciado interno */
+    border-bottom: 2px solid #ccc; /* Borde inferior */
+  }
+  
+  /* Botón de cerrar */
+  .modal-close-comunidades-miperfil {
+    color: #503B31;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Título del Modal */
+  .modal-title-comunidades-miperfil {
+    margin: 8px 0 1px 50px; 
+    font-size: 25px;
+    
+  }
+  
+  /* Contenedor de comunidades del Modal */
+  .modal-comunidades-container-comunidades-miperfil {
+    display: flex;
+    flex-direction: column; /* Alinea las comunidades verticalmente */
+    gap: 15px; /* Espaciado entre elementos */
+    margin-top: 10px;
+    padding: 5px 5px 30px 30px; /* Espaciado alrededor del contenido */
+    overflow-y: auto; /* Desplazamiento vertical si es necesario */
+    height: calc(100% - 40px); /* Ajusta la altura para el contenido desplazable */
+    scrollbar-width: thin; /* Ancho de la barra de desplazamiento (delgada) */
+    scrollbar-color: #503b31 #f5f5f5; /* Color del deslizador y del fondo */
+  }
+  
+  /* Elemento de comunidad del Modal */
+  .modal-comunidad-comunidades-miperfil {
+    display: flex;
+    align-items: center; /* Alinea verticalmente la imagen y el texto */
+    gap: 10px; /* Espaciado entre imagen y texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+  }
+  
+  /* Imagen de la comunidad del Modal */
+  .modal-img-comunidad-comunidades-miperfil {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    height: 60px; /* Ajusta el tamaño si es necesario */
+    width: 60px; /* Ajusta el tamaño si es necesario */
+    object-fit: cover;
+  } 
+  
+  /* Nombre de la comunidad del Modal */
+  .modal-name-comunidad-comunidades-miperfil {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  /* Mostrar el modal cuando el enlace apunta al ID del modal */
+  #modal-comunidades-miperfil:target {
+    display: block;
+  }
+/* fin modal comunidades */
+
+/* medallas */
+
+.medallas-miperfil {
+    margin-top: 10vh;
+    margin-left: 9vh;
+}
+
+.name-medalla-miperfil {
+    font-weight: 600;
+    color: #000;
+}
+
+.tipo-medalla-miperfil {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si es necesario */
+    gap: 30px; /* Espacio entre los elementos */
+}
+
+.medalla-espacio-miperfil {
+    color: #000;
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos dentro del span */
+    padding: 7px 15px; /* Aumenta el padding vertical y horizontal */
+    border: 1px solid #22223B;
+    border-radius: 20px;
+    margin-bottom: 2vh;
+    background-color: #ffffff; /* Color de fondo para resaltar */
+    white-space: nowrap; /* Evita el desbordamiento del texto en una sola línea */
+    font-size: 20px; /* Ajusta el tamaño de la fuente si es necesario */
+    line-height: 1.5; /* Ajusta la altura de línea para mejorar la alineación vertical */
+}
+
+.img-medall-miperfil {
+    width: 24px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 24px; /* Ajusta el tamaño de la imagen según sea necesario */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+
+ /* FIN CSS MI PERFIL */
+
+ /* INICIO MEDIA MI PERFIL */
+
+/* responsive */
+
+@media (max-width: 768px) {
+    .banner {
+        height: 25vh;
+    }
+
+    .profile-photo {
+        width: 12vh;
+        height: 12vh;
+    }
+
+    .informacion {
+        margin-top: 12vh;
+    }
+
+    .foto-usuario h4 {
+        font-size: 1rem;
+    }
+
+    .seccion-amigos, .seccion-comunidad {
+        gap: 10px;
+    }
+
+    .tipo-generos, .tipo-medalla {
+        gap: 8px;
+    }
+
+    .genero img, .medalla img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 20vh;
+    }
+
+    .profile-photo {
+        width: 10vh;
+        height: 10vh;
+    }
+
+    .informacion {
+        margin-top: 10vh;
+    }
+
+    .foto-usuario h4 {
+        font-size: 0.9rem;
+    }
+
+    .seccion-amigos, .seccion-comunidad {
+        gap: 5px;
+    }
+
+    .tipo-generos, .tipo-medalla {
+        gap: 5px;
+    }
+
+    .genero img, .medalla img {
+        width: 40px;
+        height: 40px;
+    }
+}
+ /* FIN MEDIA MI PERFIL */
+
+ /* ----------------------------------------------------------------------------------------------- */
+
+ /* INICIO CSS PERFIL USUARIO */
+ .body-perfil-usuario {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+}
+
+.main-perfil-usuario {
+    background-color: #fff;
+    margin-top: 50px;
+    max-height: 80%;
+    width: 100%;
+    height: auto !important;;
+    max-width: 100%;
+    margin-left: 16%; 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 0.5px solid #22223B;
+    transition: margin-left 0.3s ease;
+    padding: 0; 
+}
+
+
+/* Cuando el menú lateral está abierto */
+.sidebar.active ~ .main-perfil-usuario.shifted {
+    margin-left: 250px; /* Ajusta el valor según el ancho de tu menú lateral */
+}
+
+
+/* Banner */
+
+.banner-container-perfil-usuario {
+    position: relative; /* This will help to position the profile photo on top */
+    width: 100%;
+    height: 30vh; /* Reduce la altura en pantallas pequeñas */
+    overflow: visible; /* Permite que el contenido se desborde fuera del contenedor */
+    margin-bottom: 20px;
+}
+
+
+.banner-perfil-usuario {
+    width: 100%;
+    height: 40vh; /* Ajusta la altura según sea necesario */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 1px solid #000;
+    overflow: hidden; /* Evita que el contenido dentro del banner se desborde */
+}
+
+.banner-image-perfil-usuario {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Foto usuario */
+
+/* este es el div */
+.foto-usuario-perfil-usuario {
+    position: absolute; /* Permite la posición fuera del flujo normal del documento */
+    bottom: -50px; /* Mueve la foto de perfil hacia abajo para que sobresalga del banner */
+    left: 12%;
+    top: 30%;
+    transform: translateX(-50%); /* Centra horizontalmente la foto de perfil */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10; /* Asegura que la foto se muestre por encima del banner */
+}
+
+.profile-photo-perfil-usuario {
+    width: 22vh; /* Size of the profile photo */
+    height: 22vh;
+    border-radius: 50%; /* Circular photo */
+    border: 1px solid #000; /* Optional: border around the profile photo */
+    object-fit: cover;
+    margin-right: 10px;
+    margin-bottom: 10px; /* Space between the photo and the username */
+    position: relative; /* Allows it to overlap other content */
+    top: 120px; /* Adjust to move the photo up */
+}
+
+.name-usua-perfil-usuario {
+    color: #000000;
+    margin: 0;
+    margin-top: 120px;
+    align-items: center;
+    
+}
+
+/* boton de ditar  */
+
+
+.editar-btn-perfil-usuario {
+    margin-top: -13vh;
+    margin-left: 280vh; /* Espacio de 50px a la derecha de la foto de perfil */
+    padding: 5px 30px;
+    background-color: #ffffff; /* Cambia el color según tu necesidad */
+    color: #503B31;
+    border: 1px solid #22223B;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.editar-btn:hover {
+    background-color: #503b3133; /* Color al pasar el mouse */
+}
+
+/* Informacion */
+
+.informacion-perfil-usuario {
+    margin-top: 35vh;
+    margin-left: 9vh;
+    font-size: 16px;
+    color: #000; /* Cambia a negro */
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.item-perfil-usuario {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    margin-top: 1vh; /* Espacio entre cada línea */
+}
+
+.label-perfil-usuario {
+    font-weight: 600;
+    margin-right: 10px; /* Espacio entre la etiqueta y el valor */
+}
+
+.value-perfil-usuario {
+    font-weight: 400;
+}
+
+/* Linea */
+
+.line-container-perfil-usuario {
+    position: relative;
+    width: 100%; /* Ajusta según necesites */
+    margin: -74px 0;
+    height: 50px; /* Asegura que el contenedor tenga al menos la altura de la línea */
+}
+  
+.line-perfil-usuario {
+    position: absolute;
+    top: -16.5vh; /* Ajusta para mover la línea verticalmente si es necesario */
+    left: 48%; /* Ajusta para mover la línea horizontalmente si es necesario */
+    transform: translateX(-50%); /* Centra la línea en el contenedor */
+    width: 2px; /* Grosor de la línea */
+    height: 24vh; /* Altura de la línea */
+    background-color: black; /* Color de la línea */
+}
+  
+
+/* biografia */
+
+.biografia-perfil-usuario {
+    max-width: 75vh; /* Ajusta según el espacio disponible */
+    margin-top: -25vh; /* Opcional: agrega un margen superior para separar del contenedor */
+    margin-left: 89vh;
+    margin-right: 8vh;
+}
+  
+.text-biografia-perfil-usuario {
+    margin: 0; /* Elimina márgenes por defecto del párrafo */
+    color: #000;
+    font-size: 20px;
+    word-wrap: break-word; /* Permite que el texto se ajuste al contenedor */
+    overflow: hidden; /* Oculta el texto que exceda el contenedor */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos si el texto es demasiado largo */
+}
+
+
+/* generos */
+
+.generos-perfil-usuario {
+    margin-top: 20vh;
+    margin-left: 9vh;
+}
+
+.title-genero-perfil-usuario {
+    font-weight: 600;
+    color: #000;
+}
+
+.tipo-generos-perfil-usuario {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si es necesario */
+    gap: 30px; /* Espacio entre los elementos */
+}
+
+.genero-perfil-usuario {
+    color: #000;
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos dentro del span */
+    padding: 7px 15px; /* Aumenta el padding vertical y horizontal */
+    border: 1px solid #22223B;
+    border-radius: 20px;
+    background-color: #ffffff; /* Color de fondo para resaltar */
+    white-space: nowrap; /* Evita el desbordamiento del texto en una sola línea */
+    font-size: 20px; /* Ajusta el tamaño de la fuente si es necesario */
+    line-height: 1.5; /* Ajusta la altura de línea para mejorar la alineación vertical */
+}
+
+.img-genero-perfil-usuario {
+    width: 24px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 24px; /* Ajusta el tamaño de la imagen según sea necesario */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+/* amigos */
+
+.amigos-perfil-usuario {
+    margin-top: 10vh;
+    margin-left: 9vh;
+    position: relative; /* Necesario para posicionar el botón en relación con este contenedor */
+}
+
+.div-ver-mas-perfil-usuario {
+    position: absolute;
+    top: 30px; /* Ajusta este valor según sea necesario */
+    right: 0;
+    margin-right: 80px; /* Espacio desde el borde derecho */
+}
+
+.boton-ver-mas-perfil-usuario {
+    background-color: #ffffff; /* Color de fondo del botón */
+    color: #22223B; /* Color del texto del botón */
+    border: 0.2px solid  #22223B; /* Sin borde */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 5px 15px; /* Espaciado interno del botón */
+    cursor: pointer; /* Cambia el cursor cuando pasa sobre el botón */
+    font-size: 16px; /* Tamaño de la fuente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el botón */
+}
+
+.boton-ver-mas-perfil-usuario:hover {
+    background-color: #8e92a77e; /* Color de fondo del botón cuando se pasa el mouse */
+}
+
+.seccion-title-perfil-usuario {
+    font-weight: 600;
+    color: #000;
+    margin-top: 40px; /* Asegura espacio suficiente debajo del botón */
+}
+
+.seccion-amigos-perfil-usuario {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si es necesario */
+    gap: 15px; /* Espacio entre las fotos de perfil */
+    margin-left: -8vh;
+    justify-content: center; /* Centra las fotos en la pantalla */
+}
+
+.foto-amigo-perfil-usuario {
+    display: flex;
+    flex-direction: column; /* Alinea la imagen y el texto verticalmente */
+    align-items: center; /* Centra la imagen y el texto horizontalmente */
+    width: 23vh; /* Tamaño del contenedor */
+    position: relative; /* Para posicionar el texto correctamente */
+}
+
+.img-amigo-perfil-usuario {
+    width: 80%; /* Ajusta el ancho de la imagen al tamaño del contenedor */
+    height: 18vh; /* Tamaño fijo para la altura */
+    border: 1px solid #22223B;
+    border-radius: 50%; /* Foto circular */
+    object-fit: cover; /* Mantiene la imagen dentro del contenedor sin distorsión */
+    margin-top: 50px; /* Ajusta este valor según sea necesario */
+    margin-left: -8vh;
+}
+
+.name-usuar-perfil-usuario {
+    position: absolute;
+    bottom: -17vh; /* Ajusta este valor para posicionar el texto debajo de la imagen */
+    left: 38%; /* Centra el texto horizontalmente */
+    transform: translateX(-50%); /* Ajusta el texto para que esté centrado */
+    margin-bottom: 120px;
+    font-size: 20px; /* Tamaño de la fuente del nombre */
+    color: #000;
+    text-align: center; /* Centra el texto */
+    top: 27vh;
+}
+
+
+/* comunidades */
+
+.comunidades-perfil-usuario {
+    margin-top: 15vh;
+    margin-left: 9vh;
+    position: relative; /* Necesario para posicionar el botón en relación con este contenedor */
+}
+
+.seccion-title-perfil-usuario {
+    font-weight: 600;
+    color: #000;
+    margin-top: 100px; /* Asegura espacio suficiente debajo del botón */
+
+}
+
+.seccion-comunidad-perfil-usuario {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si es necesario */
+    gap: 15px; /* Espacio entre las fotos de perfil */
+    margin-left: -8vh;
+    justify-content: center; /* Centra las fotos en la pantalla */
+}
+
+.foto-comunidad-perfil-usuario {
+    display: flex;
+    flex-direction: column; /* Alinea la imagen y el texto verticalmente */
+    align-items: center; /* Centra la imagen y el texto horizontalmente */
+    width: 23vh; /* Tamaño del contenedor */
+    position: relative; /* Para posicionar el texto correctamente */
+}
+
+.img-comunidad-perfil-usuario{
+    width: 80%; /* Ajusta el ancho de la imagen al tamaño del contenedor */
+    height: 18vh; /* Tamaño fijo para la altura */
+    border: 1px solid #22223B;
+    border-radius: 50%; /* Foto circular */
+    object-fit: cover; /* Mantiene la imagen dentro del contenedor sin distorsión */
+    margin-top: 50px; /* Ajusta este valor según sea necesario */
+    margin-left: -8vh;
+}
+
+.name-comuni-perfil-usuario {
+    position: absolute;
+    bottom: -17vh; /* Ajusta este valor para posicionar el texto debajo de la imagen */
+    left: 38%; /* Centra el texto horizontalmente */
+    transform: translateX(-50%); /* Ajusta el texto para que esté centrado */
+    margin-bottom: 120px;
+    font-size: 20px; /* Tamaño de la fuente del nombre */
+    color: #000;
+    text-align: center; /* Centra el texto */
+    top: 27vh;
+}
+
+/* medallas */
+
+.medallas-section-perfil-usuario {
+    margin-top: 10vh;
+    margin-left: 9vh;
+}
+
+.title-medalla-perfil-usuario {
+    font-weight: 600;
+    color: #000;
+}
+
+.tipo-medalla-perfil-usuario {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si es necesario */
+    gap: 30px; /* Espacio entre los elementos */
+}
+
+.medalla-perfil-usuario {
+    color: #000;
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos dentro del span */
+    padding: 7px 15px; /* Aumenta el padding vertical y horizontal */
+    border: 1px solid #22223B;
+    border-radius: 20px;
+    margin-bottom: 2vh;
+    background-color: #ffffff; /* Color de fondo para resaltar */
+    white-space: nowrap; /* Evita el desbordamiento del texto en una sola línea */
+    font-size: 20px; /* Ajusta el tamaño de la fuente si es necesario */
+    line-height: 1.5; /* Ajusta la altura de línea para mejorar la alineación vertical */
+}
+
+.img-medalla-perfil-usuario{
+    width: 24px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 24px; /* Ajusta el tamaño de la imagen según sea necesario */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+ 
+ /* FIN CSS PERFIL USUARIO */
+
+ /* INCIO MEDIA PERFIL USUARIO */
+
+ @media (max-width: 768px) {
+    .banner {
+        height: 25vh;
+    }
+
+    .profile-photo {
+        width: 12vh;
+        height: 12vh;
+    }
+
+    .informacion {
+        margin-top: 12vh;
+    }
+
+    .foto-usuario h4 {
+        font-size: 1rem;
+    }
+
+    .seccion-amigos, .seccion-comunidad {
+        gap: 10px;
+    }
+
+    .tipo-generos, .tipo-medalla {
+        gap: 8px;
+    }
+
+    .genero img, .medalla img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 20vh;
+    }
+
+    .profile-photo {
+        width: 10vh;
+        height: 10vh;
+    }
+
+    .informacion {
+        margin-top: 10vh;
+    }
+
+    .foto-usuario h4 {
+        font-size: 0.9rem;
+    }
+
+    .seccion-amigos, .seccion-comunidad {
+        gap: 5px;
+    }
+
+    .tipo-generos, .tipo-medalla {
+        gap: 5px;
+    }
+
+    .genero img, .medalla img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+    .banner {
+        height: 25vh;
+    }
+
+    .profile-photo {
+        width: 12vh;
+        height: 12vh;
+    }
+
+    .informacion {
+        margin-top: 12vh;
+    }
+
+    .foto-usuario h4 {
+        font-size: 1rem;
+    }
+
+    .seccion-amigos, .seccion-comunidad {
+        gap: 10px;
+    }
+
+    .tipo-generos, .tipo-medalla {
+        gap: 8px;
+    }
+
+    .genero img, .medalla img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 20vh;
+    }
+
+    .profile-photo {
+        width: 10vh;
+        height: 10vh;
+    }
+
+    .informacion {
+        margin-top: 10vh;
+    }
+
+    .foto-usuario h4 {
+        font-size: 0.9rem;
+    }
+
+    .seccion-amigos, .seccion-comunidad {
+        gap: 5px;
+    }
+
+    .tipo-generos, .tipo-medalla {
+        gap: 5px;
+    }
+
+    .genero img, .medalla img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+ /* FIN MEDIA PERFIL USUARIO */
+
+ /* ------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+ /* ESTILOS DEL ADMINISTRADOR */
+
+ /* INICIO CSS ADMINISTRADOR AUTORES */
+
+ /* FIN CSS ADMINISTRADOR AUTORES */
+
+ /* INICIO MEDIA ADMINISTRADOR AUTORES */
+
+ /* FIN MEDIA ADMINISTRADOR MEDIA */

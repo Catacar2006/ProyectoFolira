@@ -43,7 +43,7 @@ function RegisterModal() {
                     <label htmlFor="registerUsername" className="form-label">Biografia</label>
                     <input type="text" className="form-control" id="registerUsername" required />
                   </div>
-                  <div className="mb-4">
+                  <div className="mb-4">x|
                     <label htmlFor="profilePicture" className="form-label">Foto de Perfil</label>
                     <input type="file" className="form-control" id="profilePicture" accept="image/*" />
                   </div>

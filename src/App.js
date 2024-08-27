@@ -2,6 +2,14 @@
 import { Route, Routes } from 'react-router-dom';
 import Inicio from './pages/Inicio';
 import Amigos from './pages.usuarios/Amigos';
+import FeedUsuaAutores from './pages.usuarios/FeedUsuaAutores';
+import FeedUsuaLibro from './pages.usuarios/FeedUsuaLibro';
+import FeedUsuario from './pages.usuarios/FeedUsuario';
+import FichaAutor from './pages.usuarios/FichaAutor';
+import FichaLibro from './pages.usuarios/FichaLibro';
+import MiPerfil from './pages.usuarios/Mi_Perfil';
+import PerfilUsuario from './pages.usuarios/PerfilUsuario';
+
 
 function App() {
   return (
@@ -10,6 +18,13 @@ function App() {
      <Routes>
       <Route path="/" element={<Inicio />} />
       <Route path="/amigos" element={<Amigos />} />
+      <Route path="/FeedUsuaAutores" element={<FeedUsuaAutores />} />
+      <Route path="/FeedUsuaLibro" element={<FeedUsuaLibro />} />
+      <Route path="/FeedUsuario" element={<FeedUsuario />} />
+      <Route path="/FichaAutor" element={<FichaAutor />} />
+      <Route path="/FichaLibro" element={<FichaLibro />} />
+      <Route path="/MiPerfil" element={<MiPerfil />} />
+      <Route path="/PerfilUsuario" element={<PerfilUsuario />} />
      </Routes>
      </>
     </div>

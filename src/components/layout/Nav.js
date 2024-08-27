@@ -1,15 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import folira_logo from '../../static/img/folira-logo.png';
+import flecha_nav from '../../static/img/greater_than_icon_194991.png';
+import notificacion from '../../static/img/notificaciones_icon.png';
+import lupa from '../../static/img/lupa.png';
 
 function Nav () {
-    return (
+    return ( 
 <header className="navbar navbar-expand-lg fixed-top " id="nav_moved">
   <div className="container-fluid">
     <div className="icon__menu">
-      <button className="burger" id="btn_open"><img src="../Assetes/img/greater_than_icon_194991.png" alt /></button>
+      <button className="burger" id="btn_open">
+        <img 
+          src={flecha_nav}
+          alt="flecha_nav"
+          className=""
+          />
+      </button>
     </div>
-    <a href="#searchModal" id="openModalBtn" className="btn-search">Search</a>
+    <Link to="#searchModal" id="openModalBtn" className="btn-search">Search</Link>
     <div id="searchModal" className="modal">
       <div className="modal-content">
         <Link to="#" className="close">×</Link>
@@ -19,8 +29,8 @@ function Nav () {
       </div>
     </div>
     <img 
-        src="../Assetes/img/FOLIRA.png" 
-        alt=""
+        src={folira_logo}
+        alt="folira_logo"
         className="app-logo" 
         />
     <div className="offcanvas offcanvas-end" tabIndex={-1} id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -31,10 +41,20 @@ function Nav () {
       <div className="offcanvas-body">
         <ul className="navbar-nav justify-content-end flex-grow-1 pe-3 later-item">
           <li className="nav-item">
-            <a className="nav-link" href="#searchModal" id="openModalBtn"><img src="../Assetes/img/lupa.png" alt className="nav-icon" /></a>
+            <Link className="nav-link" to="#searchModal" id="openModalBtn">
+              <img 
+                src={lupa}
+                alt="lupa"
+                className="nav-icon" 
+                />
+              </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="#"><img src="../Assetes/img/notificaciones_icon.png" alt className="nav-icon" /></Link>
+            <Link className="nav-link" to="#">
+            <img 
+              src={notificacion}
+              alt="notificacion"
+              className="nav-icon" /></Link>
           </li>
           <li className="nav-item">
           </li>
