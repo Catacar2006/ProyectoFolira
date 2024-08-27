@@ -1897,13 +1897,13 @@ header{
 
 /* selecto biblioteca */
 .ficha-libro-locations {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     color: #503b31; 
 }
 
 .text-location-libro {
     font-size: 25px; 
-   margin: -160px 30px 30px 30px;
+    margin: -160px 30px 30px 20px;
 }
 
 .locations-list-ficha-libro {
@@ -1991,6 +1991,8 @@ header{
 /* cuadros de escritura */
 .book-reviews-ficha-libro {
     display: flex;
+    max-width: 100%;
+    margin-left: -70px;
     align-items: center; /* Alinea verticalmente el área de texto y el botón */
     justify-content: space-between; /* Alinea el área de texto a la izquierda y el botón a la derecha */
     gap: 10px; /* Espacio entre el área de texto y el botón */
@@ -1998,10 +2000,17 @@ header{
     margin-bottom: 10px; /* Espacio entre los inputs y las reseñas */
 }
 
+.text-area-boton-emviar{
+    display: flex;
+    align-items: center; /* Alinea verticalmente el contenido */
+    justify-content: space-between; /* Coloca el textarea a la izquierda y el botón a la derecha */
+    gap: 10px;
+}
+
 .area-text-ficha-libro {
-    width: calc(100% - 150px); /* Deja espacio suficiente para el botón */
+    width: calc(1150% - 10px); /* Deja espacio suficiente para el botón */
     height: 60px;
-    margin: 50px 0; 
+    margin: 50px 10px 20px -60vh; 
     padding: 12px 0 10px 20px; 
     border-radius: 10px;
     border: 2px solid #503b31; 
@@ -2038,7 +2047,7 @@ header{
     text-decoration: none;
     display: inline-block;
     font-size: 22px;
-    margin: -10px 0 10px 0;
+    margin: 20px 0 10px 0;
     border-radius: 5px;
 }
 
@@ -3469,6 +3478,7 @@ header{
     cursor: pointer; /* Cambia el cursor cuando pasa sobre el botón */
     font-size: 16px; /* Tamaño de la fuente */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el botón */
+    text-decoration: none;
 }
 
 .boton-ver-mas-perfil-usuario:hover {
@@ -3517,6 +3527,313 @@ header{
     color: #000;
     text-align: center; /* Centra el texto */
     top: 27vh;
+}
+
+/* Modal amigos perfil usuario */
+/* Estilos del enlace que abre el modal */
+.modal-open {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #503b31; /* Color de fondo del botón */
+    text-decoration: none;
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  /* Estilo para el enlace cuando se pasa el mouse por encima */
+  .modal-open:hover {
+    background-color: #402a1f; /* Color de fondo en hover */
+  }
+  
+  /* Estilos del Modal */
+  .modal-amigos-perfilUsua {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1000; /* En la parte superior */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: hidden; /* Desplazamiento si es necesario */
+    background-color: rgba(0,0,0,0.4); /* Fondo oscuro con opacidad */
+  }
+  
+  .modal-content-amigos-perfilUsua {
+    position: relative; /* Posicionamiento relativo para el contenido del modal */
+    background-color: #fefefe;
+    margin: 5% auto; /* Centramos el modal */
+    padding: 0; /* Sin relleno interno aquí */
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 290px; /* Ancho máximo */
+    height: 80vh; /* Altura del modal */
+    overflow: hidden; /* Ocultar el desbordamiento del modal */
+    border-radius: 8px; /* Bordes redondeados */
+   
+  }
+  
+  /* Contenedor del encabezado del Modal */
+.modal-header-amigos-perfilUsua {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el contenido */
+    justify-content: space-between; /* Espacio entre el título y el botón de cerrar */
+    padding: -5px; /* Espaciado interno */
+    border-bottom: 2px solid #ccc; /* Borde inferior */
+  }
+  
+  /* Botón de cerrar */
+  .modal-close-amigos-perfilUsua {
+    float: right;
+    color: #503B31;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 2px 10px 10px 0;
+  }
+  
+  /* Título del Modal */
+  .modal-title-amigos-perfilUsua {
+    margin: 8px 0 1px 100px; 
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Contenedor de amigos del Modal */
+  .modal-amigos-container-amigos-perfilUsua {
+    display: flex;
+    flex-direction: column; /* Alinea los amigos verticalmente */
+    gap: 15px; /* Espaciado entre elementos */
+    margin-top: 10px;
+    padding: 5px 5px 30px 30px; /* Espaciado alrededor del contenido */
+    overflow-y: auto; /* Desplazamiento vertical si es necesario */
+    height: calc(100% - 40px); /* Ajusta la altura para el contenido desplazable */
+    scrollbar-width: thin; /* Ancho de la barra de desplazamiento (delgada) */
+    scrollbar-color: #503b31 #f5f5f5; /* Color del deslizador y del fondo */
+  }
+  
+  /* Elemento de amigo del Modal */
+  .modal-foto-amigo-perfilUsua {
+    display: flex;
+    align-items: center; /* Alinea verticalmente la imagen y el texto */
+    gap: 10px; /* Espaciado entre imagen y texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+  }
+  
+  /* Imagen del amigo del Modal */
+  .modal-img-amigo-perfilUsua {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    height: 60px; /* Ajusta el tamaño si es necesario */
+    width: 60px; /* Ajusta el tamaño si es necesario */
+    object-fit: cover;
+  }
+  
+  /* Nombre del amigo del Modal */
+  .modal-name-usuar-perfilUsua {
+    font-size: 16px;
+    margin: 0;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  /* Mostrar el modal cuando el enlace apunta al ID del modal */
+  #modal-amigos-perfilUsua:target {
+    display: block;
+  }
+  
+/* fin modla amigos */
+
+/* comunidades */
+
+.comunidades-perfil-usuario {
+    margin-top: 15vh;
+    margin-left: 9vh;
+    position: relative; /* Necesario para posicionar el botón en relación con este contenedor */
+}
+
+.seccion-title-perfil-usuario {
+    font-weight: 600;
+    color: #000;
+    margin-top: 100px; /* Asegura espacio suficiente debajo del botón */
+
+}
+
+.seccion-comunidad-perfil-usuario {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si es necesario */
+    gap: 15px; /* Espacio entre las fotos de perfil */
+    margin-left: -8vh;
+    justify-content: center; /* Centra las fotos en la pantalla */
+}
+
+.foto-comunidad-perfil-usuario {
+    display: flex;
+    flex-direction: column; /* Alinea la imagen y el texto verticalmente */
+    align-items: center; /* Centra la imagen y el texto horizontalmente */
+    width: 23vh; /* Tamaño del contenedor */
+    position: relative; /* Para posicionar el texto correctamente */
+}
+
+.img-comunidad-perfil-usuario{
+    width: 80%; /* Ajusta el ancho de la imagen al tamaño del contenedor */
+    height: 18vh; /* Tamaño fijo para la altura */
+    border: 1px solid #22223B;
+    border-radius: 50%; /* Foto circular */
+    object-fit: cover; /* Mantiene la imagen dentro del contenedor sin distorsión */
+    margin-top: 50px; /* Ajusta este valor según sea necesario */
+    margin-left: -8vh;
+}
+
+.name-comuni-perfil-usuario {
+    position: absolute;
+    bottom: -17vh; /* Ajusta este valor para posicionar el texto debajo de la imagen */
+    left: 38%; /* Centra el texto horizontalmente */
+    transform: translateX(-50%); /* Ajusta el texto para que esté centrado */
+    margin-bottom: 120px;
+    font-size: 20px; /* Tamaño de la fuente del nombre */
+    color: #000;
+    text-align: center; /* Centra el texto */
+    top: 27vh;
+}
+
+/* modal de comunidades */
+
+/* Estilos del Modal */
+.modal-comunidades-perfilUsua {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1000; /* En la parte superior */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: hidden; /* Desplazamiento si es necesario */
+    background-color: rgba(0,0,0,0.4); /* Fondo oscuro con opacidad */
+  }
+  
+  .modal-content-comunidades-perfilUsua {
+    position: relative; /* Posicionamiento relativo para el contenido del modal */
+    background-color: #fefefe;
+    margin: 5% auto; /* Centramos el modal */
+    padding: 0; /* Sin relleno interno aquí */
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 290px; /* Ancho máximo */
+    height: 80vh; /* Altura del modal */
+    overflow: hidden; /* Ocultar el desbordamiento del modal */
+    border-radius: 8px; /* Bordes redondeados */
+  }
+  
+  /* Contenedor del encabezado del Modal */
+  .modal-header-comunidades-perfilUsua {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el contenido */
+    justify-content: space-between; /* Espacio entre el título y el botón de cerrar */
+    padding: 10px; /* Espaciado interno */
+    border-bottom: 2px solid #ccc; /* Borde inferior */
+  }
+  
+  /* Botón de cerrar */
+  .modal-close-comunidades-perfilUsua {
+    color: #503B31;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Título del Modal */
+  .modal-title-comunidades-perfilUsua {
+    margin: 8px 0 1px 50px; 
+    font-size: 25px;
+    
+  }
+  
+  /* Contenedor de comunidades del Modal */
+  .modal-comunidades-container-comunidades-perfilUsua {
+    display: flex;
+    flex-direction: column; /* Alinea las comunidades verticalmente */
+    gap: 15px; /* Espaciado entre elementos */
+    margin-top: 10px;
+    padding: 5px 5px 30px 30px; /* Espaciado alrededor del contenido */
+    overflow-y: auto; /* Desplazamiento vertical si es necesario */
+    height: calc(100% - 40px); /* Ajusta la altura para el contenido desplazable */
+    scrollbar-width: thin; /* Ancho de la barra de desplazamiento (delgada) */
+    scrollbar-color: #503b31 #f5f5f5; /* Color del deslizador y del fondo */
+  }
+  
+  /* Elemento de comunidad del Modal */
+  .modal-comunidad-comunidades-perfilUsua {
+    display: flex;
+    align-items: center; /* Alinea verticalmente la imagen y el texto */
+    gap: 10px; /* Espaciado entre imagen y texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+  }
+  
+  /* Imagen de la comunidad del Modal */
+  .modal-img-comunidad-comunidades-perfilUsua {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    height: 60px; /* Ajusta el tamaño si es necesario */
+    width: 60px; /* Ajusta el tamaño si es necesario */
+    object-fit: cover;
+  }
+  
+  /* Nombre de la comunidad del Modal */
+  .modal-name-comunidad-comunidades-perfilUsua {
+    font-size: 16px;
+    margin: 0;
+    text-align: none;
+  }
+  
+  /* Mostrar el modal cuando el enlace apunta al ID del modal */
+  #modal-comunidades-perfilUsua:target {
+    display: block;
+  }
+/* fin modal comunidades */
+
+/* medallas */
+
+.medallas-section-perfil-usuario {
+    margin-top: 10vh;
+    margin-left: 9vh;
+}
+
+.title-medalla-perfil-usuario {
+    font-weight: 600;
+    color: #000;
+}
+
+.tipo-medalla-perfil-usuario {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si es necesario */
+    gap: 30px; /* Espacio entre los elementos */
+}
+
+.medalla-perfil-usuario {
+    color: #000;
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos dentro del span */
+    padding: 7px 15px; /* Aumenta el padding vertical y horizontal */
+    border: 1px solid #22223B;
+    border-radius: 20px;
+    margin-bottom: 2vh;
+    background-color: #ffffff; /* Color de fondo para resaltar */
+    white-space: nowrap; /* Evita el desbordamiento del texto en una sola línea */
+    font-size: 20px; /* Ajusta el tamaño de la fuente si es necesario */
+    line-height: 1.5; /* Ajusta la altura de línea para mejorar la alineación vertical */
+}
+
+.img-medalla-perfil-usuario{
+    width: 24px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 24px; /* Ajusta el tamaño de la imagen según sea necesario */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
 }
 
 
