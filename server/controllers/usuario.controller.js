@@ -1,5 +1,6 @@
 import { Usuario } from "../models/usuario.model.js";
 
+
 class UsuarioController{
     
     static async getUsuarios(req,res){
@@ -53,9 +54,22 @@ class UsuarioController{
         }
     }
 
+    static async estadoUsuario(req, res) {
+        try {
+            const id = parseInt(req.params.id, 10); // Asegúrate de que el ID sea un número entero
+            if (isNaN(id)) {
+              return res.status(400).json({ message: "ID inválido" });
+            }
+            const result = await Usuario.alterarEstadoUsuario(id);
+            res.status(200).json({ message: "Estado del usuario alterado con éxito" });
+          } catch (error) {
+            res.status(500).json({ message: "Error al alterar el estado del usuario: " + error.message });
+          }
+    }
+
     static async postUsuario(req,res){
         try {
-            const u  = {
+            const usu  = {
                 nombre: req.body.nombre,
                 correo: req.body.correo,
                 contrasena: req.body.contrasena,
@@ -69,7 +83,7 @@ class UsuarioController{
                 estado:req.body.estado,
                 idRolFK: req.body.idRolFK
             } 
-            await Usuario.createUsuario(u);
+            await Usuario.createUsuario(usu);
             res.status(201).json( {message: "Usuario creado con exito"} );
         } catch (error) {
             res.status(500).json( {message: "Error al crear usuario" + error} );

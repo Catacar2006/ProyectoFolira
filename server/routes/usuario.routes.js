@@ -5,7 +5,8 @@ const router = Router();
 
 router.get('/api/usuario',  UsuarioController.getUsuarios);
 router.get('/api/usuario/:id',  UsuarioController.getUsuario);
-router.get('/api/usuario/:id',  UsuarioController.putUsuario);
+router.put('/api/usuario/:id',  UsuarioController.putUsuario);
 router.post('/api/usuario',  UsuarioController.postUsuario);
+router.delete('/api/usuario/:id',  UsuarioController.estadoUsuario);
 
 export default router;
