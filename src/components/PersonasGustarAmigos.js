@@ -29,6 +29,87 @@ function PersonasGustarAmigos (){
                 <div className="amigos">
                     <img 
                         className="img-amigo" 
+                        src={foto_amigo7}
+                        alt="foto_amigo7" 
+                    />
+                    <h5 className="title-amigo">Butterfly_13🦋</h5>
+                </div>
+                <div className="amigos">
+                    <img 
+                        className="img-amigo" 
+                        src={foto_amigo7}
+                        alt="foto_amigo7" 
+                    />
+                    <h5 className="title-amigo">Butterfly_13🦋</h5>
+                </div>
+                <div className="amigos">
+                    <img 
+                        className="img-amigo" 
+                        src={foto_amigo7}
+                        alt="foto_amigo7" 
+                    />
+                    <h5 className="title-amigo">Butterfly_13🦋</h5>
+                </div>
+                <div className="amigos">
+                    <img 
+                        className="img-amigo" 
+                        src={foto_amigo7}
+                        alt="foto_amigo7" 
+                    />
+                    <h5 className="title-amigo">Butterfly_13🦋</h5>
+                </div>
+                <div className="amigos">
+                    <img 
+                        className="img-amigo" 
+                        src={foto_amigo7}
+                        alt="foto_amigo7" 
+                    />
+                    <h5 className="title-amigo">Butterfly_13🦋</h5>
+                </div>
+                <div className="amigos">
+                    <img 
+                        className="img-amigo" 
+                        src={foto_amigo7}
+                        alt="foto_amigo7" 
+                    />
+                    <h5 className="title-amigo">Butterfly_13🦋</h5>
+                </div>
+                <div className="amigos">
+                    <img 
+                        className="img-amigo" 
+                        src={foto_amigo7}
+                        alt="foto_amigo7" 
+                    />
+                    <h5 className="title-amigo">Butterfly_13🦋</h5>
+                </div>
+                <div className="amigos">
+                    <img 
+                        className="img-amigo" 
+                        src={foto_amigo7}
+                        alt="foto_amigo7" 
+                    />
+                    <h5 className="title-amigo">Butterfly_13🦋</h5>
+                </div>
+                <div className="amigos">
+                    <img 
+                        className="img-amigo" 
+                        src={foto_amigo7}
+                        alt="foto_amigo7" 
+                    />
+                    <h5 className="title-amigo">Butterfly_13🦋</h5>
+                </div>
+                <div className="amigos">
+                    <img 
+                        className="img-amigo" 
+                        src={foto_amigo7}
+                        alt="foto_amigo7" 
+                    />
+                    <h5 className="title-amigo">Butterfly_13🦋</h5>
+                </div>
+                
+                <div className="amigos">
+                    <img 
+                        className="img-amigo" 
                         src={foto_amigo8}
                         alt="foto_amigo8" 
                     />
@@ -50,6 +131,7 @@ function PersonasGustarAmigos (){
                     />
                     <h5 className="title-amigo">Kimchi_29🍥</h5>
                 </div>
+                
             </div>
         </div>
     );

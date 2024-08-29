@@ -615,7 +615,7 @@ header{
   
   /* Contenido del modal */
   .modal-content {
-    background-color: #fff;
+    background-color: #ffffff;
     margin: 15% auto;
     padding: 20px;
     border-radius: 8px;
@@ -784,9 +784,9 @@ header{
 .main-amigos {
     background-color: #fff;
     margin-top: 115px;
-    max-height: 80%;
+    max-height: 90%;
     width: 75%;
-    height: 1182px;
+    height: auto;
     max-width: 95%;
     margin-left: 16%; 
     border-top-left-radius: 20px;
@@ -827,110 +827,6 @@ header{
     align-items: center;
     justify-content: center;
     text-align: left; 
-}
-
-/* estilos del link */
-.ver-mas{
-    position: relative;
-    left: 87%;
-    top: -3vh;
-    font-size: 20px;
-    border: 1px solid  #503B31;
-    padding: 8px 15px 8px 15px;
-    border-radius: 25px;
-    text-decoration: none;
-    color: #503B31;
-}
-
-.ver-mas:hover{
-    background-color:  #503b311a;
-}
-
-
-/* Estilos del modal */
-.modal {
-    display: none; /* Oculta el modal por defecto */
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
-    justify-content: center;
-    align-items: center;
-}
-
-/* Contenido del modal */
-.modal-content {
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 20px;
-    width: 50%;
-    max-width: 450px;
-    position: relative;
-}
-
-/* Estilo del título dentro del modal */
-.modal-content .title-modal {
-    color: black;
-    text-align: center;
-    margin: 0; 
-}
-
-/* Estilos de la lista de amigos dentro del modal */
-.modal-amigos-container {
-    display: flex;
-    flex-direction: column; 
-    gap: 20px;
-    max-height: 500px; 
-    overflow-y: scroll; /* Espaciado entre amigos */
-    margin-top: 30px;
-    scrollbar-width: thin; /* Para navegadores como Firefox */
-    scrollbar-color: #503b31 #f5f5f5;
-}
-
-
-/* Estilo de cada amigo dentro del modal */
-.modal-amigos {
-    display: flex;
-    align-items: center;
-    gap: 15px; /* Espaciado entre la imagen y el nombre */
-}
-
-/* Estilo de las imágenes dentro del modal */
-.modal-img-amigo {
-    border-radius: 50%;
-    border: 1px solid #000000;
-    height: 80px; /* Ajusta el tamaño si es necesario */
-    width: 80px; /* Ajusta el tamaño si es necesario */
-    object-fit: cover;
-}
-
-/* Estilo de los nombres de usuario dentro del modal */
-.modal-title-amigo {
-    color: black;
-    font-size: 18px; /* Ajusta el tamaño del texto si es necesario */
-    text-decoration: none; /* Elimina el subrayado en los enlaces */
-}
-
-.modal-title-amigo:hover {
-    text-decoration: underline; /* Subraya el nombre al pasar el mouse */
-}
-
-/* Estilo del botón de cerrar */
-.close-amigo {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    font-size: 34px;
-    text-decoration: none;
-    color: #503b31; /* Color del botón de cerrar */
-    cursor: pointer;
-}
-
-/* Estilo al abrir el modal */
-:target.modal {
-    display: flex;
 }
 
 
@@ -993,109 +889,129 @@ header{
     
 }
 
-/* Estilos del Modal 2 */
-.modal-gustar {
-    display: none;
-    position: fixed;
-    left: 0;
+
+/* MODAL 2 AMIGOS */
+.ver-mas-gustarA{
+    position: relative;
+    left: 87%;
+    top: -3vh;
+    font-size: 15px;
+    border: 1px solid  #503B31;
+    padding: 8px 15px 8px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #503B31;
+}
+
+.ver-mas-gustarA:hover{
+    background-color:  #503b311a;
+}
+  
+.modal-overlay-gustarA {
+    position: fixed; /* Mantiene el modal fijo en la pantalla */
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
+    z-index: 9999;
 }
 
-/* Contenido del Modal 2 */
-.modal-gustar-content {
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 20px;
-    width: 50%;
-    max-width: 450px;
-    position: relative;
-}
-
-/* Estilo del título dentro del Modal 2 */
-.modal-gustar-content .amigos-modal {
-    color: #503B31;
-    text-align: center;
-    margin: 0;
-    font-size: 28px;
-    word-wrap: break-word; /* o overflow-wrap: break-word; */
+  /* Contenido del modal */
+  .modal-content-gustar {
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    border-radius: 8px;
+    max-width: 400px;
     width: 100%;
+    max-height: 70vh; 
+    overflow-y: auto; 
+    position: relative;
+    
+  }
+
+  /* Personalizar la barra de desplazamiento */
+.modal-content-gustar::-webkit-scrollbar {
+    width: 4px; /* Ancho de la barra de desplazamiento */
+  }
+  
+  .modal-content-gustar::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-content-gustar::-webkit-scrollbar-thumb {
+    background-color: #503B31; /* Color del "pulgar" de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-content-gustar::-webkit-scrollbar-thumb:hover {
+    background-color: #333; /* Color del "pulgar" cuando se pasa el mouse por encima */
+  }
+  
+ /* Cabecera del modal que se queda fija al hacer scroll */
+
+
+.Header-modalA {
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white; /* Asegura que el fondo sea visible cuando sea sticky */
+    z-index: 10; /* Asegura que esté por encima del contenido desplazable */
 }
 
-/* Contenedor de los amigos dentro del Modal 2 */
-.modal-gustar-amigos-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-height: 500px;
-    overflow-y: scroll;
-    margin-top: 30px;
-    scrollbar-width: thin;
-    scrollbar-color: #503b31 #f5f5f5;
-}
-
-/* Para WebKit (Chrome, Safari, Edge) */
-.modal-amigos-container::-webkit-scrollbar {
-    width: 6px; /* Ancho de la barra de desplazamiento */
-}
-
-.modal-amigos-container::-webkit-scrollbar-track {
-    background: transparent; /* Fondo de la pista de desplazamiento */
-}
-
-.modal-amigos-container::-webkit-scrollbar-thumb {
-    background-color: #503b31; /* Color del "thumb" */
-    border-radius: 10px; /* Radio de borde para el "thumb" */
-}
-
-/* Estilo de cada amigo dentro del Modal 2 */
-.modal2-amigos {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-/* Estilo de las imágenes dentro del Modal 2 */
-.modal2-img-amigo {
-    border-radius: 50%;
-    border: 1px solid #000000;
-    height: 80px;
-    width: 80px;
-    object-fit: cover;
-}
-
-/* Estilo de los nombres de usuario dentro del Modal 2 */
-.modal2-title-amigo {
-    color: black;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.modal2-title-amigo:hover {
-    text-decoration: underline; /* Subraya el nombre al pasar el mouse */
-   
-}
-
-/* Estilo del botón de cerrar en el Modal 2 */
-.close-gustar {
+/* Botón para cerrar el modal */
+.close-btn {
     position: absolute;
-    top: 5px;
-    right: 10px;
-    font-size: 34px;
-    text-decoration: none;
-    color: #503b31;
+    top: 2px; /* Ajusta según el padding de .Header-modalA */
+    right: 20px;
+    font-size: 28px;
+    color: #424242d8;
+    background: none;
+    border: none;
     cursor: pointer;
 }
+  
+  .close-btn:hover {
+    color: #0000008a;
+  }
 
-/* Estilo al abrir el Modal 2 */
-:target.modal-gustar {
+  .titulo-modalAmigos{
+    margin: 5px 20px 5px 20px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 450;
+  }
+
+  .modal-gustarA-content{
+    margin: 20px 20px 10px 20px;
+    
+  }
+  
+  /* Estilos para los perfiles */
+  .profile {
     display: flex;
-}
-
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .img-gustarA {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 1px solid #000;
+  }
+  
+  .name-usuar-gustarA {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
 /* ------------------------------------------------------------------------------------------------------------------------- */
 /* INICIO ESTILOS FEED AUTOR*/
 
@@ -1138,12 +1054,14 @@ header{
     margin-left: 50px;
 }
 
-/* estilos del link */
-.ver-mas{
+/* MODAL FEED AUTORES  */
+
+/* Estilos del overlay del modal */
+.ver-mas-Autores{
     position: relative;
     left: 87%;
-    top: -6vh;
-    font-size: 20px;
+    top: -3vh;
+    font-size: 15px;
     border: 1px solid  #503B31;
     padding: 8px 15px 8px 15px;
     border-radius: 25px;
@@ -1151,60 +1069,101 @@ header{
     color: #503B31;
 }
 
-.ver-mas:hover{
+.ver-mas-Autores:hover{
     background-color:  #503b311a;
 }
-
-/* ---- */
-/* Estilos del overlay del modal */
-.modal-overlay-autores {
-    display: none; /* Oculta el modal por defecto */
-    position: fixed;
-    left: 0;
+  
+.modal-overlay-Autores {
+    position: fixed; /* Mantiene el modal fijo en la pantalla */
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
-    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
     align-items: center;
+    justify-content: center;
     z-index: 9999;
 }
 
-/* Contenido del modal */
-.modal-content-autores {
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 20px;
-    width: 50%;
-    max-width: 450px;
+  /* Contenido del modal */
+  .modal-content-Autores {
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    max-height: 70vh; 
+    overflow-y: auto; 
     position: relative;
+    
+  }
+
+  /* Personalizar la barra de desplazamiento */
+.modal-content-Autores::-webkit-scrollbar {
+    width: 4px; /* Ancho de la barra de desplazamiento */
+  }
+  
+  .modal-content-Autores::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-content-Autores::-webkit-scrollbar-thumb {
+    background-color: #503B31; /* Color del "pulgar" de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-content-Autores::-webkit-scrollbar-thumb:hover {
+    background-color: #333; /* Color del "pulgar" cuando se pasa el mouse por encima */
+  }
+  
+ /* Cabecera del modal que se queda fija al hacer scroll */
+
+
+.Header-modal-Autores {
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white; /* Asegura que el fondo sea visible cuando sea sticky */
+    z-index: 10; /* Asegura que esté por encima del contenido desplazable */
 }
 
+/* Botón para cerrar el modal */
+.close-btn-Autores {
+    position: absolute;
+    top: 2px; /* Ajusta según el padding de .Header-modalA */
+    right: 20px;
+    font-size: 28px;
+    color: #424242d8;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+  
+  .close-btn-Autores:hover {
+    color: #0000008a;
+  }
 /* Estilo del título dentro del modal */
-.title-modal-feedUsuariio {
-    color: #503b31;
+.titulo-modal-Autores {
+    margin: 5px 20px 5px 20px;
+    font-size: 16px;
     text-align: center;
-    margin: 0; 
+    font-weight: 450;
 }
 
 /* Contenedor de la lista de amigos dentro del modal */
-.modal-autores-container {
-    display: flex;
-    flex-direction: column; 
-    gap: 20px;
-    max-height: 500px; 
-    overflow-y: scroll; /* Scroll para amigos */
-    margin-top: 30px;
-    scrollbar-width: thin; /* Para navegadores como Firefox */
-    scrollbar-color: #503b31 #f5f5f5;
-}
+.modal-Autores-content{
+    margin: 20px 20px 10px 20px;
+  }
 
 /* Estilo de cada amigo dentro del modal */
-.modal-autor-item {
+.modal-profile-Autores {
     display: flex;
     align-items: center;
-    gap: 15px; /* Espaciado entre la imagen y el nombre */
-}
+    margin-bottom: 15px;
+  }
 
 /* Estilo de las imágenes dentro del modal */
 .modal-img-autores {
@@ -1217,31 +1176,22 @@ header{
 
 /* Estilo de los nombres de usuario dentro del modal */
 .modal-title-autores {
-    color: black;
-    font-size: 18px; /* Ajusta el tamaño del texto si es necesario */
-    text-decoration: none; /* Elimina el subrayado en los enlaces */
+    margin: 0 0 0 10px;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
 }
 
 .modal-title-autores:hover {
-    text-decoration: underline; /* Subraya el nombre al pasar el mouse */
-}
-
-/* Estilo del botón de cerrar */
-.close-autores {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    font-size: 34px;
+    font-size: 18px;
+    color: #333;
     text-decoration: none;
-    color: #503b31; /* Color del botón de cerrar */
-    cursor: pointer;
 }
 
-/* Estilo al abrir el modal */
-.modal-overlay-autores:target {
-    display: flex;
-}
+
 /* ------ */
+
+
 /* autores */
 
 .container-autores {
@@ -1283,96 +1233,10 @@ header{
     text-align: center; /* Asegura que el texto esté centrado */
 }
 
-/* otros */
-/* Estilos del overlay del modal */
-.modal-overlay-autor {
-    display: none; /* Oculta el modal por defecto */
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-/* Contenido del modal */
-.modal-content-autor {
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 20px;
-    width: 50%;
-    max-width: 450px;
-    position: relative;
-}
-
-/* Estilo del título dentro del modal */
-.title-modal-feedUsuariio {
-    color: #503b31;
-    text-align: center;
-    margin: 0; 
-}
-
-/* Contenedor de la lista de amigos dentro del modal */
-.modal-autor-container {
-    display: flex;
-    flex-direction: column; 
-    gap: 20px;
-    max-height: 500px; 
-    overflow-y: scroll; /* Scroll para amigos */
-    margin-top: 30px;
-    scrollbar-width: thin; /* Para navegadores como Firefox */
-    scrollbar-color: #503b31 #f5f5f5;
-}
- 
-/* Estilo de cada amigo dentro del modal */
-.modal-autor2-item {
-    display: flex;
-    align-items: center;
-    gap: 15px; /* Espaciado entre la imagen y el nombre */
-}
-
-/* Estilo de las imágenes dentro del modal */
-.modal-img-autor {
-    border-radius: 50%;
-    border: 1px solid #000000;
-    height: 80px; /* Ajusta el tamaño si es necesario */
-    width: 80px; /* Ajusta el tamaño si es necesario */
-    object-fit: cover;
-}
-
-/* Estilo de los nombres de usuario dentro del modal */
-.modal-title-autor {
-    color: black;
-    font-size: 18px; /* Ajusta el tamaño del texto si es necesario */
-    text-decoration: none; /* Elimina el subrayado en los enlaces */
-}
-
-.modal-title-autor:hover {
-    text-decoration: underline; /* Subraya el nombre al pasar el mouse */
-}
-
-/* Estilo del botón de cerrar */
-.close-autor {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    font-size: 34px;
-    text-decoration: none;
-    color: #503b31; /* Color del botón de cerrar */
-    cursor: pointer;
-}
-
-/* Estilo al abrir el modal */
-.modal-overlay-autor:target {
-    display: flex;
-}
-
 /* INICIO MEDIA AUTORES*/
 
 /* FIN MEDIA AUTORES */
+
 /* FIN ESTILOS FEED AUTOR */
 
 /* -------------------------------------------------------------------------------------------------------------------------------- */
@@ -1411,30 +1275,12 @@ header{
 }
 
 .title-section-libro{
-    padding: 30px;
+    padding: 50px 0 30px 30px;
     color: #503B31;
     margin-left: 20px;
     font-family: 'Poppins', sans-serif;
     font-size: 35px;  
 }
-
-/* estilos del link */
-.ver-mas{
-    position: relative;
-    left: 87%;
-    top: -7vh;
-    font-size: 20px;
-    border: 1px solid  #503B31;
-    padding: 8px 15px 8px 15px;
-    border-radius: 25px;
-    text-decoration: none;
-    color: #503B31;
-}
-
-.ver-mas:hover{
-    background-color:  #503b311a;
-}
-
 
 
 .libro-container {
@@ -1442,7 +1288,7 @@ header{
     flex-wrap: wrap;
     gap: 45px; /* Espacio de 10px entre los elementos */
     justify-content: center;
-    margin: 30px 30px 70px 30px;
+    margin: 30px 30px 10px 30px;
 }
 
 .libro-item {
@@ -1489,6 +1335,281 @@ header{
     height: auto;
     margin: 0 2px; /* Espacio entre las estrellas */
 }
+
+
+/* Estilos del Modal */
+.ver-mas-FeedLibro{
+    position: relative;
+    left: 90%;
+    top: -48vh;
+    font-size: 15px;
+    margin-right: 90px;
+    border: 1px solid  #503B31;
+    padding: 8px 15px 8px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #503B31;
+}
+
+.ver-mas-FeedLibro:hover{
+    background-color:  #503b311a;
+}
+
+.modal-overlay-FeedLibro {
+    position: fixed; /* Mantiene el modal fijo en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Estilos del enlace que abre el modal */
+.modal-content-FeedLibro {
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    border-radius: 8px;
+    max-width: 340px;
+    width: 100%;
+    max-height: 70vh; 
+    overflow-y: auto; 
+    position: relative;
+    
+  }
+
+  /* Personalizar la barra de desplazamiento */
+.modal-content-FeedLibro::-webkit-scrollbar {
+    width: 4px; /* Ancho de la barra de desplazamiento */
+  }
+  
+  .modal-content-FeedLibro::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-content-FeedLibro::-webkit-scrollbar-thumb {
+    background-color: #503B31; /* Color del "pulgar" de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-content-FeedLibro::-webkit-scrollbar-thumb:hover {
+    background-color: #333; /* Color del "pulgar" cuando se pasa el mouse por encima */
+  }
+  
+ /* Cabecera del modal que se queda fija al hacer scroll */
+
+
+.Header-modal-FeedLibro {
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white; /* Asegura que el fondo sea visible cuando sea sticky */
+    z-index: 10; /* Asegura que esté por encima del contenido desplazable */
+}
+
+/* Botón para cerrar el modal */
+.close-btn-FeedLibro {
+    position: absolute;
+    top: 2px; /* Ajusta según el padding de .Header-modalA */
+    right: 20px;
+    font-size: 28px;
+    color: #424242d8;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+  
+  .close-btn-FeedLibro:hover {
+    color: #0000008a;
+  }
+
+  .titulo-modal-FeedLibro{
+    margin: 5px 20px 5px 20px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 450;
+  }
+
+  .modal-FeedLibro-content{
+    margin: 20px 20px 10px 20px;
+    
+  }
+  
+
+  /* Estilo de cada amigo dentro del modal */
+.modal-FeedLibro-libros {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+/* Estilo de las imágenes dentro del modal */
+.modal-img-FeedLibro {
+    border-radius: 5px;
+    border: 1px solid #000000;
+    height: 140px; /* Ajusta el tamaño si es necesario */
+    width: 90px; /* Ajusta el tamaño si es necesario */
+    object-fit: cover;
+}
+
+/* Estilo de los nombres de usuario dentro del modal */
+.modal-title-FeedLibro {
+    margin: 0 0 0 10px;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    
+}
+
+.modal-title-FeedLibro:hover {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+}
+/* fin modal2 */
+
+/* MODAL de los libros2 */
+/* Estilos del Modal */
+.ver-mas-FeedLibro2{
+    position: relative;
+    left: 90%;
+    top: -48vh;
+    font-size: 15px;
+    margin-right: 90px;
+    border: 1px solid  #503B31;
+    padding: 8px 15px 8px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #503B31;
+}
+
+.ver-mas-FeedLibro2:hover{
+    background-color:  #503b311a;
+}
+
+.modal-overlay-FeedLibro2 {
+    position: fixed; /* Mantiene el modal fijo en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Estilos del enlace que abre el modal */
+.modal-content-FeedLibro2 {
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    border-radius: 8px;
+    max-width: 340px;
+    width: 100%;
+    max-height: 70vh; 
+    overflow-y: auto; 
+    position: relative;
+    
+  }
+
+  /* Personalizar la barra de desplazamiento */
+.modal-content-FeedLibro2::-webkit-scrollbar {
+    width: 4px; /* Ancho de la barra de desplazamiento */
+  }
+  
+  .modal-content-FeeFeedLibro2dLibro::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-content-FeedLibro2::-webkit-scrollbar-thumb {
+    background-color: #503B31; /* Color del "pulgar" de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-content-FeedLibro2::-webkit-scrollbar-thumb:hover {
+    background-color: #333; /* Color del "pulgar" cuando se pasa el mouse por encima */
+  }
+  
+ /* Cabecera del modal que se queda fija al hacer scroll */
+
+
+.Header-modal-FeedLibro2 {
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white; /* Asegura que el fondo sea visible cuando sea sticky */
+    z-index: 10; /* Asegura que esté por encima del contenido desplazable */
+}
+
+/* Botón para cerrar el modal */
+.close-btn-FeedLibro2 {
+    position: absolute;
+    top: 2px; /* Ajusta según el padding de .Header-modalA */
+    right: 20px;
+    font-size: 28px;
+    color: #424242d8;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+  
+  .close-btn-FeedLibro2:hover {
+    color: #0000008a;
+  }
+
+  .titulo-modal-FeedLibro2{
+    margin: 5px 20px 5px 20px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 450;
+  }
+
+  .modal-FeedLibro2-content{
+    margin: 20px 20px 10px 20px;
+    
+  }
+  
+
+  /* Estilo de cada amigo dentro del modal */
+.modal-FeedLibro2-libros {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+/* Estilo de las imágenes dentro del modal */
+.modal-img-FeedLibro2 {
+    border-radius: 5px;
+    border: 1px solid #000000;
+    height: 140px; /* Ajusta el tamaño si es necesario */
+    width: 90px; /* Ajusta el tamaño si es necesario */
+    object-fit: cover;
+}
+
+/* Estilo de los nombres de usuario dentro del modal */
+.modal-title-FeedLibro2 {
+    margin: 0 0 0 10px;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    
+}
+
+.modal-title-FeedLibro2:hover {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+}
+/* fin modal */
+
 /* FIN CSS FEED LIBROS */
 
 /* INICIO MEDIA FEED LIBROS */
@@ -1503,6 +1624,7 @@ header{
     background-color: #fff;
     margin-top: 115px;
     max-height: 80%;
+    height: auto;
     width: 81.6%;
     max-width: 95%;
     margin-left: 14.5%; 
@@ -1518,6 +1640,7 @@ header{
     padding: 30px;
     color:  #503B31;
     margin-left: 20px;
+    margin-top: 40px;
 }
 
 .add-comunity {
@@ -1607,6 +1730,7 @@ header{
     gap: 160px; /* Espacio de 10px entre las imágenes */
     margin-left: 160px;
     margin-top: 50px;
+    
 }
 
 .autor {
@@ -1627,6 +1751,32 @@ header{
     justify-content: center;
     text-align: center; /* Asegura que el texto esté centrado */
 }
+
+.link-libro-mas {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    top: -100px; /* Desplaza hacia arriba el enlace */
+    left: -80px;
+  }
+  
+  .ver-mas-libros-link {
+    text-decoration: none;
+    color: #503B31;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 1px solid #503B31;
+    font-weight: 500;
+    border-radius: 5px;
+     
+    
+  }
+  
+  .ver-mas-libros-link:hover {
+    background-color: #503b311a;
+    
+  }
 /* FIN CSS FEED USURIO */
 
 /* INICIO MEDI FEED USUARIO */
@@ -2037,79 +2187,111 @@ header{
 
 /* estilos del link */
 /* Estilo para el botón "Ver más" */
-.ver-mas-ficha-libro {
-    background-color: #ffffff;
-    color: #503b31;
-    border: 1px solid #503b31;
-    padding: 10px 20px;
-    cursor: pointer;
-    text-align: center;
+
+.ver-mas-reseña{
+    position: relative;
+    left: 87%;
+    top: -3vh;
+    font-size: 15px;
+    border: 1px solid  #503B31;
+    padding: 8px 15px 8px 15px;
+    border-radius: 05px;
     text-decoration: none;
-    display: inline-block;
-    font-size: 22px;
-    margin: 20px 0 10px 0;
-    border-radius: 5px;
+    color: #503B31;
 }
 
-.ver-mas-ficha-libro{
-    color: #503b31;
-    text-decoration: none;
+.ver-mas-reseña:hover{
+    background-color:  #503b311a;
 }
-
-.ver-mas-ficha-libro:hover {
-    background-color: #503b3133;
-}
-
-/* Estilo general para el modal */
-.modal-ficha-libro {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
+  
+.modal-overlay-reseña {
+    position: fixed; /* Mantiene el modal fijo en la pantalla */
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding-top: 60px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
 }
 
-/* Estilo para el contenido del modal */
-.modal-content-ficha-libro {
-    background-color: #fefefe;
+  /* Contenido del modal */
+  .modal-content-reseña {
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    max-height: 70vh; 
+    overflow-y: auto; 
+    position: relative;
+    
+  }
+
+  /* Personalizar la barra de desplazamiento */
+.modal-content-reseña::-webkit-scrollbar {
+    width: 4px; /* Ancho de la barra de desplazamiento */
+  }
+  
+  .modal-content-reseña::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-content-reseña::-webkit-scrollbar-thumb {
+    background-color: #503B31; /* Color del "pulgar" de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-content-reseña::-webkit-scrollbar-thumb:hover {
+    background-color: #333; /* Color del "pulgar" cuando se pasa el mouse por encima */
+  }
+  
+ /* Cabecera del modal que se queda fija al hacer scroll */
+
+
+.Header-modal-reseña {
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white; /* Asegura que el fondo sea visible cuando sea sticky */
+    z-index: 10; /* Asegura que esté por encima del contenido desplazable */
+}
+
+
+
+/* Botón para cerrar el modal */
+.close-btn-reseña {
     position: absolute;
-    top: 50%; /* Centro vertical del modal */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 800px;
-    border-radius: 10px;
-    max-height: calc(80vh - 40px);
-    overflow-y: auto;
-    scrollbar-width: thin; /* Estilo para navegadores como Firefox */
-    scrollbar-color: #503b31 #f5f5f5; /* Estilo para la barra de desplazamiento */
-    margin-bottom: 50px;
-}
-
-/* Estilo para la cruz de cierre */
-.modal-close-ficha-libro {
-    position: absolute;
-    top: 10px; /* Espacio desde el borde superior */
-    right: 10px; /* Espacio desde el borde derecho */
-    font-size: 34px; /* Tamaño de la fuente para el icono de cierre */
-    color: #503b31; /* Color del icono de cierre */
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.modal-close-ficha-libro:hover,
-.modal-close-ficha-libro:focus {
-    color: #503b31;
-    text-decoration: none;
+    top: 2px; /* Ajusta según el padding de .Header-modalA */
+    right: 20px;
+    font-size: 28px;
+    color: #424242d8;
+    background: none;
+    border: none;
     cursor: pointer;
 }
+  
+  .close-btn-reseña:hover {
+    color: #0000008a;
+  }
+
+  /* Estilo del título dentro del modal */
+.titulo-modal-reseña {
+    margin: 5px 20px 5px 20px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 450;
+}
+
+/* Contenedor de la lista de amigos dentro del modal */
+.modal-reseña-content{
+    margin: 20px 20px 10px 20px;
+  }
+
 
 /* Estilo para el contenido de la reseña dentro del modal */
 .modal-review-ficha-libro {
@@ -2304,131 +2486,133 @@ header{
 }
 
 
-/* boton de ditar  */
-.editar-btn-miperfil {
-    margin-top: -13vh;
-    margin-left: 280vh; /* Espacio de 50px a la derecha de la foto de perfil */
-    padding: 5px 30px;
-    background-color: #ffffff; /* Cambia el color según tu necesidad */
-    color: #503B31;
-    border: 1px solid #22223B;
+/* Estilos del overlay del modal */
+.ver-mas-Miperfil{
+    position: relative;
+    left: 87%;
+    top: -3vh;
+    font-size: 15px;
+    border: 1px solid  #503B31;
+    padding: 8px 15px 8px 15px;
     border-radius: 25px;
-    cursor: pointer;
-    font-size: 18px;
     text-decoration: none;
+    color: #503B31;
 }
 
-.editar-btn-miperfil:hover {
-    background-color: #503b3133; /* Color al pasar el mouse */
+.ver-mas-Miperfil:hover{
+    background-color:  #503b311a;
 }
-
-/* Estilo base para el modal */
-.modal-miperfil-usuario {
-    display: none; /* Esconder el modal por defecto */
-    position: fixed;
+  
+.modal-overlay-Miperfil {
+    position: fixed; /* Mantiene el modal fijo en la pantalla */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-    overflow: auto;
-}
-
-/* Mostrar el modal cuando el enlace apunta a su id */
-#editModal:target {
-    display: block;
-}
-
-.modal-content-miperfil-usuario {
-    background-color: #ffffff;
-    margin: auto;
-    padding: 0;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 600px;
-    max-height: 80%;
-    overflow-y: auto;
-    position: relative;
-    top: 65px;
-    color: #503B31;
-    scrollbar-width: thin; /* Para navegadores como Firefox */
-    scrollbar-color: #503b31 #f5f5f5;
-}
-
-.header-miperfil-usuario {
-    position: sticky;
-    top: 0;
-    z-index: 9999; /* Asegura que el header esté por encima del contenido al hacer scroll */
-    background-color: #ffffff; /* Color de fondo del header */
-    padding: 10px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-bottom: 1.5px solid #503B31;
+    background-color: rgba(0, 0, 0, 0.5); 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    z-index: 9999;
+}
+
+  /* Contenido del modal */
+  .modal-content-Miperfil {
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    border-radius: 8px;
+    max-width: 550px;
+    width: 100%;
+    max-height: 70vh; 
+    overflow-y: auto; 
+    position: relative;
+    
+  }
+
+  /* Personalizar la barra de desplazamiento */
+.modal-content-Miperfil::-webkit-scrollbar {
+    width: 4px; /* Ancho de la barra de desplazamiento */
+  }
+  
+  .modal-content-Miperfil::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-content-Miperfil::-webkit-scrollbar-thumb {
+    background-color: #503B31; /* Color del "pulgar" de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-content-Miperfil::-webkit-scrollbar-thumb:hover {
+    background-color: #333; /* Color del "pulgar" cuando se pasa el mouse por encima */
+  }
+  
+ /* Cabecera del modal que se queda fija al hacer scroll */
+
+
+ .Header-modal-Miperfil {
+    border-bottom: 1px solid #000;
+    padding: 5px 10px;
+    position: sticky;
+    top: 0;
+    background-color: white; /* Asegura que el fondo sea visible cuando sea sticky */
+    z-index: 10; /* Asegura que esté por encima del contenido desplazable */
+    display: flex; /* Utiliza flexbox para alinear los elementos */
+    justify-content: space-between; /* Espacia los elementos de manera uniforme */
+    align-items: center; /* Centra los elementos verticalmente */
 }
 
 
-
-.close-miperfil-usuario {
-    color: #503B31;
+.close-btn-Miperfil {
     font-size: 28px;
-    font-weight: bold;
+    color: #424242d8;
+    background: none;
+    border: none;
     cursor: pointer;
-    text-decoration: none; /* Asegura que no haya subrayado */
-    position: absolute; /* Posiciona el botón */
-    top: -2px; /* Ajusta según sea necesario */
-    left: 10px; /* Ajusta según sea necesario */
-    padding: 10px; /* Aumenta el área clicable */
-    z-index: 1000; /* Asegura que esté encima de otros elementos */
-  }
+    margin-right: 20px; /* Espacio de 20px a la derecha del botón de cerrar */
+}
 
-  /* Opcional: Estilos para cuando se pasa el cursor sobre el botón */
-.close-miperfil-usuario:hover {
-    color: black; /* Cambia el color cuando se pasa el cursor */
-  }
+.close-btn-Miperfil:hover {
+    color: #0000008a;
+}
 
-.title-editar-miperfil-usuario {
+.titulo-modal-Miperfil {
     font-size: 18px;
-    margin-top: 10px;
-    margin-left: -40vh;
-    padding: 0;
-    flex-grow: 1;
+    font-weight: 450;
+    margin: 0; /* Elimina márgenes para alinear con flexbox */
     text-align: center;
-    color: #503B31;
-    font-weight: 600;
+    flex: 1; /* Hace que el título ocupe el espacio disponible entre el botón de cerrar y el botón de guardar */
 }
 
 .guardar-cambios-btn-miperfil-usuario {
     background-color: #ffffff;
     color: #503B31;
     border: none;
-    padding: 8px 16px;
+    padding: 4px 10px;
     border: 1px solid #503B31;
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
-    margin-right: 10px;
 }
 
 .guardar-cambios-btn-miperfil-usuario:hover {
     background-color: #503b311a;
 }
 
-/* Estilo para el contenido del modal */
-.modal-content-body-miperfil-usuario {
-    padding: 10px 20px 20px 20px;
-}
+
+/* Contenedor de la lista de amigos dentro del modal */
+.modal-Miperfil-content{
+    margin: 20px 20px 10px 20px;
+  }
 
 /* Estilo para el formulario */
-.edit-form {
+.edit-form-Miperfil {
     /* Puedes agregar estilos adicionales aquí si es necesario */
 }
 
 /* Estilo para los labels */
-.edit-form-label {
+.edit-form-label-Miperfil {
     display: block;
     margin-top: 10px;
     font-size: 16px;
@@ -2437,7 +2621,7 @@ header{
 }
 
 /* Estilo para los inputs */
-.edit-form-input, .edit-form-select {
+.edit-form-input-Miperfil, .edit-form-select-Miperfil {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -2448,7 +2632,7 @@ header{
 }
 
 /* Estilo para el textarea */
-.edit-form-textarea {
+.edit-form-textarea-Miperfil {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -2461,30 +2645,30 @@ header{
 }
 
 /* Estilo cuando los elementos están en foco */
-.edit-form-input:focus, .edit-form-textarea:focus, .edit-form-select:focus {
+.edit-form-input-Miperfil:focus, .edit-form-textarea-Miperfil:focus, .edit-form-select-Miperfil:focus {
     outline: none;
     border-color: #000000;
 }
 
 /* Estilo adicional para placeholders */
-.edit-form-input::placeholder, .edit-form-textarea::placeholder {
+.edit-form-input-Miperfil::placeholder, .edit-form-textarea-Miperfil::placeholder {
     color: #503B31;
 }
 
 /* genero modal */
 
-.genre-checkbox {
+.genre-checkbox-Miperfil {
     display: none; /* Oculta el checkbox */
   }
 
-.checkbox-group {
+.checkbox-group-Miperfil {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 20px;
   }
   
-  .genre-label {
+  .genre-label-Miperfil {
     display: inline-flex;
     align-items: center;
     padding: 10px 15px;
@@ -2495,19 +2679,19 @@ header{
     transition: all 0.3s ease;
   }
   
-  .genre-icon {
+  .genre-icon-Miperfil {
     width: 20px;
     height: 20px;
     margin-right: 8px;
   }
   
-  .genre-checkbox:checked + .genre-label {
+  .genre-checkbox-Miperfil:checked + .genre-label-Miperfil {
     border-color: #000;
     background-color: #f0f0f0;
     color: #000;
   }
   
-  .genre-label:hover {
+  .genre-label-Miperfil:hover {
     border-color: #888;
     background-color: #f7f7f7;
   }
@@ -2683,97 +2867,140 @@ header{
 /* MODAL DE LOS LIBROS */
 
 /* Estilos del Modal */
-.modal-overlay-libro-miperfil {
-    display: none; /* Oculto por defecto */
-    position: fixed; /* Fijo en la pantalla */
-    z-index: 1000; /* En la parte superior */
-    left: 0;
+.ver-mas-MiperfilLi{
+    position: relative;
+    left: 85.5%;
+    top: -40vh;
+    font-size: 15px;
+    margin-right: 90px;
+    border: 1px solid  #503B31;
+    padding: 8px 15px 8px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #503B31;
+}
+
+.ver-mas-MiperfilLi:hover{
+    background-color:  #503b311a;
+}
+
+.modal-overlay-MiperfilLi {
+    position: fixed; /* Mantiene el modal fijo en la pantalla */
     top: 0;
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Altura completa */
-    overflow: hidden; /* Desplazamiento si es necesario */
-    background-color: rgba(0,0,0,0.4); /* Fondo oscuro con opacidad */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Estilos del enlace que abre el modal */
+.modal-content-MiperfilLi {
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    border-radius: 8px;
+    max-width: 340px;
+    width: 100%;
+    max-height: 70vh; 
+    overflow-y: auto; 
+    position: relative;
     
   }
 
+  /* Personalizar la barra de desplazamiento */
+.modal-content-MiperfilLi::-webkit-scrollbar {
+    width: 4px; /* Ancho de la barra de desplazamiento */
+  }
   
+  .modal-content-MiperfilLi::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
   
-  .modal-content-libro-miperfil {
-    position: relative; /* Posicionamiento relativo para el contenido del modal */
-    background-color: #fefefe;
-    margin: 5% auto; /* Centramos el modal */
-    padding: 0; /* Sin relleno interno aquí */
-    border: 1px solid #888;
-    width: 80%; /* Ancho del modal */
-    max-width: 320px; /* Ancho máximo */
-    height: 80vh; /* Altura del modal */
-    overflow: hidden; /* Ocultar el desbordamiento del modal */
-    border-radius: 8px; /* Bordes redondeados */
+  .modal-content-MiperfilLi::-webkit-scrollbar-thumb {
+    background-color: #503B31; /* Color del "pulgar" de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
   
-   
+  .modal-content-MiperfilLi::-webkit-scrollbar-thumb:hover {
+    background-color: #333; /* Color del "pulgar" cuando se pasa el mouse por encima */
+  }
+  
+ /* Cabecera del modal que se queda fija al hacer scroll */
+
+
+.Header-modal-MiperfilLi {
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white; /* Asegura que el fondo sea visible cuando sea sticky */
+    z-index: 10; /* Asegura que esté por encima del contenido desplazable */
+}
+
+/* Botón para cerrar el modal */
+.close-btn-MiperfilLi {
+    position: absolute;
+    top: 2px; /* Ajusta según el padding de .Header-modalA */
+    right: 20px;
+    font-size: 28px;
+    color: #424242d8;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+  
+  .close-btn-MiperfilLi:hover {
+    color: #0000008a;
   }
 
-  
-  
-  .modal-header-libro-miperfil {
-    position: sticky; /* Fijo dentro del contenedor del modal */
-    top: 0; /* Pegado a la parte superior del modal */
-    background-color: #fefefe; /* Fondo para el título */
-    padding: 10px; /* Espaciado alrededor del título */
-    border-bottom: 1px solid #888; /* Línea debajo del título */
-    z-index: 1001; /* Asegura que esté encima del contenido del modal */
-  }
-  
-  .modal-close-libro-miperfil {
-    float: right;
-    color: #503B31;
-    font-size: 28px;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-    margin: -4px 10px 10px 0;
-  }
-  
-  .modal-title-libro-miperfil {
-    margin: 5px ; 
-    font-size: 25px;
+  .titulo-modal-MiperfilLi{
+    margin: 5px 20px 5px 20px;
+    font-size: 20px;
     text-align: center;
+    font-weight: 450;
+  }
+
+  .modal-MiperfilLi-content{
+    margin: 20px 20px 10px 20px;
+    
   }
   
-  .modal-books-container-libro-miperfil {
+
+  /* Estilo de cada amigo dentro del modal */
+.modal-MiperfilLi-libros {
     display: flex;
-    flex-direction: column; /* Alinea los libros verticalmente */
-    gap: 15px; /* Espaciado entre elementos */
-    margin-top: 10px;
-    padding: 5px 5px 30px 30px; /* Espaciado alrededor del contenido */
-    overflow-y: auto; /* Desplazamiento vertical si es necesario */
-    height: calc(100% - 40px); /* Ajusta la altura para el contenido desplazable */
-    scrollbar-width: thin; /* Para navegadores como Firefox */
-    scrollbar-color: #503b31 #f5f5f5;
+    align-items: center;
+    margin-bottom: 15px;
   }
+
+/* Estilo de las imágenes dentro del modal */
+.modal-img-MiperfilLi {
+    border-radius: 5px;
+    border: 1px solid #000000;
+    height: 140px; /* Ajusta el tamaño si es necesario */
+    width: 90px; /* Ajusta el tamaño si es necesario */
+    object-fit: cover;
+}
+
+/* Estilo de los nombres de usuario dentro del modal */
+.modal-title-MiperfilLi {
+    margin: 0 0 0 10px;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    
+}
+
+.modal-title-MiperfilA:hover {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+}
   
-  .modal-book-item-libro-miperfil {
-    display: flex;
-    align-items: center; /* Alinea verticalmente la imagen y el texto */
-    gap: 10px; /* Espaciado entre imagen y texto */
-    margin-bottom: 10px; /* Espaciado inferior */
-  }
-  
-  .modal-book-img-libro-miperfil {
-    width: 60px; /* Ancho de la imagen */
-    height: auto; /* Mantener la proporción de la imagen */
-    border-radius: 5px; /* Bordes redondeados */
-  }
-  
-  .modal-book-title-libro-miperfil {
-    font-size: 16px;
-    margin: 0;
-  }
-  
-  /* Mostrar el modal cuando el enlace apunta al ID del modal */
-  #modal-libro-miperfil:target {
-    display: block;
-  }
   /* finmodal -libro-miperfil */
 
 
@@ -2857,120 +3084,137 @@ header{
 
 
 /* Modal AMIgos */
+.ver-mas-MiperfilA{
+    position: relative;
+    left: 92%;
+    top: -23vh;
+    font-size: 15px;
+    border: 1px solid  #503B31;
+    padding: 8px 15px 8px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #503B31;
+}
+
+.ver-mas-MiperfilA:hover{
+    background-color:  #503b311a;
+}
+
+.modal-overlay-MiperfilA {
+    position: fixed; /* Mantiene el modal fijo en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
 
 /* Estilos del enlace que abre el modal */
-.modal-open {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #503b31; /* Color de fondo del botón */
-    text-decoration: none;
-    border-radius: 5px; /* Bordes redondeados */
-    text-align: center;
-    cursor: pointer;
+.modal-content-MiperfilA {
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    border-radius: 8px;
+    max-width: 340px;
+    width: 100%;
+    max-height: 70vh; 
+    overflow-y: auto; 
+    position: relative;
+    
+  }
+
+  /* Personalizar la barra de desplazamiento */
+.modal-content-MiperfilA::-webkit-scrollbar {
+    width: 4px; /* Ancho de la barra de desplazamiento */
   }
   
-  /* Estilo para el enlace cuando se pasa el mouse por encima */
-  .modal-open:hover {
-    background-color: #402a1f; /* Color de fondo en hover */
+  .modal-content-MiperfilA::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
   }
   
-  /* Estilos del Modal */
-  .modal-amigos-miperfil {
-    display: none; /* Oculto por defecto */
-    position: fixed; /* Fijo en la pantalla */
-    z-index: 1000; /* En la parte superior */
-    left: 0;
+  .modal-content-MiperfilA::-webkit-scrollbar-thumb {
+    background-color: #503B31; /* Color del "pulgar" de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-content-MiperfilA::-webkit-scrollbar-thumb:hover {
+    background-color: #333; /* Color del "pulgar" cuando se pasa el mouse por encima */
+  }
+  
+ /* Cabecera del modal que se queda fija al hacer scroll */
+
+
+.Header-modal-MiperfilA {
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    position: sticky;
     top: 0;
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Altura completa */
-    overflow: hidden; /* Desplazamiento si es necesario */
-    background-color: rgba(0,0,0,0.4); /* Fondo oscuro con opacidad */
-  }
-  
-  .modal-content-amigos-miperfil {
-    position: relative; /* Posicionamiento relativo para el contenido del modal */
-    background-color: #fefefe;
-    margin: 5% auto; /* Centramos el modal */
-    padding: 0; /* Sin relleno interno aquí */
-    border: 1px solid #888;
-    width: 80%; /* Ancho del modal */
-    max-width: 290px; /* Ancho máximo */
-    height: 80vh; /* Altura del modal */
-    overflow: hidden; /* Ocultar el desbordamiento del modal */
-    border-radius: 8px; /* Bordes redondeados */
-   
-  }
-  
-  /* Contenedor del encabezado del Modal */
-.modal-header-amigos-miperfil {
-    display: flex;
-    align-items: center; /* Alinea verticalmente el contenido */
-    justify-content: space-between; /* Espacio entre el título y el botón de cerrar */
-    padding: -5px; /* Espaciado interno */
-    border-bottom: 2px solid #ccc; /* Borde inferior */
-  }
-  
-  /* Botón de cerrar */
-  .modal-close-amigos-miperfil {
-    float: right;
-    color: #503B31;
+    background-color: white; /* Asegura que el fondo sea visible cuando sea sticky */
+    z-index: 10; /* Asegura que esté por encima del contenido desplazable */
+}
+
+/* Botón para cerrar el modal */
+.close-btn-MiperfilA {
+    position: absolute;
+    top: 2px; /* Ajusta según el padding de .Header-modalA */
+    right: 20px;
     font-size: 28px;
-    font-weight: bold;
-    text-decoration: none;
+    color: #424242d8;
+    background: none;
+    border: none;
     cursor: pointer;
-    margin: 2px 10px 10px 0;
-  }
+}
   
-  /* Título del Modal */
-  .modal-title-amigos-miperfil {
-    margin: 8px 0 1px 100px; 
-    font-size: 25px;
+  .close-btn-MiperfilA:hover {
+    color: #0000008a;
+  }
+
+  .titulo-modal-MiperfilA{
+    margin: 5px 20px 5px 20px;
+    font-size: 18px;
     text-align: center;
-    margin-bottom: 10px;
+    font-weight: 450;
   }
-  
-  /* Contenedor de amigos del Modal */
-  .modal-amigos-container-amigos-miperfil {
+
+  .modal-MiperfilA-content{
+    margin: 20px 20px 10px 20px;
+    
+  }
+
+ /* Estilo de cada amigo dentro del modal */
+.modal-MiperfilA-Autores {
     display: flex;
-    flex-direction: column; /* Alinea los amigos verticalmente */
-    gap: 15px; /* Espaciado entre elementos */
-    margin-top: 10px;
-    padding: 5px 5px 30px 30px; /* Espaciado alrededor del contenido */
-    overflow-y: auto; /* Desplazamiento vertical si es necesario */
-    height: calc(100% - 40px); /* Ajusta la altura para el contenido desplazable */
-    scrollbar-width: thin; /* Ancho de la barra de desplazamiento (delgada) */
-    scrollbar-color: #503b31 #f5f5f5; /* Color del deslizador y del fondo */
+    align-items: center;
+    margin-bottom: 15px;
   }
-  
-  /* Elemento de amigo del Modal */
-  .modal-amigos-amigos-miperfil {
-    display: flex;
-    align-items: center; /* Alinea verticalmente la imagen y el texto */
-    gap: 10px; /* Espaciado entre imagen y texto */
-    margin-bottom: 10px; /* Espaciado inferior */
-  }
-  
-  /* Imagen del amigo del Modal */
-  .modal-img-amigo-amigos-miperfil {
+
+/* Estilo de las imágenes dentro del modal */
+.modal-img-MiperfilA {
     border-radius: 50%;
     border: 1px solid #000000;
-    height: 60px; /* Ajusta el tamaño si es necesario */
-    width: 60px; /* Ajusta el tamaño si es necesario */
+    height: 80px; /* Ajusta el tamaño si es necesario */
+    width: 80px; /* Ajusta el tamaño si es necesario */
     object-fit: cover;
-  }
-  
-  /* Nombre del amigo del Modal */
-  .modal-name-amigo-amigos-miperfil {
-    font-size: 16px;
-    margin: 0;
-  }
-  
-  /* Mostrar el modal cuando el enlace apunta al ID del modal */
-  #modal-amigos-miperfil:target {
-    display: block;
-  }
+}
+
+/* Estilo de los nombres de usuario dentro del modal */
+.modal-title-MiperfilA {
+    margin: 0 0 0 10px;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+}
+
+.modal-title-MiperfilA:hover {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+}
+
   
 /* fin modla amigos */
 
@@ -3032,96 +3276,139 @@ header{
 /* modal de comunidades */
 
 /* Estilos del Modal */
-.modal-comunidades-miperfil {
-    display: none; /* Oculto por defecto */
-    position: fixed; /* Fijo en la pantalla */
-    z-index: 1000; /* En la parte superior */
-    left: 0;
-    top: 0;
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Altura completa */
-    overflow: hidden; /* Desplazamiento si es necesario */
-    background-color: rgba(0,0,0,0.4); /* Fondo oscuro con opacidad */
-  }
-  
-  .modal-content-comunidades-miperfil {
-    position: relative; /* Posicionamiento relativo para el contenido del modal */
-    background-color: #fefefe;
-    margin: 5% auto; /* Centramos el modal */
-    padding: 0; /* Sin relleno interno aquí */
-    border: 1px solid #888;
-    width: 80%; /* Ancho del modal */
-    max-width: 290px; /* Ancho máximo */
-    height: 80vh; /* Altura del modal */
-    overflow: hidden; /* Ocultar el desbordamiento del modal */
-    border-radius: 8px; /* Bordes redondeados */
-  }
-  
-  /* Contenedor del encabezado del Modal */
-  .modal-header-comunidades-miperfil {
-    display: flex;
-    align-items: center; /* Alinea verticalmente el contenido */
-    justify-content: space-between; /* Espacio entre el título y el botón de cerrar */
-    padding: 10px; /* Espaciado interno */
-    border-bottom: 2px solid #ccc; /* Borde inferior */
-  }
-  
-  /* Botón de cerrar */
-  .modal-close-comunidades-miperfil {
-    color: #503B31;
-    font-size: 28px;
-    font-weight: bold;
+.ver-mas-MiperfilC{
+    position: relative;
+    left: 88%;
+    top: -25vh;
+    font-size: 15px;
+    margin-right: 90px;
+    border: 1px solid  #503B31;
+    padding: 8px 15px 8px 15px;
+    border-radius: 25px;
     text-decoration: none;
-    cursor: pointer;
+    color: #503B31;
+}
+
+.ver-mas-MiperfilC:hover{
+    background-color:  #503b311a;
+}
+
+.modal-overlay-MiperfilC {
+    position: fixed; /* Mantiene el modal fijo en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Estilos del enlace que abre el modal */
+.modal-content-MiperfilC {
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    border-radius: 8px;
+    max-width: 340px;
+    width: 100%;
+    max-height: 70vh; 
+    overflow-y: auto; 
+    position: relative;
+    
+  }
+
+  /* Personalizar la barra de desplazamiento */
+.modal-content-MiperfilC::-webkit-scrollbar {
+    width: 4px; /* Ancho de la barra de desplazamiento */
   }
   
-  /* Título del Modal */
-  .modal-title-comunidades-miperfil {
-    margin: 8px 0 1px 50px; 
-    font-size: 25px;
+  .modal-content-MiperfilC::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-content-MiperfilC::-webkit-scrollbar-thumb {
+    background-color: #503B31; /* Color del "pulgar" de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-content-MiperfilC::-webkit-scrollbar-thumb:hover {
+    background-color: #333; /* Color del "pulgar" cuando se pasa el mouse por encima */
+  }
+  
+ /* Cabecera del modal que se queda fija al hacer scroll */
+
+
+.Header-modal-MiperfilC {
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white; /* Asegura que el fondo sea visible cuando sea sticky */
+    z-index: 10; /* Asegura que esté por encima del contenido desplazable */
+}
+
+/* Botón para cerrar el modal */
+.close-btn-MiperfilC {
+    position: absolute;
+    top: 2px; /* Ajusta según el padding de .Header-modalA */
+    right: 20px;
+    font-size: 28px;
+    color: #424242d8;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+  
+  .close-btn-MiperfilC:hover {
+    color: #0000008a;
+  }
+
+  .titulo-modal-MiperfilC{
+    margin: 5px 20px 5px 20px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 450;
+  }
+
+  .modal-MiperfilC-content{
+    margin: 20px 20px 10px 20px;
     
   }
   
-  /* Contenedor de comunidades del Modal */
-  .modal-comunidades-container-comunidades-miperfil {
+
+  /* Estilo de cada amigo dentro del modal */
+.modal-MiperfilC-comuni {
     display: flex;
-    flex-direction: column; /* Alinea las comunidades verticalmente */
-    gap: 15px; /* Espaciado entre elementos */
-    margin-top: 10px;
-    padding: 5px 5px 30px 30px; /* Espaciado alrededor del contenido */
-    overflow-y: auto; /* Desplazamiento vertical si es necesario */
-    height: calc(100% - 40px); /* Ajusta la altura para el contenido desplazable */
-    scrollbar-width: thin; /* Ancho de la barra de desplazamiento (delgada) */
-    scrollbar-color: #503b31 #f5f5f5; /* Color del deslizador y del fondo */
+    align-items: center;
+    margin-bottom: 15px;
   }
-  
-  /* Elemento de comunidad del Modal */
-  .modal-comunidad-comunidades-miperfil {
-    display: flex;
-    align-items: center; /* Alinea verticalmente la imagen y el texto */
-    gap: 10px; /* Espaciado entre imagen y texto */
-    margin-bottom: 10px; /* Espaciado inferior */
-  }
-  
-  /* Imagen de la comunidad del Modal */
-  .modal-img-comunidad-comunidades-miperfil {
+
+/* Estilo de las imágenes dentro del modal */
+.modal-img-MiperfilC {
     border-radius: 50%;
     border: 1px solid #000000;
-    height: 60px; /* Ajusta el tamaño si es necesario */
-    width: 60px; /* Ajusta el tamaño si es necesario */
+    height: 80px; /* Ajusta el tamaño si es necesario */
+    width: 80px; /* Ajusta el tamaño si es necesario */
     object-fit: cover;
-  } 
-  
-  /* Nombre de la comunidad del Modal */
-  .modal-name-comunidad-comunidades-miperfil {
-    font-size: 16px;
-    margin: 0;
-  }
-  
-  /* Mostrar el modal cuando el enlace apunta al ID del modal */
-  #modal-comunidades-miperfil:target {
-    display: block;
-  }
+}
+
+/* Estilo de los nombres de usuario dentro del modal */
+.modal-title-MiperfilC {
+    margin: 0 0 0 10px;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    
+}
+
+.modal-title-MiperfilC:hover {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+}
 /* fin modal comunidades */
 
 /* medallas */
@@ -3530,121 +3817,137 @@ header{
 }
 
 /* Modal amigos perfil usuario */
-/* Estilos del enlace que abre el modal */
-.modal-open {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #503b31; /* Color de fondo del botón */
+/* Modal AMIgos */
+.ver-mas-PerfilUsuaA{
+    position: relative;
+    left: 92%;
+    top: -23vh;
+    font-size: 15px;
+    border: 1px solid  #503B31;
+    padding: 8px 15px 8px 15px;
+    border-radius: 25px;
     text-decoration: none;
-    border-radius: 5px; /* Bordes redondeados */
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  /* Estilo para el enlace cuando se pasa el mouse por encima */
-  .modal-open:hover {
-    background-color: #402a1f; /* Color de fondo en hover */
-  }
-  
-  /* Estilos del Modal */
-  .modal-amigos-perfilUsua {
-    display: none; /* Oculto por defecto */
-    position: fixed; /* Fijo en la pantalla */
-    z-index: 1000; /* En la parte superior */
-    left: 0;
-    top: 0;
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Altura completa */
-    overflow: hidden; /* Desplazamiento si es necesario */
-    background-color: rgba(0,0,0,0.4); /* Fondo oscuro con opacidad */
-  }
-  
-  .modal-content-amigos-perfilUsua {
-    position: relative; /* Posicionamiento relativo para el contenido del modal */
-    background-color: #fefefe;
-    margin: 5% auto; /* Centramos el modal */
-    padding: 0; /* Sin relleno interno aquí */
-    border: 1px solid #888;
-    width: 80%; /* Ancho del modal */
-    max-width: 290px; /* Ancho máximo */
-    height: 80vh; /* Altura del modal */
-    overflow: hidden; /* Ocultar el desbordamiento del modal */
-    border-radius: 8px; /* Bordes redondeados */
-   
-  }
-  
-  /* Contenedor del encabezado del Modal */
-.modal-header-amigos-perfilUsua {
-    display: flex;
-    align-items: center; /* Alinea verticalmente el contenido */
-    justify-content: space-between; /* Espacio entre el título y el botón de cerrar */
-    padding: -5px; /* Espaciado interno */
-    border-bottom: 2px solid #ccc; /* Borde inferior */
-  }
-  
-  /* Botón de cerrar */
-  .modal-close-amigos-perfilUsua {
-    float: right;
     color: #503B31;
+}
+
+.ver-mas-PerfilUsuaA:hover{
+    background-color:  #503b311a;
+}
+
+.modal-overlay-PerfilUsuaA {
+    position: fixed; /* Mantiene el modal fijo en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Estilos del enlace que abre el modal */
+.modal-content-PerfilUsuaA {
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    border-radius: 8px;
+    max-width: 340px;
+    width: 100%;
+    max-height: 70vh; 
+    overflow-y: auto; 
+    position: relative;
+    
+  }
+
+  /* Personalizar la barra de desplazamiento */
+.modal-content-PerfilUsuaA::-webkit-scrollbar {
+    width: 4px; /* Ancho de la barra de desplazamiento */
+  }
+  
+  .modal-content-PerfilUsuaA::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-content-PerfilUsuaA::-webkit-scrollbar-thumb {
+    background-color: #503B31; /* Color del "pulgar" de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-content-PerfilUsuaA::-webkit-scrollbar-thumb:hover {
+    background-color: #333; /* Color del "pulgar" cuando se pasa el mouse por encima */
+  }
+  
+ /* Cabecera del modal que se queda fija al hacer scroll */
+
+
+.Header-modal-PerfilUsuaA {
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white; /* Asegura que el fondo sea visible cuando sea sticky */
+    z-index: 10; /* Asegura que esté por encima del contenido desplazable */
+}
+
+/* Botón para cerrar el modal */
+.close-btn-PerfilUsuaA {
+    position: absolute;
+    top: 2px; /* Ajusta según el padding de .Header-modalA */
+    right: 20px;
     font-size: 28px;
-    font-weight: bold;
-    text-decoration: none;
+    color: #424242d8;
+    background: none;
+    border: none;
     cursor: pointer;
-    margin: 2px 10px 10px 0;
-  }
+}
   
-  /* Título del Modal */
-  .modal-title-amigos-perfilUsua {
-    margin: 8px 0 1px 100px; 
-    font-size: 25px;
+  .close-btn-PerfilUsuaA:hover {
+    color: #0000008a;
+  }
+
+  .titulo-modal-PerfilUsuaA{
+    margin: 5px 20px 5px 20px;
+    font-size: 20px;
     text-align: center;
-    margin-bottom: 10px;
+    font-weight: 450;
   }
-  
-  /* Contenedor de amigos del Modal */
-  .modal-amigos-container-amigos-perfilUsua {
+
+  .modal-PerfilUsuaA-content{
+    margin: 20px 20px 10px 20px;
+    
+  }
+
+ /* Estilo de cada amigo dentro del modal */
+.modal-PerfilUsuaA-amigos {
     display: flex;
-    flex-direction: column; /* Alinea los amigos verticalmente */
-    gap: 15px; /* Espaciado entre elementos */
-    margin-top: 10px;
-    padding: 5px 5px 30px 30px; /* Espaciado alrededor del contenido */
-    overflow-y: auto; /* Desplazamiento vertical si es necesario */
-    height: calc(100% - 40px); /* Ajusta la altura para el contenido desplazable */
-    scrollbar-width: thin; /* Ancho de la barra de desplazamiento (delgada) */
-    scrollbar-color: #503b31 #f5f5f5; /* Color del deslizador y del fondo */
+    align-items: center;
+    margin-bottom: 15px;
   }
-  
-  /* Elemento de amigo del Modal */
-  .modal-foto-amigo-perfilUsua {
-    display: flex;
-    align-items: center; /* Alinea verticalmente la imagen y el texto */
-    gap: 10px; /* Espaciado entre imagen y texto */
-    margin-bottom: 10px; /* Espaciado inferior */
-  }
-  
-  /* Imagen del amigo del Modal */
-  .modal-img-amigo-perfilUsua {
+
+/* Estilo de las imágenes dentro del modal */
+.modal-img-PerfilUsuaA {
     border-radius: 50%;
     border: 1px solid #000000;
-    height: 60px; /* Ajusta el tamaño si es necesario */
-    width: 60px; /* Ajusta el tamaño si es necesario */
+    height: 80px; /* Ajusta el tamaño si es necesario */
+    width: 80px; /* Ajusta el tamaño si es necesario */
     object-fit: cover;
-  }
-  
-  /* Nombre del amigo del Modal */
-  .modal-name-usuar-perfilUsua {
-    font-size: 16px;
-    margin: 0;
-    color: #000;
+}
+
+/* Estilo de los nombres de usuario dentro del modal */
+.modal-title-PerfilUsuaA {
+    margin: 0 0 0 10px;
+    font-size: 18px;
+    color: #333;
     text-decoration: none;
-  }
-  
-  /* Mostrar el modal cuando el enlace apunta al ID del modal */
-  #modal-amigos-perfilUsua:target {
-    display: block;
-  }
+}
+
+.modal-title-PerfilUsuaA:hover {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+}
   
 /* fin modla amigos */
 
@@ -3702,99 +4005,141 @@ header{
 }
 
 /* modal de comunidades */
-
 /* Estilos del Modal */
-.modal-comunidades-perfilUsua {
-    display: none; /* Oculto por defecto */
-    position: fixed; /* Fijo en la pantalla */
-    z-index: 1000; /* En la parte superior */
-    left: 0;
-    top: 0;
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Altura completa */
-    overflow: hidden; /* Desplazamiento si es necesario */
-    background-color: rgba(0,0,0,0.4); /* Fondo oscuro con opacidad */
-  }
-  
-  .modal-content-comunidades-perfilUsua {
-    position: relative; /* Posicionamiento relativo para el contenido del modal */
-    background-color: #fefefe;
-    margin: 5% auto; /* Centramos el modal */
-    padding: 0; /* Sin relleno interno aquí */
-    border: 1px solid #888;
-    width: 80%; /* Ancho del modal */
-    max-width: 290px; /* Ancho máximo */
-    height: 80vh; /* Altura del modal */
-    overflow: hidden; /* Ocultar el desbordamiento del modal */
-    border-radius: 8px; /* Bordes redondeados */
-  }
-  
-  /* Contenedor del encabezado del Modal */
-  .modal-header-comunidades-perfilUsua {
-    display: flex;
-    align-items: center; /* Alinea verticalmente el contenido */
-    justify-content: space-between; /* Espacio entre el título y el botón de cerrar */
-    padding: 10px; /* Espaciado interno */
-    border-bottom: 2px solid #ccc; /* Borde inferior */
-  }
-  
-  /* Botón de cerrar */
-  .modal-close-comunidades-perfilUsua {
-    color: #503B31;
-    font-size: 28px;
-    font-weight: bold;
+.ver-mas-PerfilUsuaC{
+    position: relative;
+    left: 88%;
+    top: -25vh;
+    font-size: 15px;
+    margin-right: 90px;
+    border: 1px solid  #503B31;
+    padding: 8px 15px 8px 15px;
+    border-radius: 25px;
     text-decoration: none;
-    cursor: pointer;
+    color: #503B31;
+}
+
+.ver-mas-PerfilUsuaC:hover{
+    background-color:  #503b311a;
+}
+
+.modal-overlay-PerfilUsuaC {
+    position: fixed; /* Mantiene el modal fijo en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Estilos del enlace que abre el modal */
+.modal-content-PerfilUsuaC {
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    border-radius: 8px;
+    max-width: 340px;
+    width: 100%;
+    max-height: 70vh; 
+    overflow-y: auto; 
+    position: relative;
+    
+  }
+
+  /* Personalizar la barra de desplazamiento */
+.modal-content-PerfilUsuaC::-webkit-scrollbar {
+    width: 4px; /* Ancho de la barra de desplazamiento */
   }
   
-  /* Título del Modal */
-  .modal-title-comunidades-perfilUsua {
-    margin: 8px 0 1px 50px; 
-    font-size: 25px;
+  .modal-content-PerfilUsuaC::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-content-PerfilUsuaC::-webkit-scrollbar-thumb {
+    background-color: #503B31; /* Color del "pulgar" de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-content-PerfilUsuaC::-webkit-scrollbar-thumb:hover {
+    background-color: #333; /* Color del "pulgar" cuando se pasa el mouse por encima */
+  }
+  
+ /* Cabecera del modal que se queda fija al hacer scroll */
+
+
+.Header-modal-PerfilUsuaC {
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white; /* Asegura que el fondo sea visible cuando sea sticky */
+    z-index: 10; /* Asegura que esté por encima del contenido desplazable */
+}
+
+/* Botón para cerrar el modal */
+.close-btn-PerfilUsuaC {
+    position: absolute;
+    top: 2px; /* Ajusta según el padding de .Header-modalA */
+    right: 20px;
+    font-size: 28px;
+    color: #424242d8;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+  
+  .close-btn-PerfilUsuaC:hover {
+    color: #0000008a;
+  }
+
+  .titulo-modal-PerfilUsuaC{
+    margin: 5px 20px 5px 20px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 450;
+  }
+
+  .modal-PerfilUsuaC-content{
+    margin: 20px 20px 10px 20px;
     
   }
   
-  /* Contenedor de comunidades del Modal */
-  .modal-comunidades-container-comunidades-perfilUsua {
+ 
+  /* Estilo de cada amigo dentro del modal */
+.modal-PerfilUsuaC-comuni {
     display: flex;
-    flex-direction: column; /* Alinea las comunidades verticalmente */
-    gap: 15px; /* Espaciado entre elementos */
-    margin-top: 10px;
-    padding: 5px 5px 30px 30px; /* Espaciado alrededor del contenido */
-    overflow-y: auto; /* Desplazamiento vertical si es necesario */
-    height: calc(100% - 40px); /* Ajusta la altura para el contenido desplazable */
-    scrollbar-width: thin; /* Ancho de la barra de desplazamiento (delgada) */
-    scrollbar-color: #503b31 #f5f5f5; /* Color del deslizador y del fondo */
+    align-items: center;
+    margin-bottom: 15px;
   }
-  
-  /* Elemento de comunidad del Modal */
-  .modal-comunidad-comunidades-perfilUsua {
-    display: flex;
-    align-items: center; /* Alinea verticalmente la imagen y el texto */
-    gap: 10px; /* Espaciado entre imagen y texto */
-    margin-bottom: 10px; /* Espaciado inferior */
-  }
-  
-  /* Imagen de la comunidad del Modal */
-  .modal-img-comunidad-comunidades-perfilUsua {
+
+/* Estilo de las imágenes dentro del modal */
+.modal-img-PerfilUsuaC {
     border-radius: 50%;
     border: 1px solid #000000;
-    height: 60px; /* Ajusta el tamaño si es necesario */
-    width: 60px; /* Ajusta el tamaño si es necesario */
+    height: 80px; /* Ajusta el tamaño si es necesario */
+    width: 80px; /* Ajusta el tamaño si es necesario */
     object-fit: cover;
-  }
-  
-  /* Nombre de la comunidad del Modal */
-  .modal-name-comunidad-comunidades-perfilUsua {
-    font-size: 16px;
-    margin: 0;
-    text-align: none;
-  }
-  
-  /* Mostrar el modal cuando el enlace apunta al ID del modal */
-  #modal-comunidades-perfilUsua:target {
-    display: block;
-  }
+}
+
+/* Estilo de los nombres de usuario dentro del modal */
+.modal-title-PerfilUsuaC {
+    margin: 0 0 0 10px;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    
+}
+
+.modal-title-PerfilUsuaC:hover {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+}
+
 /* fin modal comunidades */
 
 /* medallas */
@@ -4065,14 +4410,650 @@ header{
 
  /* FIN MEDIA PERFIL USUARIO */
 
+
+/* CSS DE LIBRO GENERAL */
+.main-libros-general {
+    background-color: #fff;
+    margin-top: 115px;
+    max-height: 80%;
+    width: 81.6%;
+    max-width: 95%;
+    margin-left: 14.5%; 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px; 
+    border: 0.5px solid #50505e;
+}
+
+.libro-general-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px; /* Espacio de 10px entre los elementos */
+    justify-content: center;
+    margin: 30px 30px 70px 30px;
+}
+
+.libro-general-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 190px; /* Ancho fijo para todos los contenedores */
+    min-height: 350px; /* Altura mínima fija para todos los contenedores */
+    margin-top: 30px;
+}
+
+/* no poner cuidado a book_comunity */
+
+.libro-general-comunity{
+    width: 150px; /* Ajusta el tamaño según tus necesidades */
+    height: 240px;
+    border-radius: 20px; /* Ajusta según el estilo deseado */
+    border: 1px solid #22223B;
+}
+
+.title-libro-general {
+    color: black;
+    margin-top: 10%; /* Espacio entre la imagen y el título */
+    font-size: 20px; /* Ajusta el tamaño del texto según tus necesidades */
+    width: 100%; /* Ajusta el ancho para que coincida con el contenedor */
+    height: 50px; /* Altura fija para asegurar alineación */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Asegura que el texto esté centrado */
+    
+}
+
+.link-general-libro{
+    text-decoration: none;
+}
+
+.volver{
+    margin: 20px 10px 10px 40px;
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    justify-content: left;
+}
+
+.link-volver-usua{
+    text-decoration: none;
+    color: #503B31;
+    border: 1px solid #503B31;
+    border-radius: 5px;
+    padding: 5px 20px 5px 20px ;
+}
+
+.link-volver-usua:hover{
+    background-color: #503b311a;
+}
+/*  */
+
+
  /* ------------------------------------------------------------------------------------------------------------------------------------------------- */
 
  /* ESTILOS DEL ADMINISTRADOR */
 
- /* INICIO CSS ADMINISTRADOR AUTORES */
+/* GESTION DE COMUNIDADES CSS */
+.body-gestiones-comunidad {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: auto;
+} 
+.main-gestion-comunidades {
+    background-color: #fff;
+    margin-top: 115px;
+    max-height: 300%;
+    height: auto;
+    width: 75%;
+    max-width: 95%;
+    margin-left: 23%; 
+    border-top-left-radius: 21px;
+    border-top-right-radius: 21px;
+    border: 0.5px solid #50505e;
+}
 
- /* FIN CSS ADMINISTRADOR AUTORES */
+/*  */
+.img-top{
+    position: relative;
+    width: 100%;
+    height: 269px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
 
- /* INICIO MEDIA ADMINISTRADOR AUTORES */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-between;
+}
 
- /* FIN MEDIA ADMINISTRADOR MEDIA */
+.card {
+    background-color: #ebebeb;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 10px;
+    padding: 20px;
+    width: calc(50% - 35px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+}
+
+.card-image {
+    border-radius: 50%;
+    border: 1px solid #503b31;
+    width: 160px;
+    height: 160px;
+    margin-right: 30px;
+    position: relative;
+    top: 5px;
+}
+
+.card-text {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.actions {
+    display: flex;
+    justify-content:center;
+    position: relative;
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
+
+.img-gestion-comuni {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover; /* Hace que la imagen cubra todo el área del contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.button-gestion-comuni{
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 40px;
+}
+
+/* Modal Inactivar Comunidad */
+.modal-overlay-InactivarC {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Estilo para el contenido del modal */
+  .modal-content-InactivarC {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1001;
+    text-align: center;
+  }
+  
+  /* Estilo para el botón de cerrar */
+  .close-button-InactivarC {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Estilo para el título del modal */
+  .Titulo-accion-InactivarC {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Estilo para el texto del modal */
+  .text-accion-InactivarC {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 16px;
+  }
+  
+  /* Estilo para los botones de acción */
+  .modal-actions-InactivarC {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .boton-modal-InactivarC {
+    padding: 10px 20px;
+    border: 1px solid #503B31;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #503B31;
+  }
+
+  .boton-modal-InactivarC:hover{
+    background-color: #503b311a;
+  }
+
+/* Modal Activar Comunidad */
+
+/* General styles for the modal overlay */
+.modal-overlay-ActivarC {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Estilo para el contenido del modal */
+  .modal-content-ActivarC {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1001;
+    text-align: center;
+  }
+  
+  /* Estilo para el botón de cerrar */
+  .close-button-ActivarC {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Estilo para el título del modal */
+  .Titulo-accion-ActivarC {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Estilo para el texto del modal */
+  .text-accion-ActivarC {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 16px;
+  }
+  
+  /* Estilo para los botones de acción */
+  .modal-actions-ActivarC {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .boton-modal-ActivarC {
+    padding: 10px 20px;
+    border: 1px solid #503B31;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #503B31;
+  }
+  
+  .boton-modal-ActivarC:hover{
+    background-color: #503b311a;
+  }
+
+/* Modal Crear Comunidad */
+
+/* ModalCrearComunidad.css */
+
+.modal-overlay-CrearC {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content-CrearC {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+  }
+  
+  .close-button-CrearC {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .modal-title-container-CrearC {
+    border-bottom: 2px solid #503B31; /* Línea debajo del título */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .Titulo-accion-CrearC {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #503B31;
+    text-align: center;
+  }
+  
+  .modal-body-CrearC {
+    margin-bottom: 20px;
+    color: #503B31;
+    font-size: 18px;
+  }
+  
+  .modal-label-CrearC {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .modal-input-CrearC {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .modal-input-CrearC:focus {
+    border-color: #503B31; /* Color del borde cuando el campo está en foco */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+  }
+  
+  .modal-textarea-CrearC {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 100px;
+  }
+
+  .modal-textarea-CrearC:focus {
+    border-color: #503B31; /* Color del borde cuando el campo está en foco */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+  }
+  
+  .modal-image-preview-CrearC {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .modal-actions-CrearC {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .boton-modal-CrearC {
+    padding: 10px 20px;
+    border: 1px solid #503B31;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #503B31;
+  }
+  
+  .boton-modal-CrearC:hover {
+    background-color: #503b311a;
+  }
+
+/* Modal Actualizar Comunidad */
+
+.modal-overlay-ActualizarC {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content-ActualizarC {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+  }
+  
+  .close-button-ActualizarC {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .modal-title-container-ActualizarC {
+    border-bottom: 2px solid #503B31; /* Línea debajo del título */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .Titulo-accion-ActualizarC {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #503B31;
+    text-align: center;
+  }
+  
+  .modal-body-ActualizarC {
+    margin-bottom: 20px;
+    color: #503B31;
+    font-size: 18px;
+  }
+  
+  .modal-label-ActualizarC {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .modal-input-ActualizarC {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .modal-input-ActualizarC:focus {
+    border-color: #503B31; /* Color del borde cuando el campo está en foco */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+  }
+  
+  .modal-textarea-ActualizarC {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 100px;
+  }
+
+  .modal-textarea-ActualizarC:focus {
+    border-color: #503B31; /* Color del borde cuando el campo está en foco */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+  }
+  
+  .modal-image-preview-ActualizarC {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .modal-actions-ActualizarC {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .boton-modal-ActualizarC {
+    padding: 10px 20px;
+    border: 1px solid #503B31;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #503B31;
+  }
+  
+  .boton-modal-ActualizarC:hover {
+    background-color: #503b311a;
+  }
+
+  /* FIN CSS GESTION COMUNIDADES */
+
+  /* ---------------------------------------------------------------------------------------- */
+
+  /* CSS GESTION DE LIBROS */
+
+.body-gestiones-comunidad {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: auto;
+} 
+.main-gestion-libro {
+    background-color: #fff;
+    margin-top: 115px;
+    max-height: 300%;
+    height: auto;
+    width: 75%;
+    max-width: 95%;
+    margin-left: 23%; 
+    border-top-left-radius: 21px;
+    border-top-right-radius: 21px;
+    border: 0.5px solid #50505e;
+}
+
+/*  */
+.img-top{
+    position: relative;
+    width: 100%;
+    height: 269px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: #ebebeb;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 10px;
+    padding: 20px;
+    width: calc(50% - 35px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content-gestiLibro {
+    display: flex;
+    align-items: center;
+}
+
+.card-image-gestiLibro {
+    border-radius: 5%;
+    border: 1px solid #503b31;
+    width: 160px;
+    height: 220px;
+    margin-right: 30px;
+    position: relative;
+    top: 5px;
+}
+
+.card-text {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.actions {
+    display: flex;
+    justify-content:center;
+    position: relative;
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
+
+.img-gestion-libro {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover; /* Hace que la imagen cubra todo el área del contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.button-gestion-libro{
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 40px;
+}
+
+  

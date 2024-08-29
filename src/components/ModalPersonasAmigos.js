@@ -1,133 +1,89 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import modal2_foto_amigo6 from "../static/img/dp10.jpeg";
-import modal2_foto_amigo7 from "../static/img/dp9.jpeg";
-import modal2_foto_amigo8 from "../static/img/dp8.jpeg";
-import modal2_foto_amigo9 from "../static/img/dp11.jpeg";
-import modal2_foto_amigo10 from "../static/img/dp12.jpeg";
+import React, { useState } from 'react';
+import amigo1 from '../static/img/dp12.jpeg'
 
-function ModalPersonasAmigos (){
-    return(
-        <div>
-            {/* Comienzo Enlace para abrir el segundo modal */}
-        <Link to="#modal2" className="ver-mas">
-          ver más
-        </Link>
-        {/* Modal 2 */}
-        <div id="modal2" className="modal-gustar">
-          <div className="modal-gustar-content">
-            <Link to="#" className="close-gustar">
-              ×
-            </Link>
-            <h2 className="amigos-modal">PERSONAS CON UN GUSTO SIMILAR</h2>
-            <div className="modal-gustar-amigos-container">
-              {/* Lista de amigos */}
-              <div className="modal2-amigos">
-                <img
-                  className="modal2-img-amigo"
-                  src={modal2_foto_amigo6}
-                  alt="Alex_㋡"
-                />
-                <Link to="perfil-alex.html" className="modal2-title-amigo">
-                  Alex_㋡
-                </Link>
+
+function ModalPersonasAmigos() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  return (
+    <div>
+      <button className="ver-mas-gustarA" onClick={openModal}>
+        Ver Perfiles
+      </button>
+
+      {isModalOpen && (
+        <div className="modal-overlay-gustarA" onClick={closeModal}>
+          <div className="modal-content-gustar" onClick={(e) => e.stopPropagation()}>
+            <div className='Header-modalA'>
+            <button className="close-btn" onClick={closeModal}>&times;</button>
+              <h2 className='titulo-modalAmigos'>PERSONAS QUE TE PUEDEN GUSTAR</h2>
+            </div>
+            <div className='modal-gustarA-content'>
+
+              <div className="profile">
+                <img className='img-gustarA' src={amigo1} alt="Usuario 1" />
+                <p className='name-usuar-gustarA'>Usuario 1</p>
               </div>
-              <div className="modal2-amigos">
-                <img
-                  className="modal2-img-amigo"
-                  src={modal2_foto_amigo7}
-                  alt="Butterfly_13🦋"
-                />
-                <Link to="perfil-butterfly.html" className="modal2-title-amigo">
-                  Butterfly_13🦋
-                </Link>
+
+              <div className="profile">
+                <img className='img-gustarA' src={amigo1} alt="Usuario 2" />
+                <p className='name-usuar-gustarA'>Usuario 2</p>
               </div>
-              <div className="modal2-amigos">
-                <img
-                  className="modal2-img-amigo"
-                  src={modal2_foto_amigo8}
-                  alt="MyLifeIsaDrama❀"
-                />
-                <Link to="perfil-mylifeisadrama.html" className="modal2-title-amigo">
-                  MyLifeIsaDrama❀
-                </Link>
+
+              <div className="profile">
+                <img className='img-gustarA' src={amigo1} alt="Usuario 3" />
+                <p className='name-usuar-gustarA'>Usuario 3</p>
               </div>
-              <div className="modal2-amigos">
-                <img
-                  className="modal2-img-amigo"
-                  src={modal2_foto_amigo9}
-                  alt="Dark_Night☾"
-                />
-                <Link to="perfil-darknight.html" className="modal2-title-amigo">
-                  Dark_Night☾
-                </Link>
+
+              <div className="profile">
+                <img className='img-gustarA' src={amigo1} alt="Usuario 4" />
+                <p className='name-usuar-gustarA'>Usuario 4</p>
               </div>
-              <div className="modal2-amigos">
-                <img
-                  className="modal2-img-amigo"
-                  src={modal2_foto_amigo10}
-                  alt="Kimchi_29🍥"
-                />
-                <a href="perfil-kimchi.html" className="modal2-title-amigo">
-                  Kimchi_29🍥
-                </a>
+
+              <div className="profile">
+                <img className='img-gustarA' src={amigo1} alt="Usuario 2" />
+                <p className='name-usuar-gustarA'>Usuario 2</p>
               </div>
-              <div className="modal2-amigos">
-                <img
-                  className="modal2-img-amigo"
-                  src={modal2_foto_amigo10}
-                  alt="Alex_㋡"
-                />
-                <Link to="perfil-alex.html" className="modal2-title-amigo">
-                  Alex_㋡
-                </Link>
+
+              <div className="profile">
+                <img className='img-gustarA' src={amigo1} alt="Usuario 3" />
+                <p className='name-usuar-gustarA'>Usuario 3</p>
               </div>
-              <div className="modal2-amigos">
-                <img
-                  className="modal2-img-amigo"
-                  src={modal2_foto_amigo9}
-                  alt="Butterfly_13🦋"
-                />
-                <Link to="perfil-butterfly.html" className="modal2-title-amigo">
-                  Butterfly_13🦋
-                </Link>
+
+              <div className="profile">
+                <img className='img-gustarA' src={amigo1} alt="Usuario 4" />
+                <p className='name-usuar-gustarA' >Usuario 4</p>
               </div>
-              <div className="modal2-amigos">
-                <img
-                  className="modal2-img-amigo"
-                  src={modal2_foto_amigo8}
-                  alt="MyLifeIsaDrama❀"
-                />
-                <Link to="perfil-mylifeisadrama.html" className="modal2-title-amigo">
-                  MyLifeIsaDrama❀
-                </Link>
+
+              <div className="profile">
+                <img className='img-gustarA' src={amigo1} alt="Usuario 4" />
+                <p className='name-usuar-gustarA'>Usuario 4</p>
               </div>
-              <div className="modal2-amigos">
-                <img
-                  className="modal2-img-amigo"
-                  src={modal2_foto_amigo7}
-                  alt="Dark_Night☾"
-                />
-                <Link to="perfil-darknight.html" className="modal2-title-amigo">
-                  Dark_Night☾
-                </Link>
+
+              <div className="profile">
+                <img className='img-gustarA' src={amigo1} alt="Usuario 2" />
+                <p className='name-usuar-gustarA'>Usuario 2</p>
               </div>
-              <div className="modal2-amigos">
-                <img
-                  className="modal2-img-amigo"
-                  src={modal2_foto_amigo6}
-                  alt="Kimchi_29🍥"
-                />
-                <Link to="perfil-kimchi.html" className="modal2-title-amigo">
-                  Kimchi_29🍥
-                </Link>
+
+              <div className="profile">
+                <img className='img-gustarA' src={amigo1} alt="Usuario 3" />
+                <p className='name-usuar-gustarA'>Usuario 3</p>
+              </div>
+
+              <div className="profile">
+                <img className='img-gustarA' src={amigo1} alt="Usuario 4" />
+                <p className='name-usuar-gustarA' >Usuario 4</p>
               </div>
             </div>
+
           </div>
         </div>
-        {/* Final del modal */}
-        </div>
-    );
-};
+      )}
+    </div>
+  );
+}
 
 export default ModalPersonasAmigos;

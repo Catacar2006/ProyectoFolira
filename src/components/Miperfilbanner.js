@@ -4,7 +4,7 @@ import foto_miperfil from "../static/img/F_Usu.jpg";
 
 
 
-function Miperfilbanner() {
+function Miperfilbanner({ onEditClick }) {
   return (
     <div>
       {/* Banner y foto usuario */}
@@ -22,9 +22,7 @@ function Miperfilbanner() {
               className="profile-photo-miperfil"
             />
             <h4 className="name-miperfil">Jeonghan_4🫶🏼</h4>
-            <a href="#editModal" className="editar-btn-miperfil">
-              Editar
-            </a>
+            
           </div>
         </div>
       </div>

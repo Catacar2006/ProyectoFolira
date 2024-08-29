@@ -10,14 +10,6 @@ function AmigosMiPerfil () {
              {/* Seccion de amigos */}
           <div className="amigos-miperfil">
             {/* boton de ver mas */}
-            <div className="div-ver-mas-miperfil">
-              <Link
-                to="#modal-amigos-miperfil"
-                className="boton-ver-mas-miperfil"
-              >
-                Ver Más
-              </Link>
-            </div>
             <h3 className="seccion-title-amigos-miperfil">Amigos</h3>
             <div className="seccion-amigos-miperfil">
               <div className="foto-amigo-miperfil">

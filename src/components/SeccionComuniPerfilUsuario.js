@@ -6,12 +6,11 @@ import foto_comunidad3_miperfil from "../static/img/c4.jpg";
 import foto_comunidad4_miperfil from "../static/img/c5.jpg";
 import foto_comunidad5_miperfil from "../static/img/c6.jpg";
 import foto_comunidad6_miperfil from "../static/img/c7.jpg";
-import { useState } from "react";
+
 
 function SeccionComuniPerfilUsua () {
 
-    const [isModalOpen, setModalOpen] = useState(false);
-    const openModal = () => setModalOpen(true);
+
 
     return (
         
@@ -19,15 +18,6 @@ function SeccionComuniPerfilUsua () {
             {/* Comunidades */}
           <div className="comunidades-perfil-usuario">
             {/* boton de ver mas */}
-            <div className="div-ver-mas-perfil-usuario">
-              <Link 
-                to="#modal-comunidades-perfilUsua"
-                className="boton-ver-mas-perfil-usuario"
-                onClick={openModal}
-              >
-                Ver Más
-              </Link>
-            </div>
             <h3 className="seccion-title-perfil-usuario">Comunidades</h3>
             <div className="seccion-comunidad-perfil-usuario">
               <div className="foto-comunidad-perfil-usuario">

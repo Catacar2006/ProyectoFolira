@@ -6,20 +6,13 @@ import foto_comunidad4_miperfil from "../static/img/c5.jpg";
 import foto_comunidad5_miperfil from "../static/img/c6.jpg";
 import foto_comunidad6_miperfil from "../static/img/c7.jpg";
 
+
 function ComunidadMiPerfil (){
     return(
         <div>
             {/* Comunidades */}
           <div className="comunidades-miperfil">
             {/* boton de ver mas */}
-            <div className="div-ver-mas-miperfil">
-              <a
-                href="#modal-comunidades-miperfil"
-                className="boton-ver-mas-miperfil"
-              >
-                Ver Más
-              </a>
-            </div>
             <h3 className="seccion-title-comunidades-miperfil">Comunidades</h3>
             <div className="seccion-comunidad-miperfil">
               <div className="foto-comunidad-miperfil">

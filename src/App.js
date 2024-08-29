@@ -9,6 +9,9 @@ import FichaAutor from './pages.usuarios/FichaAutor';
 import FichaLibro from './pages.usuarios/FichaLibro';
 import MiPerfil from './pages.usuarios/Mi_Perfil';
 import PerfilUsuario from './pages.usuarios/PerfilUsuario';
+import GeneralLibros from './pages.usuarios/GeneralLibros';
+import GestionComunidad from './pages.administrador/GestionComunidad';
+import GestionLibro from './pages.administrador/GestionLibro';
 
 
 function App() {
@@ -25,6 +28,9 @@ function App() {
       <Route path="/FichaLibro" element={<FichaLibro />} />
       <Route path="/MiPerfil" element={<MiPerfil />} />
       <Route path="/PerfilUsuario" element={<PerfilUsuario />} />
+      <Route path="/GeneralLibros" element={<GeneralLibros />} />
+      <Route path="/GestionComunidad" element={<GestionComunidad />} />
+      <Route path="/GestionLibro" element={<GestionLibro />} />
      </Routes>
      </>
     </div>

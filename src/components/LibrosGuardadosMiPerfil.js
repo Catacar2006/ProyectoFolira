@@ -14,14 +14,6 @@ function LibrosGuardadosMiPerfil () {
             {/* SECCION DE LOS LIBRO GUARDADOS */}
           <div className="libros-aguardados-miperfil">
             {/* boton de ver mas */}
-            <div className="div-ver-mas-libro-miperfil">
-              <Link
-                to="#modal-libro-miperfil"
-                className="boton-ver-mas-libro-miperfil"
-              >
-                Ver Más
-              </Link>
-            </div>
             <h3 className="seccion-title-libro-miperfil">Libros Guardados</h3>
             <div className="seccion-libro-miperfil">
               <div className="foto-libro-miperfil">

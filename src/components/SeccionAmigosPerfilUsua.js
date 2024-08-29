@@ -8,15 +8,7 @@ function SeccionAmigosPerfilUsua (){
         <div>
             {/* Seccion de amigos */}
           <div className="amigos-perfil-usuario">
-            {/* boton de ver mas */}
-            <div className="div-ver-mas-perfil-usuario">
-              <a
-                href="#modal-amigos-perfilUsua"
-                className="boton-ver-mas-perfil-usuario"
-              >
-                Ver Más
-              </a>
-            </div>
+          
             <h3 className="seccion-title-perfil-usuario">Amigos</h3>
             <div className="seccion-amigos-perfil-usuario">
               <div className="foto-amigo-perfil-usuario">

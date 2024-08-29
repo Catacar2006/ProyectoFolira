@@ -2,7 +2,8 @@ import React from "react";
 import TextoTituloAutores from "../components/TextoTituloAutores";
 import ModalAutoresLatinos from "../components/ModalAutoresLatinos";
 import SeccionAutoresLA from "../components/SeccionAutoresLA";
-import MdoalAutoresMedeivales from "../components/ModalAutoresLatinos";
+import SeccionAutoresM from "../components/SeccionAutoresM";
+import MdoalAutoresMedeivales from "../components/ModalAutoresMedievales";
 import Nav from "../components/layout/Nav";
 import MenuLateral from "../components/layout/MenuLateral";
 
@@ -21,8 +22,9 @@ function FeedUsuaAutores() {
         <TextoTituloAutores />
         <ModalAutoresLatinos />
         <SeccionAutoresLA />
-        <ModalAutoresLatinos />
-        <MdoalAutoresMedeivales />
+        <MdoalAutoresMedeivales /> 
+        <SeccionAutoresM />
+     
         
       </main>
     </div>

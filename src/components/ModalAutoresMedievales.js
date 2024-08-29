@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import modal_autor6 from '../static/img/Shakespeare.jpg';
 import modal_autor7 from '../static/img/(Dante Alighieri).jpg';
@@ -6,28 +6,28 @@ import modal_autor8 from '../static/img/Sophocles.jpg';
 import modal_autor9 from '../static/img/Miguel de Cervantes Saavedra.jpeg';
 import modal_autor10 from '../static/img/Luis de Góngora.jpg';
 
-function MdoalAutoresMedeivales (){
-    return(
-        <div>
-            {/* autores medievales */}
-        <div>
-          <h2 className="title-section-feedautores">Medieval y Renacimiento</h2>
-        </div>
-        <Link to="#modal-autor" className="ver-mas">
-          ver más
-        </Link>
+function ModalAutoresMedievales() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-        {/* INICIO DEL MODAL DE MEDIEVAL */}
-        {/* Modal */}
-        <div id="modal-autor" className="modal-overlay-autor">
-          <div className="modal-content-autor">
-            <Link to="#" className="close-autor">
-              ×
-            </Link>
-            <h2 className="title-modal-feedUsuariio">
-              MEDIEVAL Y RENACIMIENTO
-            </h2>
-            <div className="modal-autor-container">
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  return (
+    <div>
+      <button className="ver-mas-Autores" onClick={openModal}>
+        Ver Perfiles
+      </button>
+
+      {isModalOpen && (
+        <div className="modal-overlay-Autores" onClick={closeModal}>
+          <div className="modal-content-Autores" onClick={(e) => e.stopPropagation()}>
+            <div className='Header-modal-Autores'>
+              <button className="close-btn-Autores" onClick={closeModal}>&times;</button>
+              <h2 className='titulo-modal-Autores'>ESCRITORES MEDIEVALES</h2>
+            </div>
+
+            <div className="modal-Autores-content">
+
               <div className="modal-autor-item">
                 <img
                   className="modal-img-autores"
@@ -41,7 +41,7 @@ function MdoalAutoresMedeivales (){
                   William Shakespeare
                 </Link>
               </div>
-              <div className="modal-autor-item">
+              <div className="modal-profile-Autores">
                 <img
                   className="modal-img-autores"
                   src={modal_autor7}
@@ -54,17 +54,20 @@ function MdoalAutoresMedeivales (){
                   Dante Alighieri
                 </Link>
               </div>
-              <div className="modal-autor-item">
+              <div className="modal-profile-Autores">
                 <img
                   className="modal-img-autores"
                   src={modal_autor8}
                   alt="Socrates"
                 />
-                <Link to="perfil-socrates.html" className="modal-title-autores">
+                <Link
+                  to="perfil-socrates.html"
+                  className="modal-title-autores"
+                >
                   Socrates
                 </Link>
               </div>
-              <div className="modal-autor-item">
+              <div className="modal-profile-Autores">
                 <img
                   className="modal-img-autores"
                   src={modal_autor9}
@@ -77,7 +80,7 @@ function MdoalAutoresMedeivales (){
                   Miguel de Cervantes
                 </Link>
               </div>
-              <div className="modal-autor-item">
+              <div className="modal-profile-Autores">
                 <img
                   className="modal-img-autores"
                   src={modal_autor10}
@@ -90,7 +93,7 @@ function MdoalAutoresMedeivales (){
                   Luis de Góngora
                 </Link>
               </div>
-              <div className="modal-autor-item">
+              <div className="modal-profile-Autores">
                 <img
                   className="modal-img-autores"
                   src={modal_autor6}
@@ -103,7 +106,7 @@ function MdoalAutoresMedeivales (){
                   William Shakespeare
                 </Link>
               </div>
-              <div className="modal-autor-item">
+              <div className="modal-profile-Autores">
                 <img
                   className="modal-img-autores"
                   src={modal_autor7}
@@ -116,17 +119,20 @@ function MdoalAutoresMedeivales (){
                   Dante Alighieri
                 </Link>
               </div>
-              <div className="modal-autor-item">
+              <div className="modal-profile-Autores">
                 <img
                   className="modal-img-autores"
                   src={modal_autor8}
                   alt="Socrates"
                 />
-                <Link to="perfil-socrates.html" className="modal-title-autores">
+                <Link
+                  to="perfil-socrates.html"
+                  className="modal-title-autores"
+                >
                   Socrates
                 </Link>
               </div>
-              <div className="modal-autor-item">
+              <div className="modal-profile-Autores">
                 <img
                   className="modal-img-autores"
                   src={modal_autor9}
@@ -139,7 +145,7 @@ function MdoalAutoresMedeivales (){
                   Miguel de Cervantes
                 </Link>
               </div>
-              <div className="modal-autor-item">
+              <div className="modal-profile-Autores">
                 <img
                   className="modal-img-autores"
                   src={modal_autor10}
@@ -155,9 +161,9 @@ function MdoalAutoresMedeivales (){
             </div>
           </div>
         </div>
-        {/* FIN MODAL MEDIEVAL */}
-        </div>
-    );
-};
+      )}
+    </div>
+  );
+}
 
-export default MdoalAutoresMedeivales;
+export default ModalAutoresMedievales;

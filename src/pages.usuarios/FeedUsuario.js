@@ -1,7 +1,7 @@
 import React from "react";
 import TituloTextoLibroUsuario from "../components/TituloTextoLibroUsuario";
 import ContenedorLibrosUsuario from "../components/ContenedorLibrosUsuario";
-import ContenedorRecoUsuau from "../components/ContenedorLibrosUsuario";
+import EscritorRecoUsa from '../components/EscritoresRecoUsua';
 import Nav from "../components/layout/Nav";
 import MenuLateral from "../components/layout/MenuLateral";
 
@@ -17,7 +17,7 @@ function FeedUsuario() {
       <main className="main-usuario">
         <TituloTextoLibroUsuario />
         <ContenedorLibrosUsuario />
-        <ContenedorRecoUsuau />
+        <EscritorRecoUsa />
 
       </main>
     </div>

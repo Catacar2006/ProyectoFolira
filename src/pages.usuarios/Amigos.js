@@ -19,9 +19,9 @@ function Amigos() {
       <main className="main-amigos">
 
         <TextoAmigos />
-        <TituloAmigos />
+        {/* <TituloAmigos />
         <ModalTusAmigosFeed />
-        <SeccionTusAmigosFeedA />
+        <SeccionTusAmigosFeedA /> */}
         <TituloPersonasAmigos />
         <ModalPersonasAmigos />
         <PersonasGustarAmigos />
