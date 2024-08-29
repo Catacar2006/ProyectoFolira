@@ -4991,6 +4991,341 @@ header{
     border-top-right-radius: 20px;
 }
 
+.ver-generos-container {
+    text-align: center;
+    margin-top: 20px; /* Ajusta este valor según sea necesario */
+  }
+  
+  .ver-generos-button {
+    background-color: #4CAF50; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Relleno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de fuente */
+  }
+  
+  .ver-generos-button:hover {
+    background-color: #45a049; /* Cambia el color al pasar sobre el botón */
+  }
+
+  .boton-Gestiona-Generos{
+    background-color: #fff;
+    color: #503B31;
+    padding: 5px 10px;
+    border: 1px solid #503B31;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: 30px;
+    
+  }
+
+  /* MODAL GENEROS */
+  
+/* Contenedor del Modal */
+.modal-overlay-generos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+  
+.modal-content-generos-libro {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px; /* Ancho máximo ajustado */
+    width: 100%; /* Asegura que tome el ancho completo disponible */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1001;
+    max-height: 80vh; /* Limita la altura máxima */
+    overflow-y: auto; /* Permite el desplazamiento si el contenido excede la altura */
+}
+  
+/* Estilo para el header del modal */
+.modal-gl-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1002;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+  
+/* Estilo para el título */
+.title-generos {
+    font-size: 24px;
+    color: #333;
+  
+}
+  
+/* Estilo para el botón de cerrar */
+.close-button-generos {
+    background: none;
+    border: none;
+    color: #503B31;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 20px;
+}
+  
+/* Contenedor scrollable para la lista de géneros */
+.modal-body-generos {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+  
+/* Estilo para la lista de géneros */
+.generos-list {
+    margin: 0;
+    padding: 0;
+}
+  
+.generos-list li {
+    margin-bottom: 15px;
+    margin-right: 10px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    font-size: 18px;
+}
+  
+/* Botones de activar/inactivar alineados horizontalmente */
+.generos-buttons {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.generos-buttons button {
+    padding: 5px 10px;
+    background-color: #ffffff;
+    color: #503B31;
+    border: 1px solid #503B31;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.generos-buttons button:hover {
+    background-color: #503b311a;
+}
+  
+/* Botones de crear y actualizar fuera del contenido desplazable */
+.generos-footer-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    
+}
+  
+.crear-button, .actualizar-button {
+    background-color: #503B31;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.crear-button:hover, .actualizar-button:hover {
+    background-color: #3e2f24;
+}
+  
+/* Personalizar la barra de desplazamiento */
+.modal-body-generos::-webkit-scrollbar {
+    width: 4px;
+}
+  
+.modal-body-generos::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+  
+.modal-body-generos::-webkit-scrollbar-thumb {
+    background-color: #503B31;
+    border-radius: 10px;
+}
+  
+.modal-body-generos::-webkit-scrollbar-thumb:hover {
+    background-color: #333;
+}
+
+/* Estilos adicionales de modales */
+.modal-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-footer button {
+    padding: 10px 20px;
+    background-color: #503B31;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-footer button:hover {
+    background-color: #3e2f24;
+}
+ 
+/* FIN MODAL GENEROS */
+
+/* MODAL CREAR GENERO */
+.modal-overlay-crearG {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .modal-crearG-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10001; /* Asegúrate de que el z-index sea mayor que el de la aplicación */
+  }
+  
+  .modal-crearG-content h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .modal-crearG-content input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .modal-crearG-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .modal-crearG-content button {
+    padding: 10px 20px;
+    background-color: #503B31;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal-crearG-content button:hover {
+    background-color: #3e2f24;
+  }
+/*  */
+
+/* MODAL ACTUALIZAR GENERO */
+/* Estilos para el modal de actualización de género */
+.modal-overlay-actualizarG {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .modal-actualizarG-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1001;
+  }
+  
+  .modal-header-actualizarG {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .titulos-actualizarG {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .close-button-actualizarG {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .modal-body-actualizarG {
+    margin-top: 10px;
+  }
+  
+  .input-actualizarG {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .modal-footer-actualizarG {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  
+  .boton-actualizarG {
+    padding: 10px 20px;
+    background-color: #503B31;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .boton-actualizarG:hover {
+    background-color: #3e2f24;
+  }
+  
+/*  */
+
+
 .cards {
     display: flex;
     flex-wrap: wrap;

@@ -1,4 +1,3 @@
-
 import { Route, Routes } from 'react-router-dom';
 import Inicio from './pages/Inicio';
 import Amigos from './pages.usuarios/Amigos';
