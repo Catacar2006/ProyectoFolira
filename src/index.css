@@ -5056,4 +5056,837 @@ header{
     margin-left: 40px;
 }
 
+/* INACTIVAR LIBRO */
+
+/* Modal Inactivar Comunidad */
+.modal-overlay-InactivarL {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
   
+  /* Estilo para el contenido del modal */
+  .modal-content-InactivarL {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1001;
+    text-align: center;
+  }
+  
+  /* Estilo para el botón de cerrar */
+  .close-button-InactivarL {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Estilo para el título del modal */
+  .Titulo-accion-InactivarL {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Estilo para el texto del modal */
+  .text-accion-InactivarL {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 16px;
+  }
+  
+  /* Estilo para los botones de acción */
+  .modal-actions-InactivarL {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .boton-modal-InactivarL {
+    padding: 10px 20px;
+    border: 1px solid #503B31;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #503B31;
+  }
+
+  .boton-modal-InactivarL:hover{
+    background-color: #503b311a;
+  }
+
+/* ACTIVAR LIBRO */
+
+/* Modal Inactivar Comunidad */
+.modal-overlay-ActivarL {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Estilo para el contenido del modal */
+  .modal-content-ActivarL {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1001;
+    text-align: center;
+  }
+  
+  /* Estilo para el botón de cerrar */
+  .close-button-ActivarL {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Estilo para el título del modal */
+  .Titulo-accion-ActivarL {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Estilo para el texto del modal */
+  .text-accion-ActivarL {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 16px;
+  }
+  
+  /* Estilo para los botones de acción */
+  .modal-actions-ActivarL {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .boton-modal-ActivarL {
+    padding: 10px 20px;
+    border: 1px solid #503B31;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #503B31;
+  }
+
+  .boton-modal-ActivarL:hover{
+    background-color: #503b311a;
+  }
+
+  /* CREAR LIBRO */
+
+  .modal-overlay-CrearL {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .modal-content-CrearL {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+  }
+  
+  .close-button-CrearL {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .modal-title-container-CrearL {
+    border-bottom: 2px solid #503B31; /* Línea debajo del título */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .Titulo-accion-CrearL {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #503B31;
+    text-align: center;
+  }
+  
+  .modal-body-CrearL {
+    margin-bottom: 20px;
+    color: #503B31;
+    font-size: 18px;
+  }
+  
+  .modal-label-CrearL {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .modal-input-CrearL {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .modal-input-CrearL:focus {
+    border-color: #503B31; /* Color del borde cuando el campo está en foco */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+  }
+  
+  .modal-textarea-CrearL {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 100px;
+  }
+
+  .modal-textarea-CrearL:focus {
+    border-color: #503B31; /* Color del borde cuando el campo está en foco */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+  }
+  
+  .modal-image-preview-CrearL {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .modal-actions-CrearL {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .boton-modal-CrearL {
+    padding: 10px 20px;
+    border: 1px solid #503B31;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #503B31;
+  }
+  
+  .boton-modal-CrearL:hover {
+    background-color: #503b311a;
+  }
+
+/* ACTUALIZAR LIBRO */
+
+.modal-overlay-ActualizarL {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .modal-content-ActualizarL {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+  }
+  
+  .close-button-ActualizarL {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .modal-title-container-ActualizarL {
+    border-bottom: 2px solid #503B31; /* Línea debajo del título */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .Titulo-accion-ActualizarL {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #503B31;
+    text-align: center;
+  }
+  
+  .modal-body-ActualizarL {
+    margin-bottom: 20px;
+    color: #503B31;
+    font-size: 18px;
+  }
+  
+  .modal-label-ActualizarL {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .modal-input-ActualizarL {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .modal-input-ActualizarL:focus {
+    border-color: #503B31; /* Color del borde cuando el campo está en foco */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+  }
+  
+  .modal-textarea-ActualizarL {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 100px;
+  }
+
+  .modal-textarea-ActualizarL:focus {
+    border-color: #503B31; /* Color del borde cuando el campo está en foco */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+  }
+  
+  .modal-image-preview-ActualizarL {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .modal-actions-ActualizarL {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .boton-modal-ActualizarL {
+    padding: 10px 20px;
+    border: 1px solid #503B31;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #503B31;
+  }
+  
+  .boton-modal-ActualizarL:hover {
+    background-color: #503b311a;
+  }
+
+  /* GESTION DE USUARIO */
+
+  .body-gestiones-usuario {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: auto;
+} 
+.main-gestion-usuario {
+    background-color: #fff;
+    margin-top: 115px;
+    max-height: 300%;
+    height: auto;
+    width: 75%;
+    max-width: 95%;
+    margin-left: 23%; 
+    border-top-left-radius: 21px;
+    border-top-right-radius: 21px;
+    border: 0.5px solid #50505e;
+}
+
+/*  */
+.img-top{
+    position: relative;
+    width: 100%;
+    height: 269px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: #ebebeb;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 10px;
+    padding: 20px;
+    width: calc(50% - 35px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+}
+
+.card-image {
+    border-radius: 50%;
+    border: 1px solid #503b31;
+    width: 160px;
+    height: 160px;
+    margin-right: 30px;
+    position: relative;
+    top: 5px;
+}
+
+.card-text {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.actions {
+    display: flex;
+    justify-content:center;
+    position: relative;
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
+
+.img-gestion-Usuario {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover; /* Hace que la imagen cubra todo el área del contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.button-gestion-Usuario{
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 40px;
+}
+
+/* Modal Inactivar Comunidad */
+.modal-overlay-InactivarU {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Estilo para el contenido del modal */
+  .modal-content-InactivarU {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1001;
+    text-align: center;
+  }
+  
+  /* Estilo para el botón de cerrar */
+  .close-button-InactivarU {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Estilo para el título del modal */
+  .Titulo-accion-InactivarU {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Estilo para el texto del modal */
+  .text-accion-InactivarU {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 16px;
+  }
+  
+  /* Estilo para los botones de acción */
+  .modal-actions-InactivarU {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .boton-modal-InactivarU {
+    padding: 10px 20px;
+    border: 1px solid #503B31;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #503B31;
+  }
+
+  .boton-modal-InactivarU:hover{
+    background-color: #503b311a;
+  }
+
+/* Modal Activar Comunidad */
+
+/* General styles for the modal overlay */
+.modal-overlay-ActivarU {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Estilo para el contenido del modal */
+  .modal-content-ActivarU {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1001;
+    text-align: center;
+  }
+  
+  /* Estilo para el botón de cerrar */
+  .close-button-ActivarU {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Estilo para el título del modal */
+  .Titulo-accion-ActivarU {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Estilo para el texto del modal */
+  .text-accion-ActivarU {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 16px;
+  }
+  
+  /* Estilo para los botones de acción */
+  .modal-actions-ActivarU {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .boton-modal-ActivarU {
+    padding: 10px 20px;
+    border: 1px solid #503B31;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #503B31;
+  }
+  
+  .boton-modal-ActivarU:hover{
+    background-color: #503b311a;
+  }
+
+/* Modal Crear Comunidad */
+
+/* ModalCrearComunidad.css */
+
+.modal-overlay-CrearU {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content-CrearU {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+  }
+  
+  .close-button-CrearU {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .modal-title-container-CrearU {
+    border-bottom: 2px solid #503B31; /* Línea debajo del título */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .Titulo-accion-CrearU {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #503B31;
+    text-align: center;
+  }
+  
+  .modal-body-CrearU {
+    margin-bottom: 20px;
+    color: #503B31;
+    font-size: 18px;
+  }
+  
+  .modal-label-CrearU {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .modal-input-CrearU {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .modal-input-CrearU:focus {
+    border-color: #503B31; /* Color del borde cuando el campo está en foco */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+  }
+  
+  .modal-textarea-CrearU {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 100px;
+  }
+
+  .modal-textarea-CrearU:focus {
+    border-color: #503B31; /* Color del borde cuando el campo está en foco */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+  }
+  
+  .modal-image-preview-CrearU {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .modal-actions-CrearU {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .boton-modal-CrearU {
+    padding: 10px 20px;
+    border: 1px solid #503B31;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #503B31;
+  }
+  
+  .boton-modal-CrearU:hover {
+    background-color: #503b311a;
+  }
+
+/* Modal Actualizar Comunidad */
+
+.modal-overlay-ActualizarU {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content-ActualizarU {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+  }
+  
+  .close-button-ActualizarU {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .modal-title-container-ActualizarU {
+    border-bottom: 2px solid #503B31; /* Línea debajo del título */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .Titulo-accion-ActualizarU {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #503B31;
+    text-align: center;
+  }
+  
+  .modal-body-ActualizarU {
+    margin-bottom: 20px;
+    color: #503B31;
+    font-size: 18px;
+  }
+  
+  .modal-label-ActualizarU {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .modal-input-ActualizarU {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .modal-input-ActualizarU:focus {
+    border-color: #503B31; /* Color del borde cuando el campo está en foco */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+  }
+  
+  .modal-textarea-ActualizarU {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 100px;
+  }
+
+  .modal-textarea-ActualizarU:focus {
+    border-color: #503B31; /* Color del borde cuando el campo está en foco */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+  }
+  
+  .modal-image-preview-ActualizarU {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .modal-actions-ActualizarU {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .boton-modal-ActualizarU {
+    padding: 10px 20px;
+    border: 1px solid #503B31;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #503B31;
+  }
+  
+  .boton-modal-ActualizarU:hover {
+    background-color: #503b311a;
+  }

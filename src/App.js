@@ -12,6 +12,7 @@ import PerfilUsuario from './pages.usuarios/PerfilUsuario';
 import GeneralLibros from './pages.usuarios/GeneralLibros';
 import GestionComunidad from './pages.administrador/GestionComunidad';
 import GestionLibro from './pages.administrador/GestionLibro';
+import GestionUsuario from './pages.administrador/GestionUsuario';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
       <Route path="/GeneralLibros" element={<GeneralLibros />} />
       <Route path="/GestionComunidad" element={<GestionComunidad />} />
       <Route path="/GestionLibro" element={<GestionLibro />} />
+      <Route path="/GestionUsuario" element={<GestionUsuario />} />
      </Routes>
      </>
     </div>

@@ -4,14 +4,14 @@ function ModalInactivarLibro({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className="modal-overlay-InactivarC" onClick={onClose}>
-      <div className="modal-content-InactivarC" onClick={(e) => e.stopPropagation()}>
-        <button className="close-button-InactivarC" onClick={onClose}>X</button>
-        <h2 className='Titulo-accion-InactivarC'>Inactivar Comunidad</h2>
-        <p className='text-accion-InactivarC'>¿Estás seguro de que deseas inactivar esta comunidad?</p>
-        <div className="modal-actions-InactivarC">
-          <button className='boton-modal-InactivarC' onClick={onClose}>Cancelar</button>
-          <button className='boton-modal-InactivarC'>Confirmar</button>
+    <div className="modal-overlay-InactivarL" onClick={onClose}>
+      <div className="modal-content-InactivarL" onClick={(e) => e.stopPropagation()}>
+        <button className="close-button-InactivarL" onClick={onClose}>X</button>
+        <h2 className='Titulo-accion-InactivarL'>Inactivar Libro</h2>
+        <p className='text-accion-InactivarL'>¿Estás seguro de que deseas inactivar este libro?</p>
+        <div className="modal-actions-InactivarL">
+          <button className='boton-modal-InactivarL' onClick={onClose}>Cancelar</button>
+          <button className='boton-modal-InactivarL'>Confirmar</button>
         </div>
       </div>
     </div>
