@@ -1,8 +1,6 @@
 import express from 'express';
 import cors from 'cors';
 import fileUpload from 'express-fileupload';
-import path from 'path';
-import { fileURLToPath } from 'url';
 import UsuarioRoutes  from './routes/usuario.routes.js';
 import RolRoutes from './routes/rol.routes.js';
 import SeguidorRoutes from './routes/seguidor.routes.js';
@@ -28,11 +26,10 @@ import ReunionRoutes from './routes/reunion.routes.js';
 import InsigniaRoutes from './routes/insignia.routes.js';
 import UsuarioInsigniaRoutes from './routes/usuarioInsignia.routes.js';
 import TiempoPantallaRoutes from './routes/tiempoPantalla.routes.js'
-
+import authRoutes from './routes/auth.routes.js';
 
 // Obtener el directorio actual usando __filename y __dirname en módulos ES
-/**/const __filename = fileURLToPath(import.meta.url);
-const _dirname = path.dirname(__filename);
+
 
 const app = express();
 
@@ -40,8 +37,7 @@ app.use(fileUpload());
 app.use(express.json());
 app.use(cors());
 
-// Servir archivos estáticos desde la carpeta 'uploads'
-app.use('/uploads', express.static(path.join(_dirname, 'uploads')));
+
 
 // Usar las rutas de la aplicación
 app.use(UsuarioRoutes);
@@ -69,5 +65,6 @@ app.use(ReunionRoutes);
 app.use(InsigniaRoutes);
 app.use(UsuarioInsigniaRoutes);
 app.use(TiempoPantallaRoutes);
+app.use(authRoutes);
 
 export default app;

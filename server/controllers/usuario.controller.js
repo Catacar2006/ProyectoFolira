@@ -41,7 +41,7 @@ class UsuarioController{
                 fechaCreacion: req.body.fechaCreacion,
                 genero:req.body.genero,
                 biografia:req.body.biografia,
-                fotoPerfil:req.body.fotoPerfil,
+                fotoPerfil:req.file ? req.file.path : req.body.fotoPerfil,
                 pais:req.body.pais,
                 estado:req.body.estado,
                 idRolFK: req.body.idRolFK
@@ -78,7 +78,7 @@ class UsuarioController{
                 fechaCreacion: req.body.fechaCreacion,
                 genero:req.body.genero,
                 biografia:req.body.biografia,
-                fotoPerfil:req.body.fotoPerfil,
+                fotoPerfil:req.file ? req.file.path : null,
                 pais:req.body.pais,
                 estado:req.body.estado,
                 idRolFK: req.body.idRolFK

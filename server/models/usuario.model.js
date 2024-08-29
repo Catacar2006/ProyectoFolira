@@ -1,9 +1,16 @@
 import { DataTypes, ENUM, Model, NOW } from "sequelize";
 import {  sequelize } from "../config/db.js";
+import bcrypt from "bcrypt";
 
 class Usuario extends Model {
+  
+
     static async createUsuario(usuario){
         try{
+            if (usuario.contrasena) {
+                const salt = await bcrypt.genSalt(10);
+                usuario.contrasena = await bcrypt.hash(usuario.contrasena, salt);
+              }
             return await this.create(usuario);
         }catch(error){
             console.error(`error al crear usuario: ${error}` );
@@ -52,21 +59,25 @@ class Usuario extends Model {
             console.error(`error al actualizar el usuario: ${error}` );
             throw error;
         }
+        
     }
+    async comparePassword(candidatePassword) {
+        return bcrypt.compare(candidatePassword, this.contrasena)
+      }
 }
 Usuario.init({
  
     idUsuario:{type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
-    nombre:{type: DataTypes.STRING (255), allowNull:false},
+    nombre:{type: DataTypes.STRING (255), allowNull:false, unique:true},
     correo:{type:  DataTypes.STRING (255), allowNull:false, unique:true},
     contrasena:{type: DataTypes.STRING (255), allowNull:false},
     numeroTelefono:{type:DataTypes.DECIMAL (10,0), allowNull:false},
     fechaNacimiento:{type:DataTypes.DATE, allowNull:false},
     fechaCreacion:{type: DataTypes.DATE,defaultValue:DataTypes.NOW, allowNull:false},
     genero:{type:ENUM('masculino','femenino','otro')},
-    biografia:{type: DataTypes.STRING (255), allowNull:false},
-    fotoPerfil:{type: DataTypes.STRING (255), allowNull:false},
-    pais:{type: DataTypes.STRING (50), allowNull:false},
+    biografia:{type: DataTypes.STRING (255)},
+    fotoPerfil:{type: DataTypes.STRING (255)},
+    pais:{type: DataTypes.STRING (50)},
     estado:{type:DataTypes.BOOLEAN, allowNull:false},
     idRolFK:{type: DataTypes.INTEGER, allowNull:false}
 },
