@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "../components/layout/Nav";
-import MenuLateral from "../components/layout/MenuLateral";
+
 import BannerFotoPerfilUsua from "../components/BannerFotoPerfilUsua";
 import InformacionPerfilUsuario from "../components/InofrmacionPerfilUsua";
 import LineaPerfilUsuario from "../components/LineaPerfilUsuario";
@@ -17,7 +17,7 @@ function PerfilUsuario() {
   return (
     <div className="bodyy-perfil-usuario">
         <Nav/>
-        <MenuLateral/>
+
 
       {/* Main Content */}
       <div className="col-md-9 col-lg-10">

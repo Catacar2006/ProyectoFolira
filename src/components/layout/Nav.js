@@ -1,70 +1,40 @@
 import React from "react";
+import logo_nav from '../../static/img/folira-logo.png'
+import book_nav from '../../static/icons/book-nav.svg';
+import autor_nav from '../../static/icons/autor_nav.svg';
+import reseña_nav from '../../static/icons/reseñas_nav.svg';
+import comunidad_nav from '../../static/icons/comunidad-nav.svg';
+import denuncia_nav from '../../static/icons/denuncia-nav.svg';
+import lupa_nav from '../../static/icons/lupa-nav.svg';
+import noti_nav from '../../static/icons/noti-nav.svg';
+import perfil_nav from '../../static/icons/perfil-nav.svg';
 import { Link } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import folira_logo from '../../static/img/folira-logo.png';
-import flecha_nav from '../../static/img/greater_than_icon_194991.png';
-import notificacion from '../../static/img/notificaciones_icon.png';
-import lupa from '../../static/img/lupa.png';
 
-function Nav () {
-    return ( 
-<header className="navbar navbar-expand-lg fixed-top " id="nav_moved">
-  <div className="container-fluid">
-    <div className="icon__menu">
-      <button className="burger" id="btn_open">
-        <img 
-          src={flecha_nav}
-          alt="flecha_nav"
-          className=""
-          />
-      </button>
-    </div>
-    <Link to="#searchModal" id="openModalBtn" className="btn-search">Search</Link>
-    <div id="searchModal" className="modal">
-      <div className="modal-content">
-        <Link to="#" className="close">×</Link>
-        <h2>Buscar</h2>
-        <input type="text" placeholder="Escribe tu búsqueda..." className="search-input" />
-        <button className="search-btn">Buscar</button>
-      </div>
-    </div>
-    <img 
-        src={folira_logo}
-        alt="folira_logo"
-        className="app-logo" 
-        />
-    <div className="offcanvas offcanvas-end" tabIndex={-1} id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div className="offcanvas-header">
-        <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-        <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" />
-      </div>
-      <div className="offcanvas-body">
-        <ul className="navbar-nav justify-content-end flex-grow-1 pe-3 later-item">
-          <li className="nav-item">
-            <Link className="nav-link" to="#searchModal" id="openModalBtn">
-              <img 
-                src={lupa}
-                alt="lupa"
-                className="nav-icon" 
-                />
-              </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="#">
-            <img 
-              src={notificacion}
-              alt="notificacion"
-              className="nav-icon" /></Link>
-          </li>
-          <li className="nav-item">
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</header>
 
-    );
-};
+function Nav() {
+  return (
+    <nav>
+      <div className="logo">
+        <img className="icon-logo" src={logo_nav} alt="logo_nav"/>
+      </div>
+      <div className="options">
+        <Link to="/FeedUsuaLibro"><img className="option-img" src={book_nav} alt="book-nav"/></Link>
+        <Link to="/FeedUsuaAutores"><img className="option-img" src={autor_nav} alt="autor_nav" /></Link>
+        <Link to="/Reseña"><img className="option-img" src={reseña_nav} alt="reseña_nav"/></Link>
+        <Link to="/Comunidad"><img className="option-img" src={comunidad_nav} alt="comunidad_nav"/></Link>
+        <Link to="/Amigos"><img className="option-img" src={denuncia_nav} alt="denuncia_nav"/></Link>
+        
+      </div>
+      <div className="search">
+        <input type="search" placeholder="Buscar" />
+        <img className="icon-lupa" src={lupa_nav} alt="lipa_nav" />
+      </div>
+      <div className="options-two">
+        <img className="option-two-nav" src={noti_nav} alt="notificacion_nav" />
+        <Link to="/MiPerfil"><img className="option-two-nav" src={perfil_nav} alt="perfil_nav" /></Link>
+      </div>
+    </nav>
+  );
+}
 
 export default Nav;

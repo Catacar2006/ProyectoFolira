@@ -5,7 +5,6 @@ import SeccionAutoresLA from "../components/SeccionAutoresLA";
 import SeccionAutoresM from "../components/SeccionAutoresM";
 import MdoalAutoresMedeivales from "../components/ModalAutoresMedievales";
 import Nav from "../components/layout/Nav";
-import MenuLateral from "../components/layout/MenuLateral";
 
 
 
@@ -15,7 +14,6 @@ function FeedUsuaAutores() {
   return (
     <div>
         <Nav />
-        <MenuLateral />
 
       <main className="main-feedautores">
 

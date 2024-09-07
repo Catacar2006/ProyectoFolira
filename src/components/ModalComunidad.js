@@ -26,17 +26,14 @@ function ModalPersonasAmigos() {
               <h2 className='titulo-modal-Autores'>ESCRITORES LATINOS</h2>
             </div>
 
-           <div className='modal-Autores-content'>
+x            <div className='modal-Autores-content'>
 
               <div className="modal-profile-Autores">
-                <Link>
                 <img
                   className="modal-img-autores"
                   src={modal_autor1}
                   alt="Gabriel García Márquez"
                 />
-                </Link>
-                
                 <Link
                   to="perfil-gabriel-garcia-marquez.html"
                   className="modal-title-autores"
@@ -46,14 +43,11 @@ function ModalPersonasAmigos() {
               </div>
 
               <div className="modal-profile-Autores">
-                <Link>
                 <img
                   className="modal-img-autores"
                   src={modal_autor2}
                   alt="Burgos Julia"
                 />
-                </Link>
-                
                 <Link
                   to="perfil-burgos-julia.html"
                   className="modal-title-autores"
@@ -63,14 +57,11 @@ function ModalPersonasAmigos() {
               </div>
 
               <div className="modal-profile-Autores">
-                <Link>
                 <img
                   className="modal-img-autores"
                   src={modal_autor3}
                   alt="Mario Benedetti"
                 />
-                </Link>
-                
                 <Link
                   to="perfil-mario-benedetti.html"
                   className="modal-title-autores"
@@ -80,14 +71,11 @@ function ModalPersonasAmigos() {
               </div>
 
               <div className="modal-profile-Autores">
-                <Link>
                 <img
                   className="modal-img-autores"
                   src={modal_autor4}
                   alt="Mario Vargas Llosa"
                 />
-                </Link>
-                
                 <Link
                   to="perfil-mario-vargas-llosa.html"
                   className="modal-title-autores"
@@ -97,14 +85,11 @@ function ModalPersonasAmigos() {
               </div>
 
               <div className="modal-profile-Autores">
-                <Link>
                 <img
                   className="modal-img-autores"
                   src={modal_autor4}
                   alt="Mario Vargas Llosa"
                 />
-                </Link>
-                
                 <Link
                   to="perfil-mario-vargas-llosa.html"
                   className="modal-title-autores"
@@ -114,14 +99,11 @@ function ModalPersonasAmigos() {
               </div>
 
               <div className="modal-profile-Autores">
-                <Link>
                 <img
                   className="modal-img-autores"
                   src={modal_autor4}
                   alt="Mario Vargas Llosa"
                 />
-                </Link>
-                
                 <Link
                   to="perfil-mario-vargas-llosa.html"
                   className="modal-title-autores"
@@ -131,14 +113,11 @@ function ModalPersonasAmigos() {
               </div>
 
               <div className="modal-profile-Autores">
-                <Link>
                 <img
                   className="modal-img-autores"
                   src={modal_autor4}
                   alt="Mario Vargas Llosa"
                 />
-                </Link>
-                
                 <Link
                   to="perfil-mario-vargas-llosa.html"
                   className="modal-title-autores"
@@ -148,14 +127,11 @@ function ModalPersonasAmigos() {
               </div>
 
               <div className="modal-profile-Autores">
-                <Link>
                 <img
                   className="modal-img-autores"
                   src={modal_autor4}
                   alt="Mario Vargas Llosa"
                 />
-                </Link>
-                
                 <Link
                   to="perfil-mario-vargas-llosa.html"
                   className="modal-title-autores"
@@ -165,14 +141,11 @@ function ModalPersonasAmigos() {
               </div>
 
               <div className="modal-profile-Autores">
-                <Link>
                 <img
                   className="modal-img-autores"
                   src={modal_autor4}
                   alt="Mario Vargas Llosa"
                 />
-                </Link>
-                
                 <Link
                   to="perfil-mario-vargas-llosa.html"
                   className="modal-title-autores"
@@ -182,14 +155,11 @@ function ModalPersonasAmigos() {
               </div>
 
               <div className="modal-profile-Autores">
-                <Link>
                 <img
                   className="modal-img-autores"
                   src={modal_autor4}
                   alt="Mario Vargas Llosa"
                 />
-                </Link>
-                
                 <Link
                   to="perfil-mario-vargas-llosa.html"
                   className="modal-title-autores"
@@ -199,14 +169,11 @@ function ModalPersonasAmigos() {
               </div>
 
               <div className="modal-profile-Autores">
-                <Link>
                 <img
                   className="modal-img-autores"
                   src={modal_autor5}
                   alt="Laura Restrepo"
                 />
-                </Link>
-                
                 <Link
                   to="perfil-laura-restrepo.html"
                   className="modal-title-autores"

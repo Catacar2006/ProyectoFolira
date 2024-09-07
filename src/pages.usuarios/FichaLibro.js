@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "../components/layout/Nav";
-import MenuLateral from "../components/layout/MenuLateral";
+
 import DescripcionFichaLibro from "../components/DescripcionFichaLibro";
 import LocacionFichaLibro from "../components/LocacionFichaLibro";
 import CalificarAgregarFichaLibro from "../components/CalificacionAgregarFichaLibros";
@@ -16,7 +16,7 @@ function FichaLibro() {
   return (
     <div>
       <Nav />
-      <MenuLateral />
+
       <main className="main-ficha-libro">
         <div className="libro-container">
           

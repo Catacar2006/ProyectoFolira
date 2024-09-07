@@ -45,6 +45,87 @@ function ContenidoGestionUsuario({ onInactivar, onActivar, onCrear, onActualizar
         </div>
       </section>
 
+      <section className="card">
+        <div className="card-content">
+          <img src={foto_usua1} alt="Image1" className="card-image" />
+          <div className="card-text">
+            <p><strong>Nombre:</strong> Alex Rodriguez</p>
+            <p><strong>Nombre Usuario:</strong> Alex_🫶🏼</p>
+          </div>
+        </div>
+        <div className="actions">
+
+        <button className="button-gestion-Usuario" onClick={onActivar}>
+            <img className="img-gestion-Usuario" src={activar_icon} alt="Activar" />
+          </button>
+
+          <button className="button-gestion-Usuario" onClick={onInactivar}>
+            <img className="img-gestion-Usuario" src={inactivar_icon} alt="inactivar" />
+          </button>
+
+          <button className="button-gestion-Usuario" onClick={onCrear}>
+            <img className="img-gestion-Usuario" src={crear_icon} alt="crear" />
+          </button>
+          <button className="button-gestion-Usuario" onClick={onActualizar}>
+            <img className="img-gestion-Usuario" src={actualizar_icon} alt="actualizar" />
+          </button>
+        </div>
+      </section>
+
+      <section className="card">
+        <div className="card-content">
+          <img src={foto_usua1} alt="Image1" className="card-image" />
+          <div className="card-text">
+            <p><strong>Nombre:</strong> Alex Rodriguez</p>
+            <p><strong>Nombre Usuario:</strong> Alex_🫶🏼</p>
+          </div>
+        </div>
+        <div className="actions">
+
+        <button className="button-gestion-Usuario" onClick={onActivar}>
+            <img className="img-gestion-Usuario" src={activar_icon} alt="Activar" />
+          </button>
+
+          <button className="button-gestion-Usuario" onClick={onInactivar}>
+            <img className="img-gestion-Usuario" src={inactivar_icon} alt="inactivar" />
+          </button>
+
+          <button className="button-gestion-Usuario" onClick={onCrear}>
+            <img className="img-gestion-Usuario" src={crear_icon} alt="crear" />
+          </button>
+          <button className="button-gestion-Usuario" onClick={onActualizar}>
+            <img className="img-gestion-Usuario" src={actualizar_icon} alt="actualizar" />
+          </button>
+        </div>
+      </section>
+
+      <section className="card">
+        <div className="card-content">
+          <img src={foto_usua1} alt="Image1" className="card-image" />
+          <div className="card-text">
+            <p><strong>Nombre:</strong> Alex Rodriguez</p>
+            <p><strong>Nombre Usuario:</strong> Alex_🫶🏼</p>
+          </div>
+        </div>
+        <div className="actions">
+
+        <button className="button-gestion-Usuario" onClick={onActivar}>
+            <img className="img-gestion-Usuario" src={activar_icon} alt="Activar" />
+          </button>
+
+          <button className="button-gestion-Usuario" onClick={onInactivar}>
+            <img className="img-gestion-Usuario" src={inactivar_icon} alt="inactivar" />
+          </button>
+
+          <button className="button-gestion-Usuario" onClick={onCrear}>
+            <img className="img-gestion-Usuario" src={crear_icon} alt="crear" />
+          </button>
+          <button className="button-gestion-Usuario" onClick={onActualizar}>
+            <img className="img-gestion-Usuario" src={actualizar_icon} alt="actualizar" />
+          </button>
+        </div>
+      </section>
+
       
 
    

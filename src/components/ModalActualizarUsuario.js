@@ -17,7 +17,7 @@ function ModalActualizarUsuario({ isOpen, onClose }) {
       <div className="modal-content-ActualizarU" onClick={(e) => e.stopPropagation()}>
         <button className="close-button-ActualizarU" onClick={onClose}>X</button>
         <div className="modal-title-container-ActualizarU">
-          <h2 className='Titulo-accion-ActualizarU'>Actualizar Comunidad</h2>
+          <h2 className='Titulo-accion-ActualizarU'>Actualizar Usuario</h2>
         </div>
         <div className="modal-body-ActualizarU">
           <label className='modal-label-ActualizarU'>Imagen</label>

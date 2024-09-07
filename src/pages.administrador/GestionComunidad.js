@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ContenidoGestionComunidad from "../components/ContenidoGestionComunidad";
 import ModalInactivarComunidad from "../components/ModalInactivarComunidad";
 import Nav from "../components/layout/Nav";
-import MenuLateral from "../components/layout/MenuLateral";
+
 import banner_comuni from "../static/img/admi_banner_co.jpeg";
 import ModalActivarComunidad from "../components/ModalActivarComunidad";
 import ModalCrearComunidad from "../components/ModalCrearComunidad";
@@ -18,7 +18,7 @@ function GestionComunidad() {
     <div>
       <Nav />
       <div>
-        <MenuLateral />
+
         <main className="main-gestion-comunidades">
           <div>
             <img className="img-top" src={banner_comuni} alt="banner" />

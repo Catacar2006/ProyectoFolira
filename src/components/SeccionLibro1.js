@@ -145,31 +145,7 @@ function SeccionLibros1(){
                 alt="estrella_vacia_icon" />
             </div>
           </div>
-          <div className="libro-item">
-            <img
-              className="libro-comunity-perso"
-              src={img_libro6}
-              alt="img_libro6"
-            />
-            <h5 className="title-libro-section">23 Otoños antes de ti</h5>
-            <div className="rating-libro">
-              <img 
-                src={estrella_rellena_icon} 
-                alt="estrella_rellena_icon" />
-              <img 
-                src={estrella_rellena_icon} 
-                alt="estrella_rellena_icon" />
-              <img 
-                src={estrella_vacia_icon} 
-                alt="estrella_vacia_icon" />
-              <img 
-                src={estrella_vacia_icon} 
-                alt="estrella_vacia_icon" />
-              <img 
-                src={estrella_vacia_icon} 
-                alt="estrella_vacia_icon" />
-            </div>
-          </div>
+         
         </div>
         </div>
     );

@@ -12,6 +12,7 @@ import ciencia_ficcion_icon from "../static/icons/ciencia-ficcion.png";
 import misterio_icon from "../static/icons/anonimo.png";
 import comedia_icon from "../static/icons/comedia.png";
 import corazon_icon from "../static/icons/corazon (1).png";
+import drama_icon from '../static/icons/mascara-de-teatro.png'
 
 function ModalPersonasAmigos() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,7 +23,7 @@ function ModalPersonasAmigos() {
   return (
     <div>
       <button className="ver-mas-Miperfil" onClick={openModal}>
-        Ver Perfiles
+        Editar Perfil
       </button>
 
       {isModalOpen && (
@@ -346,11 +347,11 @@ function ModalPersonasAmigos() {
                       className="genre-label-Miperfil"
                     >
                       <img
-                        src={negocios_icon}
+                        src={drama_icon}
                         alt="Negocios"
                         className="genre-icon-Miperfil"
                       />
-                      Negocios
+                      Drama
                     </label>
 
                     <input

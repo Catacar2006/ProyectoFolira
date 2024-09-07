@@ -9,7 +9,8 @@ function BiografiaMiPerfil () {
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Temporibus minima nostrum unde ex, magni ipsa asperiores soluta
               hic earum aut quidem ipsum laudantium dolor nisi accusamus
-              inventore numquam
+              inventore numquam Lorem hic earum aut quidem ipsum laudantium dolor nisi accusamus
+             
             </p>
           </div>
         </div>

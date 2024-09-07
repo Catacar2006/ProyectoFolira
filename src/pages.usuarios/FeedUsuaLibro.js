@@ -5,7 +5,7 @@ import SeleccionLibro2 from "../components/SeccionLibros2.js";
 import ModalFeedLibro from '../components/ModalFeedLibro.js';
 import ModalFeedLibro2 from '../components/ModalFeedLibro.js';
 import Nav from "../components/layout/Nav";
-import MenuLateral from "../components/layout/MenuLateral";
+
 
 
 
@@ -13,7 +13,7 @@ function FeedUsuaLibro() {
   return (
     <div>
         <Nav />
-        <MenuLateral />
+
       <main className="main-libros">
         <TextoLibros />
         <SeccionLibros1 />

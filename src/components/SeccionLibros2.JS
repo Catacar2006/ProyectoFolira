@@ -151,31 +151,7 @@ function SeleccionLibro2(){
             </div>
           </div>
 
-          <div className="libro-item">
-            <img
-              className="libro-comunity-perso"
-              src={img_libro12}
-              alt="img_libro12"
-            />
-            <h5 className="title-libro-section">La Ladrona de Libros</h5>
-            <div className="rating-libro">
-              <img 
-                src={estrella_rellena_icon} 
-                alt="estrella_rellena_icon" />
-              <img 
-                src={estrella_rellena_icon} 
-                alt="estrella_rellena_icon" />
-              <img 
-               src={estrella_rellena_icon} 
-               alt="estrella_rellena_icon" />
-              <img 
-                src={estrella_rellena_icon} 
-                alt="estrella_rellena_icon" />
-              <img 
-                src={estrella_medio_icon}
-                alt="estrella_medio_icon" />
-            </div>
-          </div>
+          
         </div>
         </div>
     );

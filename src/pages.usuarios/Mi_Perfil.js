@@ -1,6 +1,5 @@
 import React from "react";
 import Nav from "../components/layout/Nav";
-import MenuLateral from "../components/layout/MenuLateral";
 import Miperfilbanner from "../components/Miperfilbanner";
 import ModalEditarMiPerfil from "../components/ModalEditarMiPerfil";
 import InformaciónMiperfil from "../components/InformacionMiperfil";
@@ -30,7 +29,6 @@ function MiPerfil() {
   return (
     <div>
       <Nav />
-      <MenuLateral />
       {/* Main Content */}
       <div className="col-md-9 col-lg-10">
         <main className="main-miperfil">

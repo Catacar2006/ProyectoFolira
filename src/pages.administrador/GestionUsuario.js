@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ContenidoGestionUsuario from "../components/ContenidoGestionUsuario";
 import ModalInactivarUsuario from "../components/ModalInactivarUsuario";
 import Nav from "../components/layout/Nav";
-import MenuLateral from "../components/layout/MenuLateral";
+
 import banner_usua from "../static/img/admi_banners_usua.jpeg";
 import ModalActivarUsuario from "../components/ModalActivarUsuario";
 import ModalCrearUsuario from "../components/ModalCrearUsuario";
@@ -18,7 +18,7 @@ function GestionComunidad() {
     <div>
       <Nav />
       <div>
-        <MenuLateral />
+    
         <main className="main-gestion-usuario">
           <div>
             <img className="img-top" src={banner_usua} alt="banner" />

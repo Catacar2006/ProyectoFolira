@@ -483,296 +483,147 @@
 
 /* INICIO DEL CSS DEL NAV */
 
+/* Ajustes generales */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
 
-header{
-    width: 100%;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    z-index: 200;
-    background-color: #ccc;
-  }
-  .icon__menu{
-    width: 50px;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(10px);
-  }
-  button{
-  
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-      border: 2px solid #f6f6f6;
-      background-color: #fff;
-      z-index: 10;
-  }
-  .burger img{
-    width: 40%;
-    align-items: center;
-  }
+body {
+  height: 100vh;
+  background-color: #e6e6e6;
+  display: flex;
+  flex-direction: row;
+}
 
+nav {
+  width: 100%;
+  height: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-bottom: thin solid #393a3b;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0 1.8rem;
+}
 
-/*clases para usar javascript*/
-.body_move{
-    margin-left: 250px;
-  }
-  
-  .menu__side_move{
-    width: auto;
-  }
-  .name_move_trasparent{
-    margin-left: -50px;
-    font-size: 27px;
-    color: #000000;
-    position: relative;
-    left: 30px;
-  
-  }
-  .burger_move{
-    z-index: 10;
-    transform: translateX(120px);
-  }
-  
-  .foto_move{
-    position: relative;
-    left: 10px;
-    width: 163px !important;
-    height: 121px;
-    margin-bottom: 5px;
-  }
-  .nav-icon{
-    height: 30px !important;
-    width: 30px !important;
-  }
-  
-  .app-logo{
-    width: 50px;
-    margin-left: 20px;
-  }
-  
-  .center-item{
-    justify-content: center;
-    position: relative;
-    left: 450px;
-  }
-  .nav_move{
-    width: auto !important;
-  }
-  
-  .center-item-move{
-    left: 368px;
-  }
-  
-  .fixed-top {
-    position: sticky;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-    width: auto;
-    margin-left: 20px;
-    border-radius: 36px;
-    margin-bottom: 34px;
-    height: 76px;
-    box-shadow: 0 16px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
-  }
-  
-  .btn-search{
-    color:transparent;
-    cursor: default !important;
-  }
-  
-  #openModalBtn{
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  /* Estilos del modal */
-  .modal {
-    display: none; /* Oculto por defecto */
-    position: fixed;
-    z-index: 10;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro con opacidad */
-  }
-  
-  /* Mostrar el modal cuando se hace clic en el enlace */
-  .modal:target {
-    display: block;
-  }
-  
-  /* Contenido del modal */
-  .modal-content {
-    background-color: #ffffff;
-    margin: 15% auto;
-    padding: 20px;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 500px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-  }
-  
-  /* Botón para cerrar el modal */
-  .close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  /* Estilos del input de búsqueda */
-  .search-input {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-top: 20px;
-    border: 1px solid #756149;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  /* Botón de búsqueda */
-  .search-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #5e4f3c;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
 
-/* FIN DEL CSS DEL NAV */
-/* ----------------------------------------------------------------------------------------------------------------------------------- */
+.icon-logo {
+  width: 41px;
+  cursor: pointer;
+}
 
-/* INICIO CSS MENU LATERAL */
+/* Ajuste para mover los íconos a la izquierda o centrarlos */
+.icon-container {
+  display: flex;
+  justify-content: flex-start; /* Para alinear a la izquierda */
+  align-items: center;
+  flex-grow: 1; /* Hace que este contenedor ocupe más espacio */
+}
 
-.menu__side{
-    width: 80px;
-    height: 100%;
-    background: #503B31;
-    position: fixed;
-    top: 0;
-    left: 0;
-    color: #22223B;
-    font-size: 18px;
-    overflow: hidden;
-    overflow-y: scroll;
-    border-right: 20px solid #503B31;
-    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  
-  }
-  /*ocultar scroll*/
-  .menu__side::-webkit-scrollbar{
-    display: none;
-  }
-  
-  .menu__side{
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  
-  .name__page{
-    padding: 100px 30px;
-    align-items: center;
-    margin-top: 10px;
-  }
-  .name__page img {
-    width: 50px;
-    margin-right: 20px;
-    border-radius: 50%;
-  }
-  
-  .options__menu{
-    padding: 30px 0px;
-    position: absolute;
-  
-  }
-  .name{
-    color: transparent;
-    font-size: 1px;
-  }
-  .options__menu a{
-    color: white;
-    cursor: default;
-    display: flex;
-    position: relative;
-    transition: 200ms;
-  }
-  .options__menu a:hover{
-    color: #000000;
-  }
-  
-  .options__menu .items-op{
-    padding: 20px 0px;
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-  .options__menu .items-opp{
-    padding: 70px 0px;
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-  .options__menu .items-opp img {
-    width: 30px;
-    cursor: pointer;
-    margin-right: 20px;
-  }
-  .options__menu .items-op img{
-    width: 30px;
-    cursor: pointer;
-    margin-right: 20px;
-  }
-  
-  .options__menu .items-op h6{
-    display: ruby;
-    cursor: pointer;
-  }
-  
-  a.selected{
-    color: #fff;
-  }
-  
-  .selected:before{
-    content: '';
-    width: 3px;
-    height: 80%;
-    background-color: white;
-    position: absolute;
-    top: 10%;
-    left: -30px;
-  }
-  .foto{
-    width: 100px;
-    position: relative;
-    right: 20px;
-  }
-/* FINAL CSS MENU LATERAL */
+/* Search sin espacio entre notificaciones */
+.search {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  border: 1px solid #501b31;
+  padding: 0 0.5rem;
+  width: 250px;
+  margin-right: 0; /* Elimina espacio a la derecha */
+  margin-left: auto; /* Empuja el search hacia la derecha */
+}
 
-/* INCIO MEDIA DEL MENU Y NAV */
+.search input {
+  width: 100%;
+  height: 40px;
+  border-radius: 1.5rem;
+  background-color: #ffffff;
+  outline: none;
+  border: none;
+  color: #000;
+  font-size: 1rem;
+  padding-left: 10px;
+}
+
+.search input::placeholder {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #9fa1a7;
+}
+
+/* Eliminar la "X" azul que aparece en inputs de tipo search */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
 
 
-/* FIN MEDIA DEL MENU Y NAV */
+.icon-lupa {
+  height: 25px;
+  padding-left: 0.5rem;
+  cursor: pointer;
+}
+
+/* Notificaciones e iconos de perfil, sin espacio entre ellos */
+.options {
+  display: flex;
+  align-items: center;
+  margin-left: 20%; /* Ajusta este valor para mover más a la izquierda si es necesario */
+}
+
+.option-img {
+  height: 40px;
+  padding: 0.7vw 3vw; /* Ajustar para reducir espacio lateral */
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.options img:hover {
+  background-color: #503b311a;
+}
+
+.options-two {
+  display: flex;
+  align-items: center;
+}
+
+.option-two-nav {
+  height: 40px;
+  padding: 0.7vw;
+  margin: 0 0.2vw;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.options-two > img:hover {
+  background-color: #503b311a;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 1024px) {
+  .search > input {
+      display: none;
+  }
+
+  .sidebar {
+      width: 100%;
+      position: relative;
+      top: 0;
+  }
+}
+
 
   
 
@@ -782,18 +633,18 @@ header{
 
  
 .main-amigos {
-    background-color: #fff;
-    margin-top: 115px;
-    max-height: 90%;
-    width: 75%;
-    height: auto;
-    max-width: 95%;
-    margin-left: 16%; 
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border: 0.5px solid #22223B;
-    padding: 20px; /* Añade padding si necesitas separar el contenido de los bordes */
+  background-color: #fff;
+  margin: 115px auto 0; /* Centrado horizontal y margen superior */
+  width: 100%;
+  height: 187%; /* Ajusta la altura al contenido */
+  max-width: 95%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border: 0.5px solid #22223B;
+  padding: 20px;
+  overflow: visible; /* Asegura que el contenido no se oculte */
 }
+
 
  
 /* titulo de la seccion */
@@ -844,6 +695,7 @@ header{
     align-items: center;
     text-align: center;
     width: 150px; /* Ancho fijo para todos los contenedores */
+    text-decoration: none;
 }
 
 .title-amigo {
@@ -855,6 +707,7 @@ header{
     align-items: center;
     justify-content: center;
     text-align: center; /* Asegura que el texto esté centrado */
+    text-decoration: none;
 }
 
 /* amigos que te pueden gustar --------------*/
@@ -886,6 +739,7 @@ header{
     object-fit: cover;
     margin-top: -70px;
     margin-bottom: 20px;
+    text-decoration:  none;
     
 }
 
@@ -1011,22 +865,25 @@ header{
     margin: 0;
     font-size: 18px;
     color: #333;
+    text-decoration: none;
   }
 /* ------------------------------------------------------------------------------------------------------------------------- */
 /* INICIO ESTILOS FEED AUTOR*/
 
 
 .main-feedautores {
-    background-color: #fff;
-    margin-top: 115px;
-    max-height: 80%;
-    width: 81.6%;
-    max-width: 95%;
-    margin-left: 16%; 
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border: 0.5px solid #50505e;
+  background-color: #fff;
+  margin: 115px auto 0; /* Centrado horizontal y margen superior */
+  width: 100%;
+  height: 187%; /* Ajusta la altura al contenido */
+  max-width: 95%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border: 0.5px solid #22223B;
+  padding: 20px;
+  overflow: visible; /* Asegura que el contenido no se oculte */
 }
+
 
 
 .title-feed-autores{
@@ -1060,7 +917,7 @@ header{
 .ver-mas-Autores{
     position: relative;
     left: 87%;
-    top: -3vh;
+    top: -10vh;
     font-size: 15px;
     border: 1px solid  #503B31;
     padding: 8px 15px 8px 15px;
@@ -1231,6 +1088,7 @@ header{
     align-items: center;
     justify-content: center;
     text-align: center; /* Asegura que el texto esté centrado */
+    text-decoration: none;
 }
 
 /* INICIO MEDIA AUTORES*/
@@ -1245,15 +1103,16 @@ header{
 
 
 .main-libros {
-    background-color: #fff;
-    margin-top: 115px;
-    max-height: 80%;
-    width: 81.6%;
-    max-width: 95%;
-    margin-left: 14.5%; 
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px; 
-    border: 0.5px solid #50505e;
+  background-color: #fff;
+  margin: 115px auto 0; /* Centrado horizontal y margen superior */
+  width: 100%;
+  height: 187%; /* Ajusta la altura al contenido */
+  max-width: 95%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border: 0.5px solid #22223B;
+  padding: 20px;
+  overflow: visible; /* Asegura que el contenido no se oculte */
 }
  
 .title-libro{
@@ -1341,7 +1200,7 @@ header{
 .ver-mas-FeedLibro{
     position: relative;
     left: 90%;
-    top: -48vh;
+    top: -71vh;
     font-size: 15px;
     margin-right: 90px;
     border: 1px solid  #503B31;
@@ -1727,9 +1586,9 @@ header{
 .container-autores {
     display: flex;
     flex-wrap: wrap;
-    gap: 160px; /* Espacio de 10px entre las imágenes */
-    margin-left: 160px;
-    margin-top: 50px;
+    gap: 100px; /* Espacio de 10px entre las imágenes */
+    margin-left: 50px;
+    margin-top: -30px;
     
 }
 
@@ -2049,6 +1908,7 @@ header{
 .ficha-libro-locations {
     margin-bottom: 20px;
     color: #503b31; 
+    margin-left: -70vh;
 }
 
 .text-location-libro {
@@ -2343,7 +2203,8 @@ header{
     border-radius: 30px;
     margin-bottom: 10px;
     border: 1px solid #503b31;
-    max-width: 100%;
+    max-width: 20%;
+    margin-left: 270vh;
     
 }
 
@@ -2404,12 +2265,11 @@ header{
 
 .main-miperfil {
     background-color: #fff;
-    margin-top: 50px;
+    margin: 115px auto 0 45px;
     max-height: 80%;
-    width: 100%;
+    width: 160%;
     height: auto;
-    max-width: 100%;
-    margin-left: 16%; 
+    max-width: 122%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border: 0.5px solid #22223B;
@@ -2490,7 +2350,7 @@ header{
 .ver-mas-Miperfil{
     position: relative;
     left: 87%;
-    top: -3vh;
+    top: 12vh;
     font-size: 15px;
     border: 1px solid  #503B31;
     padding: 8px 15px 8px 15px;
@@ -2747,14 +2607,14 @@ header{
 /* biografia */
 
 .biografia-miperfil {
-    max-width: 75vh; /* Ajusta según el espacio disponible */
+    max-width: 95vh; /* Ajusta según el espacio disponible */
     margin-top: -25vh; /* Opcional: agrega un margen superior para separar del contenedor */
     margin-left: 85vh;
     margin-right: 8vh;
 }
   
 .text-briografia-miperfil {
-    margin: 0; /* Elimina márgenes por defecto del párrafo */
+    margin: 0 0 0 75px; /* Elimina márgenes por defecto del párrafo */
     color: #000;
     font-size: 20px;
     word-wrap: break-word; /* Permite que el texto se ajuste al contenedor */
@@ -2842,7 +2702,6 @@ header{
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si es necesario */
     gap: 15px; /* Espacio entre las fotos de perfil */
-    margin-left: -8vh;
     justify-content: center; /* Centra las fotos en la pantalla */
 }
 
@@ -2850,7 +2709,7 @@ header{
     display: flex;
     flex-direction: column; /* Alinea la imagen y el texto verticalmente */
     align-items: center; /* Centra la imagen y el texto horizontalmente */
-    width: 23vh; /* Tamaño del contenedor */
+    width: 26vh; /* Tamaño del contenedor */
     position: relative; /* Para posicionar el texto correctamente */
 }
 
@@ -2861,7 +2720,7 @@ header{
     border-radius: 5%; /* Foto circular */
     object-fit: cover; /* Mantiene la imagen dentro del contenedor sin distorsión */
     margin-top: 50px; /* Ajusta este valor según sea necesario */
-    margin-left: -8vh;
+    margin-left: -20vh;
 }
 
 /* MODAL DE LOS LIBROS */
@@ -3048,7 +2907,7 @@ header{
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si es necesario */
     gap: 15px; /* Espacio entre las fotos de perfil */
-    margin-left: -8vh;
+    margin-left: -19vh;
     justify-content: center; /* Centra las fotos en la pantalla */
 }
 
@@ -3056,13 +2915,13 @@ header{
     display: flex;
     flex-direction: column; /* Alinea la imagen y el texto verticalmente */
     align-items: center; /* Centra la imagen y el texto horizontalmente */
-    width: 23vh; /* Tamaño del contenedor */
+    width: 25vh; /* Tamaño del contenedor */
     position: relative; /* Para posicionar el texto correctamente */
 }
 
 .img-amigos-miperfil {
-    width: 80%; /* Ajusta el ancho de la imagen al tamaño del contenedor */
-    height: 18vh; /* Tamaño fijo para la altura */
+    width: 92%; /* Ajusta el ancho de la imagen al tamaño del contenedor */
+    height: 25vh; /* Tamaño fijo para la altura */
     border: 1px solid #22223B;
     border-radius: 50%; /* Foto circular */
     object-fit: cover; /* Mantiene la imagen dentro del contenedor sin distorsión */
@@ -3079,7 +2938,7 @@ header{
     font-size: 20px; /* Tamaño de la fuente del nombre */
     color: #000;
     text-align: center; /* Centra el texto */
-    top: 27vh;
+    top: 35vh;
 }
 
 
@@ -3238,7 +3097,7 @@ header{
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si es necesario */
     gap: 15px; /* Espacio entre las fotos de perfil */
-    margin-left: -8vh;
+    margin-left: -19vh;
     justify-content: center; /* Centra las fotos en la pantalla */
 }
 
@@ -3246,13 +3105,13 @@ header{
     display: flex;
     flex-direction: column; /* Alinea la imagen y el texto verticalmente */
     align-items: center; /* Centra la imagen y el texto horizontalmente */
-    width: 23vh; /* Tamaño del contenedor */
+    width: 25vh; /* Tamaño del contenedor */
     position: relative; /* Para posicionar el texto correctamente */
 }
 
 .img-comunidad-miperfil {
-    width: 80%; /* Ajusta el ancho de la imagen al tamaño del contenedor */
-    height: 18vh; /* Tamaño fijo para la altura */
+    width: 92%; /* Ajusta el ancho de la imagen al tamaño del contenedor */
+    height: 25vh; /* Tamaño fijo para la altura */
     border: 1px solid #22223B;
     border-radius: 50%; /* Foto circular */
     object-fit: cover; /* Mantiene la imagen dentro del contenedor sin distorsión */
@@ -3269,7 +3128,7 @@ header{
     font-size: 20px; /* Tamaño de la fuente del nombre */
     color: #000;
     text-align: center; /* Centra el texto */
-    top: 27vh;
+    top: 35vh;
     text-decoration: none;
 }
 
@@ -6225,3 +6084,455 @@ header{
   .boton-modal-ActualizarU:hover {
     background-color: #503b311a;
   }
+
+  /* --------------------------------------------------------------------------------------------------------------------------------- */
+
+  /* INICIO RESEÑAS */
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    margin-right: 10;
+}
+
+.body-reseña {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+}
+
+.main-reseña {
+  background-color: #fff;
+  margin: 115px auto 0; /* Centrado horizontal y margen superior */
+  width: 100%;
+  height: 187%; /* Ajusta la altura al contenido */
+  max-width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border: 0.5px solid #22223B;
+  padding: 20px;
+  overflow: visible; /* Asegura que el contenido no se oculte */
+}
+
+
+/* Estilos para la sección de reseñas izquierda*/
+.review-section-izquierda {
+    width: 50%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px ;
+    margin-left: 10px;
+    margin-top: 20px ;
+    
+}
+
+/* Cuadro que encierra la reseña */
+.review-box {
+    padding: 20px ;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los elementos dentro de la reseña */
+.review-item {
+    margin-bottom: 15px;
+}
+
+.review-label {
+    font-weight: bold;
+    color: #503B31;
+    margin-right: 10px;
+}
+
+.review-value {
+    color: #333;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------- */
+
+/* Estilos para la sección de reseñas derecha */
+.review-section-derecha {
+    width: 50%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px;
+    margin-top: -39vh ;
+    margin-left: 550px ;
+    margin-bottom: -20px;
+    
+}
+
+/* Cuadro que encierra la reseña */
+.review-box-derecha {
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Estilos para los elementos dentro de la reseña */
+.review-item-derecha {
+    margin-bottom: 15px;
+}
+
+.review-label-derecha {
+    font-weight: bold;
+    color: #503B31;
+    margin-right: 10px;
+}
+
+.review-value-derecha {
+    color: #333;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Estilo para la reseña */
+.review-text {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+  /* FINAL RESEÑAS */
+
+  /* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+  /* INICIO FEED COMUNIDADES */
+
+
+  .main-comunidad {
+    background-color: #fff;
+    margin: 115px auto 0; /* Centrado horizontal y margen superior */
+    width: 100%;
+    height: 187%; /* Ajusta la altura al contenido */
+    max-width: 95%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 0.5px solid #22223B;
+    padding: 20px;
+    overflow: visible; /* Asegura que el contenido no se oculte */
+}
+
+
+.section-comunidad{
+    padding: 30px;
+    color: #503B31;
+    margin-left: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 450;
+    font-size: 45px;
+    
+}
+
+.text-section-comunidad{
+    color: #000000;
+    margin-left: 60px;
+    font-size: 24.9px;
+    width: 90%;
+    margin-top: 2px;
+    margin-left: 50px;
+    
+}
+
+.title-section-comunidad{
+    padding: 30px;
+    color: #503B31;
+    margin: 30px 0 20px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+}
+
+
+/* estilos del link */
+.ver-mas-comunidades{
+    position: relative;
+    left: 87%;
+    top: -7vh;
+    font-size: 20px;
+    border: 1px solid  #503B31;
+    padding: 8px 15px 8px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #503B31;
+}
+
+.ver-mas-comunidades:hover{
+    background-color:  #503b311a;
+}
+
+/* Estilo del modal */
+.modal-overlay-comunidades {
+  position: fixed; /* Mantiene el modal fijo en la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Contenido del modal */
+.modal-comunidades-content {
+  background-color: rgb(255, 255, 255);
+  padding: 0;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  max-height: 70vh; 
+  overflow-y: auto; 
+  position: relative;
+}
+
+  /* Personalizar la barra de desplazamiento */
+  .modal-comunidades-content::-webkit-scrollbar {
+    width: 4px; /* Ancho de la barra de desplazamiento */
+  }
+  
+  .modal-comunidades-content::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-comunidades-content::-webkit-scrollbar-thumb {
+    background-color: #503B31; /* Color del "pulgar" de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-comunidades-content::-webkit-scrollbar-thumb:hover {
+    background-color: #333; /* Color del "pulgar" cuando se pasa el mouse por encima */
+  }
+
+/* Estilo del título dentro del modal */
+.modal-comunidades-content .title-modal-comunidad {
+    color: #503B31;
+    text-align: center;
+    font-size: 27px;
+    overflow-wrap: break-word;
+    margin: 0;
+    margin-bottom: 20px; /* Espacio entre el título y la primera imagen */
+}
+
+/* Estilos de la lista de comunidades dentro del modal */
+.modal-comunidades-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; /* Espaciado entre las comunidades */
+    max-width: 500px;
+    max-height: 500px; 
+    overflow-y: scroll; /* Permite el scroll vertical */
+    margin-top: 30px;
+    padding-top: 20px;
+    scrollbar-width: thin; /* Para navegadores como Firefox */
+    scrollbar-color:  #503b31 #f5f5f5; 
+}
+
+/* Estilo de cada comunidad dentro del modal */
+.modal-comunidad {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+/* Estilo de las imágenes dentro del modal */
+.modal-comunidad .modal-img-comunidad {
+    margin-top: 5px;
+    border-radius: 50px;
+    border: 1px solid #000000;
+    height: 80px; /* Tamaño uniforme de la imagen */
+    width: 80px; /* Tamaño uniforme de la imagen */
+    object-fit: cover;
+}
+
+/* Estilo de los nombres de comunidades dentro del modal */
+.modal-title-comunidad {
+    color: black;
+    font-size: 20px; /* Ajusta el tamaño del texto */
+    text-decoration: none; /* Elimina el subrayado por defecto de los enlaces */
+    margin-left: 10px; /* Espacio entre la imagen y el nombre */
+    text-align: left; /* Alinea el texto a la derecha */
+    flex: 1; /* Permite que el nombre ocupe el espacio disponible */
+}
+
+.modal-title-comunidad:hover {
+    text-decoration: underline; /* Subraya el nombre al pasar el mouse */
+}
+
+/* Estilo del botón de cerrar */
+.modal-close-comunidades {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 34px;
+    color: #503b31;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Mostrar el modal cuando se active el enlace */
+:target.modal-overlay-comunidades {
+    display: flex;
+}
+
+
+/* comunidades */
+
+.container-comunidad {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px; 
+    margin: 45px 0 120px 45px;
+}
+
+.img-comunidad {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    margin-top: -70px;
+    margin-bottom: 20px;
+    
+}
+
+
+
+.comunidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 150px; /* Ancho fijo para todos los contenedores */
+}
+
+.title-comunidad {
+    color: black;
+    margin-top: 10px; /* Espacio entre la imagen y el título */
+    font-size: 20px; /* Ajusta el tamaño del texto según tus necesidades */
+    width: 100%; /* Ajusta el ancho para que coincida con el contenedor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+/* segundo modal */
+
+
+/* Estilo del modal */
+.modal-otra-comunidades {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Contenido del modal */
+.modal-otra-comunidades-content {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 50%;
+    max-width: 480px;
+    position: relative;
+}
+
+/* Estilo del título dentro del modal */
+.modal-otra-comunidades-content .modal-comunidad {
+    color: #503B31;
+    text-align: center;
+    font-size: 27px;
+    overflow-wrap: break-word;
+    margin: 0;
+    margin-bottom: 20px; /* Espacio entre el título y la primera imagen */
+}
+
+/* Estilos de la lista de comunidades dentro del modal */
+.modal-otra-comunidades-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; /* Espaciado entre las comunidades */
+    max-width: 500px;
+    max-height: 500px; 
+    overflow-y: scroll; /* Permite el scroll vertical */
+    margin-top: 30px;
+    padding-top: 20px;
+    scrollbar-width: thin; /* Para navegadores como Firefox */
+    scrollbar-color:  #503b31 #f5f5f5; 
+}
+
+/* Estilo de cada comunidad dentro del modal */
+.comunidades-otra {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+/* Estilo de las imágenes dentro del modal */
+.comunidades-otra .img-comunidad-otra {
+    margin-top: 5px;
+    border-radius: 50px;
+    border: 1px solid #000000;
+    height: 80px; /* Tamaño uniforme de la imagen */
+    width: 80px; /* Tamaño uniforme de la imagen */
+    object-fit: cover;
+}
+
+/* Estilo de los nombres de comunidades dentro del modal */
+.title-comunidad-otra {
+    color: black;
+    font-size: 20px; /* Ajusta el tamaño del texto */
+    text-decoration: none; /* Elimina el subrayado por defecto de los enlaces */
+    margin-left: 10px; /* Espacio entre la imagen y el nombre */
+    text-align: left; /* Alinea el texto a la derecha */
+    flex: 1; /* Permite que el nombre ocupe el espacio disponible */
+}
+
+.title-comunidad-otra:hover {
+    text-decoration: underline; /* Subraya el nombre al pasar el mouse */
+}
+
+/* Estilo del botón de cerrar */
+.close-comunidades-otra {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 34px;
+    color: #503b31;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Mostrar el modal cuando se active el enlace */
+:target.modal-otra-comunidades{
+    display: flex;
+}
+
+
+  /* FINAL FEED COMUNIDADES */
