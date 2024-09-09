@@ -4,7 +4,7 @@ const router = Router();
 
 router.get('/api/publicacion',  PublicacionController.getPublicaciones);
 router.get('/api/publicacion/:id',  PublicacionController.getPublicacion);
-router.put('/api/publicacion/:id',  PublicacionController.putUsuario);
+router.put('/api/publicacion/:id',  PublicacionController.putPublicacion);
 router.post('/api/publicacion',  PublicacionController.postPublicacion);
 router.delete('/api/publicacion/:id',  PublicacionController.estadoPublicacion);
 

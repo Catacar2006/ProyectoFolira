@@ -33,7 +33,6 @@ class UsuarioLibroController{
     static async putUsuarioLibro(req,res){
         try {
             const updateUsuarioLibro  = {
-                UsuarioLibro: req.body.UsuarioLibro,
                 estado: req.body.estado,
                 idUsuarioFK: req.body.idUsuarioFK,
                 idLibroFK: req.body.idLibroFK,
@@ -63,7 +62,6 @@ class UsuarioLibroController{
     static async postUsuarioLibro(req,res){
         try {
             const usulibr  = {
-                UsuarioLibro: req.body.UsuarioLibro,
                 estado: req.body.estado,
                 idUsuarioFK: req.body.idUsuarioFK,
                 idLibroFK: req.body.idLibroFK,

@@ -61,7 +61,7 @@ TiempoPantalla.init({
     tiempoInicio:{type: DataTypes.DATE,defaultValue:DataTypes.NOW, allowNull:false},
     tiempoFin:{type: DataTypes.DATE,defaultValue:DataTypes.NOW, allowNull:false},
     tiempoTotal:{type: DataTypes.INTEGER, allowNull:false},
-    estado:{type:DataTypes.BOOLEAN, allowNull:false}
+    estado:{type:DataTypes.BOOLEAN}
 },
  {
     sequelize,

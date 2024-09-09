@@ -59,7 +59,7 @@ BibliotecaLibro.init({
     idBibliotecaLibro:{type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
     idBibliotecaFK:{type: DataTypes.INTEGER, allowNull:false},
     idLibroFK:{type: DataTypes.INTEGER, allowNull:false},
-    estado:{type:DataTypes.BOOLEAN, allowNull:false}
+    estado:{type:DataTypes.BOOLEAN}
 },
  {
     sequelize,

@@ -57,12 +57,13 @@ class Insignia extends Model {
 Insignia.init({
  
     idInsignia:{type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
-    nombre:{type: DataTypes.STRING (50), allowNull:false},
+    nombre:{type: DataTypes.STRING (200), allowNull:false},
     descripcion:{type:  DataTypes.TEXT, allowNull:false},
-    icono:{type: DataTypes.STRING (255), allowNull:false},
+    icono:{type: DataTypes.TEXT, allowNull:false},
+    iconoURL:{type: DataTypes.TEXT, allowNull:false},
     criterio:{type: DataTypes.TEXT, allowNull:false},
     fechaCreacion:{type: DataTypes.DATE,defaultValue:DataTypes.NOW, allowNull:false},
-    estado:{type:DataTypes.BOOLEAN, allowNull:false}
+    estado:{type:DataTypes.BOOLEAN}
 },
  {
     sequelize,

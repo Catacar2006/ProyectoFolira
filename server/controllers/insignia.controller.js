@@ -36,6 +36,7 @@ class InsigniaController{
                 nombre: req.body.nombre,
                 descripcion: req.body.descripcion,
                 icono: req.body.icono,
+                iconoURL: req.body.iconoURL,
                 criterio: req.body.criterio,
                 fechaCreacion: req.body.fechaCreacion,
                 estado:req.body.estado
@@ -67,9 +68,11 @@ class InsigniaController{
                 nombre: req.body.nombre,
                 descripcion: req.body.descripcion,
                 icono: req.body.icono,
+                iconoURL: req.body.iconoURL,
                 criterio: req.body.criterio,
                 fechaCreacion: req.body.fechaCreacion,
-                estado:req.body.estado            } 
+                estado:req.body.estado
+               } 
             await Insignia.createInsignia(insig);
             res.status(201).json( {message: "Insignia creada con exito"} );
         } catch (error) {

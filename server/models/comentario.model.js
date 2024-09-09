@@ -59,7 +59,7 @@ Comentario.init({
     idComentario:{type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
     fechaPublicacion:{type: DataTypes.DATE,defaultValue:DataTypes.NOW, allowNull:false},
     contenido:{type: DataTypes.TEXT, allowNull:false},
-    estado:{type:DataTypes.BOOLEAN, allowNull:false},
+    estado:{type:DataTypes.BOOLEAN},
     idPublicacionFK:{type: DataTypes.INTEGER, allowNull:false}
 
 },

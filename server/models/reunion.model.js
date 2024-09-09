@@ -58,11 +58,11 @@ Reunion.init({
  
     idReunion:{type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
     idOrganizador:{type: DataTypes.INTEGER, allowNull:false},
-    titulo:{type: DataTypes.STRING (50), allowNull:false},
+    titulo:{type: DataTypes.STRING (200), allowNull:false},
     fechaHoraInicio:{type: DataTypes.DATE,defaultValue:DataTypes.NOW, allowNull:false},
     ubicacion:{type:  DataTypes.STRING (100), allowNull:false},
     fechaCreacion:{type: DataTypes.DATE,defaultValue:DataTypes.NOW, allowNull:false},
-    estado:{type:DataTypes.BOOLEAN, allowNull:false}
+    estado:{type:DataTypes.BOOLEAN}
 },
  {
     sequelize,

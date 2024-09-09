@@ -35,8 +35,6 @@ class UsuarioInsigniaController{
             const updateUsuarioInsignia  = {
                 idDestacado: req.body.idDestacado,
                 idInsigniaFK: req.body.idInsigniaFK,
-                fechaInicio: req.body.fechaInicio,
-                fechaFin: req.body.fechaFin,
                 fechaOtorgada: req.body.fechaOtorgada,
                 estado: req.body.estado,
                 nota:req.body.nota

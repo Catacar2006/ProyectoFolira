@@ -30,8 +30,8 @@ class AuthController {
             token,
             usuario: {
               id: usuario.idUsuario,
-              correo: usuario.correo
-        
+              correo: usuario.correo,
+              idRol: usuario.idRolFK
             },
           });
         } else {

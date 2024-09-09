@@ -60,7 +60,11 @@ Comunidad.init({
     nombre:{type: DataTypes.STRING (100), allowNull:false},
     fechaCreacion:{type: DataTypes.DATE,defaultValue:DataTypes.NOW, allowNull:false},
     descripcion:{type: DataTypes.STRING (255), allowNull:false},
-    estado:{type:DataTypes.BOOLEAN, allowNull:false}
+    fotoComunidad:{type:DataTypes.TEXT, allowNull:true},
+    fotoComunidadURL:{type:DataTypes.TEXT, allowNull:true},
+    fotoBanner:{type:DataTypes.TEXT, allowNull:true},
+    fotoBannerURL:{type:DataTypes.TEXT, allowNull:true},
+    estado:{type:DataTypes.BOOLEAN}
 },
  {
     sequelize,

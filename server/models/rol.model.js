@@ -60,7 +60,7 @@ Rol.init({
     idRol:{type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
     TipoRol:{type:ENUM('usuario','admin'), allowNull:false},
     descripcion:{type:DataTypes.STRING(100), allowNull:false},
-    estado:{type:DataTypes.BOOLEAN, allowNull:false}
+    estado:{type:DataTypes.BOOLEAN}
 },
  {
     sequelize,

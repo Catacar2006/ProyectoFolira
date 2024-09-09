@@ -33,8 +33,8 @@ class ReseñaController{
     static async putReseña(req,res){
         try {
             const updateReseña  = {
-                titulo: req.body.titulo,
                 contenido: req.body.contenido,
+                puntuacion: req.body.puntuacion,
                 fechaCreacion: req.body.fechaCreacion,
                 idLibroFK: req.body.idLibroFK,
                 idUsuarioFK: req.body.idUsuarioFK,
@@ -64,8 +64,8 @@ class ReseñaController{
     static async postReseña(req,res){
         try {
             const resen  = {
-                titulo: req.body.titulo,
                 contenido: req.body.contenido,
+                puntuacion: req.body.puntuacion,
                 fechaCreacion: req.body.fechaCreacion,
                 idLibroFK: req.body.idLibroFK,
                 idUsuarioFK: req.body.idUsuarioFK,

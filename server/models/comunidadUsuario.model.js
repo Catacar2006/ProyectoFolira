@@ -57,8 +57,8 @@ class ComunidadUsuario extends Model {
 ComunidadUsuario.init({
  
     idComunidadUsuario:{type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
-    rol:{type:ENUM('miembro','administrador')},
-    estado:{type:DataTypes.BOOLEAN, allowNull:false},
+    rol:{type:ENUM('miembro','administrador'), allowNull:false},
+    estado:{type:DataTypes.BOOLEAN},
     idUsuarioFK:{type: DataTypes.INTEGER, allowNull:false},
     idComunidadFK:{type: DataTypes.INTEGER, allowNull:false}
 },

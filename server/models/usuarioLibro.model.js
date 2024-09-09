@@ -57,10 +57,10 @@ class UsuarioLibro extends Model {
 UsuarioLibro.init({
  
     idUsuarioLibro:{type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
-    estado:{type:ENUM('ya_lo_lei','por_leer')},
+    estado:{type:ENUM('ya_lo_lei','por_leer'), allowNull:false},
     idUsuarioFK:{type: DataTypes.INTEGER, allowNull:false},
     idLibroFK:{type: DataTypes.INTEGER, allowNull:false},
-    estadoUsuarioLibro:{type:DataTypes.BOOLEAN, allowNull:false}
+    estadoUsuarioLibro:{type:DataTypes.BOOLEAN}
 },
  {
     sequelize,

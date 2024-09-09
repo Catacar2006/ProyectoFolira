@@ -60,8 +60,8 @@ Like.init({
     fecha:{type: DataTypes.DATE,defaultValue:DataTypes.NOW, allowNull:false},
     idUsuarioFK:{type: DataTypes.INTEGER, allowNull:false},
     idObjetoFK:{type: DataTypes.INTEGER, allowNull:false},
-    tipoObjeto:{type:ENUM('publicacion','comentario')},
-    estado:{type:DataTypes.BOOLEAN, allowNull:false}
+    tipoObjeto:{type:ENUM('publicacion','comentario'), allowNull:false},
+    estado:{type:DataTypes.BOOLEAN}
 
 },
  {

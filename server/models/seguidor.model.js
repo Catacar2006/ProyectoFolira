@@ -58,7 +58,7 @@ Seguidor.init({
  
     idSeguidor:{type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
     fechaCreacion:{type:DataTypes.DATE,defaultValue:DataTypes.NOW, allowNull:false},
-    estado:{type:DataTypes.BOOLEAN, allowNull:false},
+    estado:{type:DataTypes.BOOLEAN},
     idUsuarioFK:{type:DataTypes.INTEGER, allowNull:false},
     idSeguidorFK:{type:DataTypes.INTEGER, allowNull:false}
 },

@@ -60,7 +60,7 @@ Conversacion.init({
     idRemitente:{type: DataTypes.INTEGER, allowNull:false},
     idReceptor:{type: DataTypes.INTEGER, allowNull:false},
     fechaConversacion:{type: DataTypes.DATE,defaultValue:DataTypes.NOW, allowNull:false},
-    estado:{type:DataTypes.BOOLEAN, allowNull:false},
+    estado:{type:DataTypes.BOOLEAN},
     tipoConversacion:{type:ENUM('personal','comunidad'), allowNull:false}
 },
  {

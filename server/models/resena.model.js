@@ -57,12 +57,12 @@ class Reseña extends Model {
 Reseña.init({
  
     idResena:{type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
-    titulo:{type: DataTypes.STRING (50), allowNull:false},
     contenido:{type:  DataTypes.TEXT, allowNull:false},
+    puntuacion:{type: DataTypes.INTEGER, allowNull:false},
     fechaCreacion:{type: DataTypes.DATE,defaultValue:DataTypes.NOW, allowNull:false},
     idLibroFK:{type: DataTypes.INTEGER, allowNull:false},
     idUsuarioFK:{type: DataTypes.INTEGER, allowNull:false},
-    estado:{type:DataTypes.BOOLEAN, allowNull:false}
+    estado:{type:DataTypes.BOOLEAN}
 
 },
  {

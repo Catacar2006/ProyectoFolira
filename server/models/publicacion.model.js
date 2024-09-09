@@ -58,9 +58,11 @@ Publicacion.init({
  
     idPublicacion:{type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
     contenido:{type: DataTypes.TEXT, allowNull:false},
-    foto:{type: DataTypes.STRING (255), allowNull:false},
+    fotoPublicacion:{type: DataTypes.TEXT, allowNull:true},
+    fotoPublicacionURL:{type: DataTypes.TEXT, allowNull:true},
+    fechaPublicacion:{type:DataTypes.DATE, defaultValue:DataTypes.NOW},
     tipoPublicacion:{type:ENUM('publicacion','Eventos'), allowNull:false},
-    estado:{type:DataTypes.BOOLEAN, allowNull:false},
+    estado:{type:DataTypes.BOOLEAN},
     idComunidadFK:{type: DataTypes.INTEGER, allowNull:false}
     
 },

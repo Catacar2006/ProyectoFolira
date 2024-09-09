@@ -58,7 +58,7 @@ Mensaje.init({
     idMensaje:{type:DataTypes.INTEGER,primaryKey:true, autoIncrement:true},
     contenido:{type: DataTypes.TEXT, allowNull:false},
     fechaHoraEnvio:{type: DataTypes.DATE,defaultValue:DataTypes.NOW, allowNull:false},
-    estado:{type:DataTypes.BOOLEAN, allowNull:false},
+    estado:{type:DataTypes.BOOLEAN},
     idConversacionFK:{type: DataTypes.INTEGER, allowNull:false}
 
 },

@@ -34,7 +34,6 @@ class NotificacionController{
         try {
             const updateNotificacion  = {
                 tipo: req.body.tipo,
-                contenidoTipo: req.body.contenidoTipo,
                 mensaje: req.body.mensaje,
                 leido: req.body.leido,
                 fechaCreacion: req.body.fechaCreacion,

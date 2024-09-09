@@ -57,16 +57,15 @@ class Notificacion extends Model {
 Notificacion.init({
  
     idNotificacion:{type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
-    tipo:{type: DataTypes.STRING (50), allowNull:false},
-    contenidoTipo:{type:ENUM('publicacion','like','comentario','mensaje','insignea','denuncias'), allowNull:false},
+    tipo:{type:ENUM('publicacion','like','comentario','mensaje','insignea','denuncias'), allowNull:false},
     mensaje:{type:  DataTypes.TEXT, allowNull:false},
     leido:{type:DataTypes.BOOLEAN, allowNull:false},
     fechaCreacion:{type: DataTypes.DATE,defaultValue:DataTypes.NOW, allowNull:false},
     idUsuarioFK:{type: DataTypes.INTEGER, allowNull:false},
     idObjetoFK:{type: DataTypes.INTEGER, allowNull:false},
     tipoObjeto:{type:ENUM('publicacion','like','comentario','mensaje','insignea','denuncias'), allowNull:false},
-    estado:{type:DataTypes.BOOLEAN, allowNull:false}
-
+    estado:{type:DataTypes.BOOLEAN}
+    
 },
  {
     sequelize,

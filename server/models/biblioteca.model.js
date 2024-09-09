@@ -60,7 +60,7 @@ Biblioteca.init({
     tipoBiblioteca:{type:ENUM('Fisica','Virtual'), allowNull:false},
     fechaCreacion:{type: DataTypes.DATE,defaultValue:DataTypes.NOW, allowNull:false},
     biografia:{type: DataTypes.TEXT, allowNull:false},
-    estado:{type:DataTypes.BOOLEAN, allowNull:false}
+    estado:{type:DataTypes.BOOLEAN}
 },
  {
     sequelize,

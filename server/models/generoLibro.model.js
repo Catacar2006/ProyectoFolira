@@ -59,7 +59,7 @@ GeneroLibro.init({
     idGeneroLibro:{type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
     idGeneroFK:{type: DataTypes.INTEGER, allowNull:false},
     idLibroFK:{type: DataTypes.INTEGER, allowNull:false},
-    estado:{type:DataTypes.BOOLEAN, allowNull:false}
+    estado:{type:DataTypes.BOOLEAN}
 },
  {
     sequelize,

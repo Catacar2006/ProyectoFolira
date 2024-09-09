@@ -57,8 +57,8 @@ class GeneroLiterario extends Model {
 GeneroLiterario.init({
  
     idGeneroLiterario:{type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
-    nombreGeneroLiterario:{type: DataTypes.STRING (50), allowNull:false},
-    estadoGeneroLiterario:{type:DataTypes.BOOLEAN, allowNull:false},
+    nombreGeneroLiterario:{type: DataTypes.STRING(200), allowNull:false},
+    estadoGeneroLiterario:{type:DataTypes.BOOLEAN},
 },
  {
     sequelize,

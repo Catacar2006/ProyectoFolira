@@ -57,12 +57,13 @@ class Libro extends Model {
 Libro.init({
  
     idLibro:{type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
-    titulo:{type: DataTypes.STRING (100), allowNull:false},
+    titulo:{type: DataTypes.STRING (200), allowNull:false},
     ISBN:{type:  DataTypes.STRING (13), allowNull:false, unique:true},
     fechaPublicacion:{type:DataTypes.DATE, allowNull:false},
-    editorial:{type: DataTypes.STRING (100), allowNull:false},
+    editorial:{type: DataTypes.STRING (200), allowNull:false},
     sinopsis:{type: DataTypes.TEXT, allowNull:false},
-    portada:{type: DataTypes.STRING (255), allowNull:false},
+    portada:{type: DataTypes.TEXT},
+    portadaURL:{type: DataTypes.TEXT},
     calificacion:{type: DataTypes.INTEGER, allowNull:false},
     estado:{type:DataTypes.BOOLEAN, allowNull:false}
 },

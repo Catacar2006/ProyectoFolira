@@ -60,8 +60,9 @@ Autor.init({
     nombre:{type: DataTypes.STRING (100), allowNull:false},
     fechaNacimiento:{type:DataTypes.DATE, allowNull:false},
     biografia:{type: DataTypes.TEXT, allowNull:false},
-    fotoAutor:{type: DataTypes.STRING (255), allowNull:false},
-    estado:{type:DataTypes.BOOLEAN, allowNull:false}
+    fotoAutor:{type: DataTypes.TEXT, allowNull:true},
+    fotoAutorURL:{type: DataTypes.TEXT, allowNull:true},
+    estado:{type:DataTypes.BOOLEAN}
 
 },
  {
