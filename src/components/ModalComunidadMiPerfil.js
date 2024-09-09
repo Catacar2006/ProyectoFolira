@@ -34,11 +34,14 @@ function ModalAmigosMiPerfil() {
             <div className="modal-MiperfilC-content">
 
             <div className="modal-MiperfilC-comuni">
+                <Link>
                 <img
                   className="modal-img-MiperfilC"
                   src={foto_usua1_miperfil}
                   alt="Alex_㋛"
                 />
+                </Link>
+
                 <Link
                   to="#"
                   className="modal-title-MiperfilC"
@@ -48,11 +51,14 @@ function ModalAmigosMiPerfil() {
               </div>
 
               <div className="modal-MiperfilC-comuni">
+                <Link>
                 <img
                   className="modal-img-MiperfilC"
                   src={foto_usua2_miperfil}
                   alt="Emma_✩"
                 />
+                </Link>
+
                 <Link
                   to="#"
                   className="modal-title-MiperfilC"
@@ -62,11 +68,14 @@ function ModalAmigosMiPerfil() {
               </div>
 
               <div className="modal-MiperfilC-comuni">
+                <Link>
                 <img
                   className="modal-img-MiperfilC"
                   src={foto_usua3_miperfil}
                   alt="John_★"
                 />
+                </Link>
+
                 <Link
                   to="#"
                   className="modal-title-MiperfilC"
@@ -76,11 +85,13 @@ function ModalAmigosMiPerfil() {
               </div>
 
               <div className="modal-MiperfilC-comuni">
+                <Link>
                 <img
                   className="modal-img-MiperfilC"
                   src={foto_usua1_miperfil}
                   alt="Alex_㋛"
                 />
+                </Link>
                 <Link
                   to="#"
                   className="modal-title-MiperfilC"
@@ -90,11 +101,14 @@ function ModalAmigosMiPerfil() {
               </div>
 
               <div className="modal-MiperfilC-comuni">
+                <Link>
                 <img
                   className="modal-img-MiperfilC"
                   src={foto_usua2_miperfil}
                   alt="Emma_✩"
                 />
+                </Link>
+
                 <Link
                   to="#"
                   className="modal-title-MiperfilC"
@@ -104,11 +118,15 @@ function ModalAmigosMiPerfil() {
               </div>
 
               <div className="modal-MiperfilC-comuni">
+                
+                <Link>
                 <img
                   className="modal-img-MiperfilC"
                   src={foto_usua3_miperfil}
                   alt="John_★"
                 />
+                </Link>
+
                 <Link
                   to="#"
                   className="modal-title-MiperfilC"
@@ -117,7 +135,6 @@ function ModalAmigosMiPerfil() {
                 </Link>
               </div>
 
-              
             </div>
           </div>
         </div>

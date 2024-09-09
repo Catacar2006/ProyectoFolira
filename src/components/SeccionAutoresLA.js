@@ -12,7 +12,7 @@ function SeccionAutoresLA (){
             {/* otro contendio */}
         <div className="container-autores">
           <div className="autor">
-            <Link>
+            <Link to="/FichaAutor">
             <img
               className="img-autor"
               src={autor1}
@@ -20,13 +20,13 @@ function SeccionAutoresLA (){
             />
             </Link>
             
-            <Link to="" className="title-autor">
+            <Link to="/FichaAutor" className="title-autor">
             Gabriel García Márquez
             </Link>
             
           </div>
           <div className="autor">
-            <Link>
+          <Link to="/FichaAutor">
             <img
               className="img-autor"
               src={autor2}
@@ -34,13 +34,13 @@ function SeccionAutoresLA (){
             />
             </Link>
             
-            <Link to="" className="title-autor">
+            <Link to="/FichaAutor" className="title-autor">
             Burgos Julia
             </Link>
             
           </div>
           <div className="autor">
-            <Link>
+          <Link to="/FichaAutor">
             <img
               className="img-autor"
               src={autor3}
@@ -49,13 +49,13 @@ function SeccionAutoresLA (){
             </Link>
             
 
-            <Link to="" className="title-autor">
+            <Link to="/FichaAutor" className="title-autor">
             Mario Benedetti
             </Link>
 
           </div>
           <div className="autor">
-            <Link>
+          <Link to="/FichaAutor">
             <img
               className="img-autor"
               src={autor4}
@@ -63,13 +63,13 @@ function SeccionAutoresLA (){
             />
             </Link>
             
-            <Link to="" className="title-autor">
+            <Link to="/FichaAutor" className="title-autor">
             Mario Vargas Llosa
             </Link>
 
           </div>
           <div className="autor">
-            <Link>
+          <Link to="/FichaAutor">
             <img
               className="img-autor"
               src={autor5}
@@ -77,7 +77,7 @@ function SeccionAutoresLA (){
             />
             </Link>
 
-            <Link to="" className="title-autor">
+            <Link to="/FichaAutor" className="title-autor">
             Luara Restrepo
             </Link>
             

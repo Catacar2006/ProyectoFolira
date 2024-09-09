@@ -1,42 +1,83 @@
 import React from "react";
-import comunidad6 from '../static/img/cp9.jpeg';
-import comunidad8 from '../static/img/c4.jpg';
-import comunidad9 from '../static/img/c5.jpg';
-import comunidad11 from '../static/img/c7.jpg';
+import comunidad7 from "../static/img/cp7.jpg";
+import comunidad2 from "../static/img/cp8.jpeg";
+import comunidad12 from "../static/img/c8.jpg";
+import comunidad4 from "../static/img/c2.jpg";
+import { Link } from "react-router-dom";
 
-function SeccionComunidad2 (){
-    return (
-        <div>
-            {/* otras comunidades */}
-        <div>
-          <h2 className="title-section-comunidad">Politico e historico</h2>
+function SeccionComunidad2() {
+  return (
+    <div>
+      {/* otras comunidades */}
+      <div>
+            <h3 class="title-tus-comunidad">Tus Comunidades</h3>
+      </div>
+
+      {/* contenido por fuera */}
+      <div className="tusComunidadesFeed">
+        
+        <div className="tus-comunidades">
+        <Link to="/FichaAutor">
+          <img className="tus-img-comunidad" src={comunidad7} alt="" />
+          </Link>
+          
+          <Link to="/FichaAutor" className="tus-title-comunidad">
+          Un viaje al pasado
+          </Link>
         </div>
 
-        {/* contenido por fuera */}
-        <div className="container-comunidad">
-          <div className="comunidades">
-            <img className="img-comunidad" src={comunidad6} alt="" />
-            <h5 className="title-comunidad">Un viaje al pasado</h5>
-          </div>
-          <div className="comunidades">
-            <img className="img-comunidad" src={comunidad8} alt="" />
-            <h5 className="title-comunidad">Lo bello de la antiguedad</h5>
-          </div>
-          <div className="comunidades">
-            <img className="img-comunidad" src={comunidad9} alt="" />
-            <h5 className="title-comunidad">¿Izquierda o Derecha?</h5>
-          </div>
-          <div className="comunidades">
-            <img className="img-comunidad" src={comunidad6} alt="" />
-            <h5 className="title-comunidad">El ayer, el hoy y el mañana</h5>
-          </div>
-          <div className="comunidades">
-            <img className="img-comunidad" src={comunidad11} alt="" />
-            <h5 className="title-comunidad">Épocas que cambiaron el hoy</h5>
-          </div>
+        <div className="tus-comunidades">
+        <Link to="/FichaAutor">
+          <img className="tus-img-comunidad" src={comunidad2} alt="" />
+          </Link>
+
+          <Link to="/FichaAutor" className="tus-title-comunidad">
+          Lo bello de la antiguedad
+          </Link>
         </div>
+
+        <div className="tus-comunidades">
+        <Link to="/FichaAutor">
+          <img className="tus-img-comunidad" src={comunidad12} alt="" />
+          </Link>
+
+          <Link to="/FichaAutor" className="tus-title-comunidad">
+          ¿Izquierda o Derecha?
+          </Link>
         </div>
-    );
+
+        <div className="tus-comunidades">
+        <Link to="/FichaAutor">
+          <img className="tus-img-comunidad" src={comunidad4} alt="" />
+          </Link>
+
+          <Link to="/FichaAutor" className="tus-title-comunidad">
+          El ayer, el hoy y el mañana
+          </Link>
+        </div>
+
+        <div className="tus-comunidades">
+        <Link to="/FichaAutor">
+          <img className="tus-img-comunidad" src={comunidad2} alt="" />
+          </Link>
+
+          <Link to="/FichaAutor" className="tus-title-comunidad">
+          Épocas que cambiaron el hoy
+          </Link>
+        </div>
+
+        <div className="tus-comunidades">
+          <Link to="/FichaAutor">
+          <img className="tus-img-comunidad" src={comunidad2} alt="" />
+          </Link>
+          <Link to="/FichaAutor" className="tus-title-comunidad">
+          Lo bello de la antiguedad
+          </Link>
+        </div>
+
+      </div>
+    </div>
+  );
 }
 
 export default SeccionComunidad2;

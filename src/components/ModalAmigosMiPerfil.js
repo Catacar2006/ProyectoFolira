@@ -27,11 +27,13 @@ function ModalAmigosMiPerfil() {
             <div className="modal-MiperfilA-content">
 
               <div className="modal-MiperfilA-Autores">
+                <Link to="">
                 <img
                   className="modal-img-MiperfilA"
                   src={foto_usua1_miperfil}
                   alt="Alex_㋛"
-                />
+                /></Link>
+                
                 <Link
                   to="#"
                   className="modal-title-MiperfilA"
@@ -41,11 +43,14 @@ function ModalAmigosMiPerfil() {
               </div>
 
               <div className="modal-profile-Autores">
+                <Link>
                 <img
                   className="modal-img-autores"
                   src={foto_usua2_miperfil}
                   alt="Emma_✩"
                 />
+                </Link>
+
                 <Link
                   to="#"
                   className="modal-title-autores"
@@ -55,11 +60,13 @@ function ModalAmigosMiPerfil() {
               </div>
 
               <div className="modal-profile-Autores">
+                <Link>
                 <img
                   className="modal-img-autores"
                   src={foto_usua3_miperfil}
                   alt="John_★"
                 />
+                </Link>
                 <Link
                   to="#"
                   className="modal-title-autores"
@@ -69,11 +76,14 @@ function ModalAmigosMiPerfil() {
               </div>
 
               <div className="modal-profile-Autores">
+                <Link>
                 <img
                   className="modal-img-autores"
                   src={foto_usua1_miperfil}
                   alt="Alex_㋛"
                 />
+                </Link>
+
                 <Link
                   to="#"
                   className="modal-title-autores"
@@ -83,11 +93,14 @@ function ModalAmigosMiPerfil() {
               </div>
 
               <div className="modal-profile-Autores">
+                <Link>
                 <img
                   className="modal-img-autores"
                   src={foto_usua2_miperfil}
                   alt="Emma_✩"
                 />
+                </Link>
+
                 <Link
                   to="#"
                   className="modal-title-autores"
@@ -97,11 +110,14 @@ function ModalAmigosMiPerfil() {
               </div>
 
               <div className="modal-profile-Autores">
+                <Link>
                 <img
                   className="modal-img-autores"
                   src={foto_usua3_miperfil}
                   alt="John_★"
                 />
+                </Link>
+
                 <Link
                   to="#"
                   className="modal-title-autores"

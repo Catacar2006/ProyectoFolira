@@ -1,124 +1,161 @@
-import React from "react";
-import comunidad8 from '../static/img/c4.jpg';
-import comunidad9 from '../static/img/c5.jpg';
-import comunidad10 from '../static/img/c6.jpg';
-import comunidad11 from '../static/img/c7.jpg';
-import comunidad6 from '../static/img/cp9.jpeg';
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import modal_autor1 from "../static/img/Gabriel García Márquez.jpg";
+import modal_autor2 from "../static/img/burgos_julia.jpg";
+import modal_autor3 from "../static/img/Las frases de Mario Benedetti.jpg";
+import modal_autor4 from "../static/img/Mario Vargas Llosa.jpeg";
+import modal_autor5 from "../static/img/Laura-Restrepo.jpeg";
 
-function ModalComunidad2 () {
-    return (
-        <div>
-            {/* Enlace para abrir el modal */}
-        <a href="#modal-otra-comunidades" className="ver-mas">
-          ver más
-        </a>
+function ModalFeedComunidad2() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-        {/* Modal de Comunidades */}
-        <div id="modal-otra-comunidades" className="modal-comunidades">
-          <div className="modal-otra-comunidades-content">
-            <Link href="#" className="close-comunidades-otra">
-              ×
-            </Link>
-            <h2 className="modal-comunidad">COMUNIDADES QUE TE INTERESEN</h2>
-            <div className="modal-otra-comunidades-container">
-              <div className="comunidades-otra">
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  return (
+    <div>
+      <button className="ver-mas-tus-comunidades" onClick={openModal}>
+        Tus Comunidades
+      </button>
+
+      {isModalOpen && (
+        <div className="modal-overlay-tus-comunidades" onClick={closeModal}>
+          <div
+            className="modal-tus-comunidades-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="Header-tus-modal-comunidad">
+              <button className="close-btn-tus-comunidad" onClick={closeModal}>
+                &times;
+              </button>
+              <h2 className="titulo-modal-tus-comuni">TUS COMUNIDADES</h2>
+            </div>
+            {" "}
+            <div className="modal-gustar-tus-comuni-content">
+
+              <div className="modal-profile-tus-comuni">
+              <Link to="/FichaAutor">
                 <img
-                  className="img-comunidad-otra"
-                  src={comunidad6}
-                  alt=""
-                />
-                <h5 className="title-comunidad-otra">Un viaje al pasado</h5>
+                  className="modal-img-gustar-tus-comuni"
+                  src={modal_autor1}
+                  alt="Gabriel García Márquez"
+                /> 
+                </Link>
+                
+                <Link
+                  to="/FichaAutor"
+                  className="modal-name-tus-comuni"
+                >
+                  Gabriel García Márquez
+                </Link>
               </div>
-              <div className="comunidades-otra">
+
+              <div className="modal-profile-tus-comuni">
+              <Link to="/FichaAutor">
                 <img
-                  className="img-comunidad-otra"
-                  src={comunidad8}
-                  alt=""
+                  className="modal-img-gustar-tus-comuni"
+                  src={modal_autor1}
+                  alt="Gabriel García Márquez"
                 />
-                <h5 className="title-comunidad-otra">
-                  Lo bello de la antiguedad
-                </h5>
+                </Link>
+                <Link
+                  to="/FichaAutor"
+                  className="modal-name-tus-comuni"
+                >
+                  Gabriel García Márquez
+                </Link>
               </div>
-              <div className="comunidades-otra">
+
+              <div className="modal-profile-tus-comuni">
+              <Link to="/FichaAutor">
                 <img
-                  className="img-comunidad-otra"
-                  src={comunidad9}
-                  alt=""
+                  className="modal-img-gustar-tus-comuni"
+                  src={modal_autor1}
+                  alt="Gabriel García Márquez"
                 />
-                <h5 className="title-comunidad-otra">¿Izquierda o Derecha?</h5>
+                </Link>
+
+                <Link
+                  to="/FichaAutor"
+                  className="modal-name-tus-comuni"
+                >
+                  Gabriel García Márquez
+                </Link>
               </div>
-              <div className="comunidades-otra">
+
+              <div className="modal-profile-tus-comuni">
+              <Link to="/FichaAutor">
                 <img
-                  className="img-comunidad-otra"
-                  src={comunidad10}
-                  alt=""
+                  className="modal-img-gustar-tus-comuni"
+                  src={modal_autor1}
+                  alt="Gabriel García Márquez"
                 />
-                <h5 className="title-comunidad-otra">
-                  El ayer, el hoy y el mañana
-                </h5>
+                </Link>
+
+                <Link
+                  to="/FichaAutor"
+                  className="modal-name-tus-comuni"
+                >
+                  Gabriel García Márquez
+                </Link>
               </div>
-              <div className="comunidades-otra">
+
+              <div className="modal-profile-tus-comuni">
+              <Link to="/FichaAutor">
                 <img
-                  className="img-comunidad-otra"
-                  src={comunidad11}
-                  alt=""
+                  className="modal-img-gustar-tus-comuni"
+                  src={modal_autor1}
+                  alt="Gabriel García Márquez"
                 />
-                <h5 className="title-comunidad-otra">
-                  Épocas que cambiaron el hoy
-                </h5>
+                </Link>
+                <Link
+                  to="/FichaAutor"
+                  className="modal-name-tus-comuni"
+                >
+                  Gabriel García Márquez
+                </Link>
               </div>
-              <div className="comunidades-otra">
+
+              <div className="modal-profile-tus-comuni">
+              <Link to="/FichaAutor">
                 <img
-                  className="img-comunidad-otra"
-                  src={comunidad6}
-                  alt=""
+                  className="modal-img-gustar-tus-comuni"
+                  src={modal_autor1}
+                  alt="Gabriel García Márquez"
                 />
-                <h5 className="title-comunidad-otra">Un viaje al pasado</h5>
+                </Link>
+
+                <Link
+                  to="/FichaAutor"
+                  className="modal-name-tus-comuni"
+                >
+                  Gabriel García Márquez
+                </Link>
               </div>
-              <div className="comunidades-otra">
+
+              <div className="modal-profile-tus-comuni">
+              <Link to="/FichaAutor">
                 <img
-                  className="img-comunidad-otra"
-                  src={comunidad8}
-                  alt=""
+                  className="modal-img-gustar-tus-comuni"
+                  src={modal_autor1}
+                  alt="Gabriel García Márquez"
                 />
-                <h5 className="title-comunidad-otra">
-                  Lo bello de la antiguedad
-                </h5>
+                </Link>
+                <Link
+                  to="/FichaAutor"
+                  className="modal-name-tus-comuni"
+                >
+                  Gabriel García Márquez
+                </Link>
               </div>
-              <div className="comunidades-otra">
-                <img
-                  className="img-comunidad-otra"
-                  src={comunidad9}
-                  alt=""
-                />
-                <h5 className="title-comunidad-otra">¿Izquierda o Derecha?</h5>
-              </div>
-              <div className="comunidades-otra">
-                <img
-                  className="img-comunidad-otra"
-                  src={comunidad10}
-                  alt=""
-                />
-                <h5 className="title-comunidad-otra">
-                  El ayer, el hoy y el mañana
-                </h5>
-              </div>
-              <div className="comunidades-otra">
-                <img
-                  className="img-comunidad-otra"
-                  src={comunidad11}
-                  alt=""
-                />
-                <h5 className="title-comunidad-otra">
-                  Épocas que cambiaron el hoy
-                </h5>
-              </div>
+
+              {/* Más perfiles pueden ser añadidos de manera similar */}
             </div>
           </div>
         </div>
-        </div>
-    );
+      )}
+    </div>
+  );
 }
 
-export default ModalComunidad2;
+export default ModalFeedComunidad2;

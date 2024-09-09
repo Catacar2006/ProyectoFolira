@@ -12,6 +12,7 @@ function AmigosMiPerfil () {
             {/* boton de ver mas */}
             <h3 className="seccion-title-amigos-miperfil">Amigos</h3>
             <div className="seccion-amigos-miperfil">
+              <Link to="/PerfilUsuario">
               <div className="foto-amigo-miperfil">
                 <img
                   src={foto_usua1_miperfil}
@@ -20,6 +21,9 @@ function AmigosMiPerfil () {
                 />
                 <p className="name-amigo-miperfil">Alex_㋛</p>
               </div>
+              </Link>
+
+              <Link>
               <div className="foto-amigo-miperfil">
                 <img
                   src={foto_usua2_miperfil}
@@ -28,6 +32,9 @@ function AmigosMiPerfil () {
                 />
                 <p className="name-amigo-miperfil">Emma_✩</p>
               </div>
+              </Link>
+              
+              <Link>
               <div className="foto-amigo-miperfil">
                 <img
                   src={foto_usua3_miperfil}
@@ -36,6 +43,9 @@ function AmigosMiPerfil () {
                 />
                 <p className="name-amigo-miperfil">John_★</p>
               </div>
+              </Link>
+              
+              <Link>
               <div className="foto-amigo-miperfil">
                 <img
                   src={foto_usua1_miperfil}
@@ -44,6 +54,9 @@ function AmigosMiPerfil () {
                 />
                 <p className="name-amigo-miperfil">Alex_㋛</p>
               </div>
+              </Link>
+              
+              <Link>
               <div className="foto-amigo-miperfil">
                 <img
                   src={foto_usua2_miperfil}
@@ -52,6 +65,9 @@ function AmigosMiPerfil () {
                 />
                 <p className="name-amigo-miperfil">Emma_✩</p>
               </div>
+              </Link>
+              
+              <Link>
               <div className="foto-amigo-miperfil">
                 <img
                   src={foto_usua3_miperfil}
@@ -60,6 +76,8 @@ function AmigosMiPerfil () {
                 />
                 <p className="name-amigo-miperfil">John_★</p>
               </div>
+              </Link>
+              
             </div>
           </div>
         </div>

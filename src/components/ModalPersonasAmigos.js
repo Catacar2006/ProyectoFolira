@@ -8,7 +8,7 @@ function ModalPersonasAmigos() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  return (
+  return ( 
     <div>
       <button className="ver-mas-gustarA" onClick={openModal}>
         Ver Perfiles

@@ -1179,6 +1179,7 @@ input[type="search"]::-webkit-search-cancel-button {
     align-items: center;
     justify-content: center;
     text-align: center; /* Asegura que el texto esté centrado */
+    text-decoration: none;
 }
 
 .rating-libro {
@@ -1647,16 +1648,16 @@ input[type="search"]::-webkit-search-cancel-button {
 /* INICIO CSS FICHA AUTOR */
 /* Estilos para el contenedor principal */
 .main-ficha-autores {
-    background-color: #fff;
-    margin-top: 115px;
-    max-height: 80%;
-    width: 75%;
-    max-width: 95%;
-    margin-left: 16%; 
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border: 0.5px solid #22223B;
-    padding: 20px; /* Añade padding si necesitas separar el contenido de los bordes */
+  background-color: #fff;
+  margin: 115px auto 0; /* Centrado horizontal y margen superior */
+  width: 100%;
+  height: 187%; /* Ajusta la altura al contenido */
+  max-width: 95%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border: 0.5px solid #22223B;
+  padding: 20px;
+  overflow: visible; /* Asegura que el contenido no se oculte */
 }
 
 
@@ -1732,7 +1733,7 @@ input[type="search"]::-webkit-search-cancel-button {
     gap: 40px; /* Espacio de 20px entre los botones */
     margin-top: 40px; /* Espacio encima del contenedor de los botones */
     justify-content: center; /* Centra los botones horizontalmente */
-    margin-left: 1250px;
+    margin-left: 1150px;
 }
 
 
@@ -1829,6 +1830,7 @@ input[type="search"]::-webkit-search-cancel-button {
     line-height: 1.2; /* Ajusta la altura de línea para mejorar la legibilidad */
     word-wrap: break-word; /* Permite que el texto se rompa si es necesario */
     font-weight: 500 ; /* Aplica negrita al texto */
+    text-decoration: none;
 }
 /* FIN CSS FICHA AUTOR */
 
@@ -1841,16 +1843,16 @@ input[type="search"]::-webkit-search-cancel-button {
  /* INICIO CSS FICHA LIBRO */
 
  .main-ficha-libro {
-    background-color: #fff;
-    margin-top: 115px;
-    width: 75%;
-    max-width: 95%;
-    margin-left: 16%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border: 0.5px solid #22223B;
-    padding: 20px; 
-    box-sizing: border-box; 
+  background-color: #fff;
+  margin: 115px auto 0; /* Centrado horizontal y margen superior */
+  width: 100%;
+  height: 187%; /* Ajusta la altura al contenido */
+  max-width: 95%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border: 0.5px solid #22223B;
+  padding: 20px;
+  overflow: visible; /* Asegura que el contenido no se oculte */
 }
 
 .libro-container {
@@ -1904,11 +1906,11 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 95%;
 }
 
-/* selecto biblioteca */
+/* seleccion biblioteca */
 .ficha-libro-locations {
     margin-bottom: 20px;
     color: #503b31; 
-    margin-left: -70vh;
+    margin-left: -85vh;
 }
 
 .text-location-libro {
@@ -2050,7 +2052,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .ver-mas-reseña{
     position: relative;
-    left: 87%;
+    left: 17px;
     top: -3vh;
     font-size: 15px;
     border: 1px solid  #503B31;
@@ -6222,7 +6224,7 @@ input[type="search"]::-webkit-search-cancel-button {
     background-color: #fff;
     margin: 115px auto 0; /* Centrado horizontal y margen superior */
     width: 100%;
-    height: 187%; /* Ajusta la altura al contenido */
+    height: 197%; /* Ajusta la altura al contenido */
     max-width: 95%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -6233,49 +6235,49 @@ input[type="search"]::-webkit-search-cancel-button {
 
 
 .section-comunidad{
-    padding: 30px;
-    color: #503B31;
-    margin-left: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 450;
-    font-size: 45px;
-    
+  padding: 10px;
+  color: #503B31;
+  margin-left: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 450;
+  font-size: 45px;
 }
 
 .text-section-comunidad{
-    color: #000000;
-    margin-left: 60px;
-    font-size: 24.9px;
-    width: 90%;
-    margin-top: 2px;
-    margin-left: 50px;
-    
+  color: #000000;
+  margin-left: 60px;
+  font-size: 24.9px;
+  width: 97%;
+  margin-top: 2px;
+  margin-left: 28px;
 }
 
 .title-section-comunidad{
-    padding: 30px;
-    color: #503B31;
-    margin: 30px 0 20px 20px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 35px;
+  padding: 10px;
+  color: #503B31;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 450;
+  font-size: 35px;
 }
 
 
 /* estilos del link */
 .ver-mas-comunidades{
-    position: relative;
-    left: 87%;
-    top: -7vh;
-    font-size: 20px;
-    border: 1px solid  #503B31;
-    padding: 8px 15px 8px 15px;
-    border-radius: 25px;
-    text-decoration: none;
-    color: #503B31;
+  position: relative;
+  left: 87%;
+  top: -65vh;
+  font-size: 15px;
+  border: 1px solid  #503B31;
+  padding: 8px 15px 8px 15px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #503B31;
 }
 
 .ver-mas-comunidades:hover{
-    background-color:  #503b311a;
+  background-color:  #503b311a;
 }
 
 /* Estilo del modal */
@@ -6323,216 +6325,280 @@ input[type="search"]::-webkit-search-cancel-button {
     background-color: #333; /* Color del "pulgar" cuando se pasa el mouse por encima */
   }
 
-/* Estilo del título dentro del modal */
-.modal-comunidades-content .title-modal-comunidad {
-    color: #503B31;
-    text-align: center;
-    font-size: 27px;
-    overflow-wrap: break-word;
-    margin: 0;
-    margin-bottom: 20px; /* Espacio entre el título y la primera imagen */
+  .Header-modal-comunidad {
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white; /* Asegura que el fondo sea visible cuando sea sticky */
+    z-index: 10; /* Asegura que esté por encima del contenido desplazable */
 }
 
-/* Estilos de la lista de comunidades dentro del modal */
-.modal-comunidades-container {
-    display: flex;
-    flex-direction: column; 
-    gap: 20px; /* Espaciado entre las comunidades */
-    max-width: 500px;
-    max-height: 500px; 
-    overflow-y: scroll; /* Permite el scroll vertical */
-    margin-top: 30px;
-    padding-top: 20px;
-    scrollbar-width: thin; /* Para navegadores como Firefox */
-    scrollbar-color:  #503b31 #f5f5f5; 
+/* Botón para cerrar el modal */
+.close-btn-comunidad {
+  position: absolute;
+  top: 2px; /* Ajusta según el padding de .Header-modalA */
+  right: 20px;
+  font-size: 28px;
+  color: #424242d8;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-/* Estilo de cada comunidad dentro del modal */
-.modal-comunidad {
-    display: flex;
-    align-items: center;
-    gap: 15px; 
+.close-btn-comunidad:hover {
+  color: #0000008a;
 }
 
-/* Estilo de las imágenes dentro del modal */
-.modal-comunidad .modal-img-comunidad {
-    margin-top: 5px;
-    border-radius: 50px;
-    border: 1px solid #000000;
-    height: 80px; /* Tamaño uniforme de la imagen */
-    width: 80px; /* Tamaño uniforme de la imagen */
-    object-fit: cover;
+.titulo-modal-comuni{
+  margin: 5px 20px 5px 20px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 450;
 }
 
-/* Estilo de los nombres de comunidades dentro del modal */
-.modal-title-comunidad {
-    color: black;
-    font-size: 20px; /* Ajusta el tamaño del texto */
-    text-decoration: none; /* Elimina el subrayado por defecto de los enlaces */
-    margin-left: 10px; /* Espacio entre la imagen y el nombre */
-    text-align: left; /* Alinea el texto a la derecha */
-    flex: 1; /* Permite que el nombre ocupe el espacio disponible */
+.modal-gustar-comuni-content{
+  margin: 20px 20px 10px 20px;
+  
 }
 
-.modal-title-comunidad:hover {
-    text-decoration: underline; /* Subraya el nombre al pasar el mouse */
+/* Estilos para los perfiles */
+.modal-profile-comuni {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
-/* Estilo del botón de cerrar */
-.modal-close-comunidades {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 34px;
-    color: #503b31;
-    text-decoration: none;
-    cursor: pointer;
+.modal-img-gustar-comuni {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 1px solid #000;
 }
 
-/* Mostrar el modal cuando se active el enlace */
-:target.modal-overlay-comunidades {
-    display: flex;
+.modal-name-comuni-feed {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
 }
 
 
 /* comunidades */
 
 .container-comunidad {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 100px; 
-    margin: 45px 0 120px 45px;
+  display: flex;
+  flex-wrap: wrap;
+  gap:40px; 
+  margin: 105px 0 120px 45px;
 }
 
 .img-comunidad {
-    border-radius: 50%;
-    border: 1px solid #000000;
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
-    margin-top: -70px;
-    margin-bottom: 20px;
-    
+  border-radius: 50%;
+  border: 1px solid #000000;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  margin-top: -70px;
+  margin-bottom: 20px;
 }
 
-
-
 .comunidades {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 150px; /* Ancho fijo para todos los contenedores */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 150px; /* Ancho fijo para todos los contenedores */
 }
 
 .title-comunidad {
-    color: black;
-    margin-top: 10px; /* Espacio entre la imagen y el título */
-    font-size: 20px; /* Ajusta el tamaño del texto según tus necesidades */
-    width: 100%; /* Ajusta el ancho para que coincida con el contenedor */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center; /* Asegura que el texto esté centrado */
+  color: rgb(0, 0, 0);
+  margin-top: 10px; /* Espacio entre la imagen y el título */
+  font-size: 18px; /* Ajusta el tamaño del texto según tus necesidades */
+  width: 100%; /* Ajusta el ancho para que coincida con el contenedor */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 200;
+  text-align: center; /* Asegura que el texto esté centrado */
+  text-decoration: none;
 }
+
+
+/* TUS COMUNIDADES */
+.title-tus-comunidad{
+  padding: 10px;
+  margin: -100px 0 0 20px ;
+  color: #503B31;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 450;
+  font-size: 35px;
+}
+
+.tusComunidadesFeed {
+  display: flex;
+  flex-wrap: wrap;
+  gap:40px; 
+  margin: 85px 0 120px 45px;
+}
+
+.tus-img-comunidad {
+  border-radius: 50%;
+  border: 1px solid #000000;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  margin-top: -70px;
+  margin-bottom: 20px;
+}
+
+.tus-comunidades {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 150px; /* Ancho fijo para todos los contenedores */
+}
+
+.tus-title-comunidad {
+  color: rgb(0, 0, 0);
+  margin-top: 10px; /* Espacio entre la imagen y el título */
+  font-size: 18px; /* Ajusta el tamaño del texto según tus necesidades */
+  width: 100%; /* Ajusta el ancho para que coincida con el contenedor */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 200;
+  text-align: center; /* Asegura que el texto esté centrado */
+  text-decoration: none;
+}
+
 
 /* segundo modal */
 
 
+/* estilos del link */
+.ver-mas-tus-comunidades{
+  position: relative;
+  left: 87%;
+  top: -65vh;
+  font-size: 15px;
+  border: 1px solid  #503B31;
+  padding: 8px 15px 8px 15px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #503B31;
+}
+
+.ver-mas-tus-comunidades:hover{
+  background-color:  #503b311a;
+}
+
 /* Estilo del modal */
-.modal-otra-comunidades {
-    display: none; /* Oculta el modal por defecto */
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+.modal-overlay-tus-comunidades {
+  position: fixed; /* Mantiene el modal fijo en la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
 }
 
 /* Contenido del modal */
-.modal-otra-comunidades-content {
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 20px;
-    width: 50%;
-    max-width: 480px;
-    position: relative;
+.modal-tus-comunidades-content {
+  background-color: rgb(255, 255, 255);
+  padding: 0;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  max-height: 70vh; 
+  overflow-y: auto; 
+  position: relative;
 }
 
-/* Estilo del título dentro del modal */
-.modal-otra-comunidades-content .modal-comunidad {
-    color: #503B31;
-    text-align: center;
-    font-size: 27px;
-    overflow-wrap: break-word;
-    margin: 0;
-    margin-bottom: 20px; /* Espacio entre el título y la primera imagen */
+  /* Personalizar la barra de desplazamiento */
+  .modal-tus-comunidades-content::-webkit-scrollbar {
+    width: 4px; /* Ancho de la barra de desplazamiento */
+  }
+  
+  .modal-tus-comunidades-content::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-tus-comunidades-content::-webkit-scrollbar-thumb {
+    background-color: #503B31; /* Color del "pulgar" de la barra de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .modal-tus-comunidades-content::-webkit-scrollbar-thumb:hover {
+    background-color: #333; /* Color del "pulgar" cuando se pasa el mouse por encima */
+  }
+
+  .Header-tus-modal-comunidad {
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white; /* Asegura que el fondo sea visible cuando sea sticky */
+    z-index: 10; /* Asegura que esté por encima del contenido desplazable */
 }
 
-/* Estilos de la lista de comunidades dentro del modal */
-.modal-otra-comunidades-container {
-    display: flex;
-    flex-direction: column; 
-    gap: 20px; /* Espaciado entre las comunidades */
-    max-width: 500px;
-    max-height: 500px; 
-    overflow-y: scroll; /* Permite el scroll vertical */
-    margin-top: 30px;
-    padding-top: 20px;
-    scrollbar-width: thin; /* Para navegadores como Firefox */
-    scrollbar-color:  #503b31 #f5f5f5; 
+/* Botón para cerrar el modal */
+.close-btn-tus-comunidad {
+  position: absolute;
+  top: 2px; /* Ajusta según el padding de .Header-modalA */
+  right: 20px;
+  font-size: 28px;
+  color: #424242d8;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-/* Estilo de cada comunidad dentro del modal */
-.comunidades-otra {
-    display: flex;
-    align-items: center;
-    gap: 15px; 
+.close-btn-tus-comunidad:hover {
+  color: #0000008a;
 }
 
-/* Estilo de las imágenes dentro del modal */
-.comunidades-otra .img-comunidad-otra {
-    margin-top: 5px;
-    border-radius: 50px;
-    border: 1px solid #000000;
-    height: 80px; /* Tamaño uniforme de la imagen */
-    width: 80px; /* Tamaño uniforme de la imagen */
-    object-fit: cover;
+.titulo-modal-tus-comuni{
+  margin: 5px 20px 5px 20px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 450;
 }
 
-/* Estilo de los nombres de comunidades dentro del modal */
-.title-comunidad-otra {
-    color: black;
-    font-size: 20px; /* Ajusta el tamaño del texto */
-    text-decoration: none; /* Elimina el subrayado por defecto de los enlaces */
-    margin-left: 10px; /* Espacio entre la imagen y el nombre */
-    text-align: left; /* Alinea el texto a la derecha */
-    flex: 1; /* Permite que el nombre ocupe el espacio disponible */
+.modal-gustar-tus-comuni-content{
+  margin: 20px 20px 10px 20px;
+  
 }
 
-.title-comunidad-otra:hover {
-    text-decoration: underline; /* Subraya el nombre al pasar el mouse */
+/* Estilos para los perfiles */
+.modal-profile-tus-comuni {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
-/* Estilo del botón de cerrar */
-.close-comunidades-otra {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 34px;
-    color: #503b31;
-    text-decoration: none;
-    cursor: pointer;
+.modal-img-gustar-tus-comuni {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 1px solid #000;
 }
 
-/* Mostrar el modal cuando se active el enlace */
-:target.modal-otra-comunidades{
-    display: flex;
+.modal-name-tus-comuni {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
 }
+
 
 
   /* FINAL FEED COMUNIDADES */

@@ -8,6 +8,7 @@ import img_libro12 from '../static/img/La Ladrona de Libros.jpeg';
 import estrella_rellena_icon from '../static/icons/estrella-rellena.png';
 import estrella_vacia_icon from '../static/icons/estrella-basia.png';
 import estrella_medio_icon from '../static/icons/estrella-medio-vacia.png';
+import { Link } from "react-router-dom";
 
 
 
@@ -20,14 +21,17 @@ function SeleccionLibro2(){
         </div>
         <div className="libro-container">
           <div className="libro-item">
+          <Link to="/FichaLibro">
             <img
               className="libro-comunity-perso"
               src={img_libro7}
               alt="img_libro7"
             />
-            <h5 className="title-libro-section">
-              El amor en tiempos de cólera
-            </h5>
+            </Link>
+
+            <Link to="/FichaLibro" className="title-libro-section">
+            El amor en tiempos de cólera
+            </Link>
             <div className="rating-libro">
               <img 
                 src={estrella_rellena_icon} 
@@ -48,12 +52,17 @@ function SeleccionLibro2(){
           </div>
 
           <div className="libro-item">
+          <Link to="/FichaLibro">
             <img
               className="libro-comunity-perso"
               src={img_libro8}
               alt="img_libro8"
             />
-            <h5 className="title-libro-section">Romeo y Julieta</h5>
+            </Link>
+
+            <Link to="/FichaLibro" className="title-libro-section">
+            Romeo y Julieta
+            </Link>
             <div className="rating-libro">
               <img 
                 src={estrella_rellena_icon} 
@@ -74,12 +83,17 @@ function SeleccionLibro2(){
           </div>
 
           <div className="libro-item">
+          <Link to="/FichaLibro">
             <img
               className="libro-comunity-perso"
               src={img_libro9}
               alt="img_libro9"
             />
-            <h5 className="title-libro-section">Memorias de una Geisha</h5>
+            </Link>
+
+            <Link to="/FichaLibro" className="title-libro-section">
+            Memorias de una Geisha
+            </Link>
             <div className="rating-libro">
               <img 
                 src={estrella_rellena_icon} 
@@ -100,12 +114,17 @@ function SeleccionLibro2(){
           </div>
 
           <div className="libro-item">
+          <Link to="/FichaLibro">
             <img
               className="libro-comunity-perso"
               src={img_libro10}
               alt="img_libro10"
             />
-            <h5 className="title-libro-section">Cumbres Borrascosas</h5>
+            </Link>
+
+            <Link to="/FichaLibro" className="title-libro-section">
+            Cumbres Borrascosas
+            </Link>
             <div className="rating-libro">
               <img 
                 src={estrella_rellena_icon} 
@@ -126,12 +145,17 @@ function SeleccionLibro2(){
           </div>
 
           <div className="libro-item">
+          <Link to="/FichaLibro">
             <img
               className="libro-comunity-perso"
               src={img_libro11}
               alt="img_libro11"
             />
-            <h5 className="title-libro-section">La dependienta</h5>
+            </Link>
+
+            <Link to="/FichaLibro" className="title-libro-section">
+            La dependienta
+            </Link>
             <div className="rating-libro">
               <img 
                 src={estrella_rellena_icon} 

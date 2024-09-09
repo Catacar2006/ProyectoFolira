@@ -29,7 +29,7 @@ function ModalPersonasAmigos() {
            <div className='modal-Autores-content'>
 
               <div className="modal-profile-Autores">
-                <Link>
+                <Link to="/FichaAutor">
                 <img
                   className="modal-img-autores"
                   src={modal_autor1}
@@ -38,7 +38,7 @@ function ModalPersonasAmigos() {
                 </Link>
                 
                 <Link
-                  to="perfil-gabriel-garcia-marquez.html"
+                  to="/FichaAutor"
                   className="modal-title-autores"
                 >
                   Gabriel García Márquez
@@ -46,7 +46,7 @@ function ModalPersonasAmigos() {
               </div>
 
               <div className="modal-profile-Autores">
-                <Link>
+              <Link to="/FichaAutor">
                 <img
                   className="modal-img-autores"
                   src={modal_autor2}
@@ -55,7 +55,7 @@ function ModalPersonasAmigos() {
                 </Link>
                 
                 <Link
-                  to="perfil-burgos-julia.html"
+                  to="/FichaAutor"
                   className="modal-title-autores"
                 >
                   Burgos Julia
@@ -63,7 +63,7 @@ function ModalPersonasAmigos() {
               </div>
 
               <div className="modal-profile-Autores">
-                <Link>
+              <Link to="/FichaAutor">
                 <img
                   className="modal-img-autores"
                   src={modal_autor3}
@@ -72,7 +72,7 @@ function ModalPersonasAmigos() {
                 </Link>
                 
                 <Link
-                  to="perfil-mario-benedetti.html"
+                  to="/FichaAutor"
                   className="modal-title-autores"
                 >
                   Mario Benedetti
@@ -80,7 +80,7 @@ function ModalPersonasAmigos() {
               </div>
 
               <div className="modal-profile-Autores">
-                <Link>
+              <Link to="/FichaAutor">
                 <img
                   className="modal-img-autores"
                   src={modal_autor4}
@@ -89,7 +89,7 @@ function ModalPersonasAmigos() {
                 </Link>
                 
                 <Link
-                  to="perfil-mario-vargas-llosa.html"
+                  to="/FichaAutor"
                   className="modal-title-autores"
                 >
                   Mario Vargas Llosa
@@ -97,7 +97,7 @@ function ModalPersonasAmigos() {
               </div>
 
               <div className="modal-profile-Autores">
-                <Link>
+              <Link to="/FichaAutor">
                 <img
                   className="modal-img-autores"
                   src={modal_autor4}
@@ -106,7 +106,7 @@ function ModalPersonasAmigos() {
                 </Link>
                 
                 <Link
-                  to="perfil-mario-vargas-llosa.html"
+                  to="/FichaAutor"
                   className="modal-title-autores"
                 >
                   Mario Vargas Llosa
@@ -114,7 +114,7 @@ function ModalPersonasAmigos() {
               </div>
 
               <div className="modal-profile-Autores">
-                <Link>
+              <Link to="/FichaAutor">
                 <img
                   className="modal-img-autores"
                   src={modal_autor4}
@@ -123,7 +123,7 @@ function ModalPersonasAmigos() {
                 </Link>
                 
                 <Link
-                  to="perfil-mario-vargas-llosa.html"
+                  to="/FichaAutor"
                   className="modal-title-autores"
                 >
                   Mario Vargas Llosa
@@ -131,7 +131,7 @@ function ModalPersonasAmigos() {
               </div>
 
               <div className="modal-profile-Autores">
-                <Link>
+              <Link to="/FichaAutor">
                 <img
                   className="modal-img-autores"
                   src={modal_autor4}
@@ -140,7 +140,7 @@ function ModalPersonasAmigos() {
                 </Link>
                 
                 <Link
-                  to="perfil-mario-vargas-llosa.html"
+                  to="/FichaAutor"
                   className="modal-title-autores"
                 >
                   Mario Vargas Llosa
@@ -148,7 +148,7 @@ function ModalPersonasAmigos() {
               </div>
 
               <div className="modal-profile-Autores">
-                <Link>
+              <Link to="/FichaAutor">
                 <img
                   className="modal-img-autores"
                   src={modal_autor4}
@@ -157,7 +157,7 @@ function ModalPersonasAmigos() {
                 </Link>
                 
                 <Link
-                  to="perfil-mario-vargas-llosa.html"
+                  to="/FichaAutor"
                   className="modal-title-autores"
                 >
                   Mario Vargas Llosa
@@ -165,7 +165,7 @@ function ModalPersonasAmigos() {
               </div>
 
               <div className="modal-profile-Autores">
-                <Link>
+              <Link to="/FichaAutor">
                 <img
                   className="modal-img-autores"
                   src={modal_autor4}
@@ -174,7 +174,7 @@ function ModalPersonasAmigos() {
                 </Link>
                 
                 <Link
-                  to="perfil-mario-vargas-llosa.html"
+                  to="/FichaAutor"
                   className="modal-title-autores"
                 >
                   Mario Vargas Llosa
@@ -182,7 +182,7 @@ function ModalPersonasAmigos() {
               </div>
 
               <div className="modal-profile-Autores">
-                <Link>
+              <Link to="/FichaAutor">
                 <img
                   className="modal-img-autores"
                   src={modal_autor4}
@@ -191,7 +191,7 @@ function ModalPersonasAmigos() {
                 </Link>
                 
                 <Link
-                  to="perfil-mario-vargas-llosa.html"
+                  to="/FichaAutor"
                   className="modal-title-autores"
                 >
                   Mario Vargas Llosa
@@ -199,7 +199,7 @@ function ModalPersonasAmigos() {
               </div>
 
               <div className="modal-profile-Autores">
-                <Link>
+              <Link to="/FichaAutor">
                 <img
                   className="modal-img-autores"
                   src={modal_autor5}
@@ -208,7 +208,7 @@ function ModalPersonasAmigos() {
                 </Link>
                 
                 <Link
-                  to="perfil-laura-restrepo.html"
+                  to="/FichaAutor"
                   className="modal-title-autores"
                 >
                   Laura Restrepo

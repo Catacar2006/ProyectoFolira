@@ -14,51 +14,51 @@ function SeccionAutoresM() {
       </div>
       <div className="container-autores">
         <div className="autor">
-          <Link>
+        <Link to="/FichaAutor">
           <img className="img-autor" src={autor6} alt="autor6" />
           </Link>
 
-          <Link to="" className="title-autor">
+          <Link to="/FichaAutor" className="title-autor">
           William Shakespeare
           </Link>
 
         </div>
         <div className="autor">
-          <Link>
+        <Link to="/FichaAutor">
           <img className="img-autor" src={autor7} alt="autor7" />
           </Link>
           
-          <Link to="" className="title-autor">
+          <Link to="/FichaAutor" className="title-autor">
           Dante Alighieri
           </Link>
 
         </div>
         <div className="autor">
-          <Link>
+        <Link to="/FichaAutor">
           <img className="img-autor" src={autor8} alt="autor8" />
           </Link>
           
-          <Link to="" className="title-autor">
+          <Link to="/FichaAutor" className="title-autor">
           Socrates
           </Link>
 
         </div>
         <div className="autor">
-          <Link>
+        <Link to="/FichaAutor">
           <img className="img-autor" src={autor9} alt="autor9" />
           </Link>
           
-          <Link ti="" className="title-autor">
+          <Link to="/FichaAutor" className="title-autor">
           Miguel de Cervantes
           </Link>
 
         </div>
         <div className="autor">
-          <Link>
+        <Link to="/FichaAutor">
           <img className="img-autor" src={autor10} alt="autor10" />
           </Link>
           
-          <Link to="" className="title-autor">
+          <Link to="/FichaAutor" className="title-autor">
           Luis de Góngora
           </Link>
 

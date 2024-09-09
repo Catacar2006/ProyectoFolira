@@ -8,6 +8,7 @@ import img_libro6 from '../static/img/23 Otoños Antes De Ti.jpg';
 import estrella_rellena_icon from '../static/icons/estrella-rellena.png';
 import estrella_vacia_icon from '../static/icons/estrella-basia.png';
 import estrella_medio_icon from '../static/icons/estrella-medio-vacia.png';
+import { Link } from "react-router-dom";
 
 
 function SeccionLibros1(){
@@ -18,11 +19,17 @@ function SeccionLibros1(){
         </div>
         <div className="libro-container">
           <div className="libro-item">
+            <Link to="/FichaLibro">
             <img
               className="libro-comunity-perso"
               src={img_libro1}
               alt="img_libro1"/>
-            <h5 className="title-libro-section">Orgullo y prejuicio</h5>
+            </Link>
+
+            <Link to="/FichaLibro" className="title-libro-section">
+            Orgullo y prejuicio
+            </Link>
+        
             <div className="rating-libro">
               <img 
                 src={estrella_rellena_icon} 
@@ -41,13 +48,19 @@ function SeccionLibros1(){
                 alt="estrella_medio_icon" />
             </div>
           </div>
+
           <div className="libro-item">
+          <Link to="/FichaLibro">
             <img
               className="libro-comunity-perso"
               src={img_libro2}
               alt="img_libro2"
             />
-            <h5 className="title-libro-section">Yo antes de ti</h5>
+            </Link>
+
+            <Link to="/FichaLibro" className="title-libro-section">
+            Yo antes de ti
+            </Link>
             <div className="rating-libro">
               <img 
                 src={estrella_rellena_icon} 
@@ -68,12 +81,18 @@ function SeccionLibros1(){
           </div>
 
           <div className="libro-item">
+          <Link to="/FichaLibro">
             <img
               className="libro-comunity-perso"
               src={img_libro3}
               alt="img_libro3"
             />
-            <h5 className="title-libro-section">El Arte De Ser Nosotros</h5>
+            </Link>
+
+            <Link to="/FichaLibro" className="title-libro-section">
+            El Arte De Ser Nosotros
+            </Link>
+            
             <div className="rating-libro">
               <img 
                 src={estrella_rellena_icon} 
@@ -94,12 +113,18 @@ function SeccionLibros1(){
           </div>
 
           <div className="libro-item">
+          <Link to="/FichaLibro">
             <img
               className="libro-comunity-perso"
               src={img_libro4}
               alt="img_libro4"
             />
-            <h5 className="title-libro-section">Bajo la misma estrella</h5>
+            </Link>
+            
+            <Link to="/FichaLibro" className="title-libro-section">
+            Bajo la misma estrella
+            </Link>
+
             <div className="rating-libro">
               <img 
                 src={estrella_rellena_icon} 
@@ -118,15 +143,19 @@ function SeccionLibros1(){
                 alt="estrella_medio_icon" />
             </div>
           </div>
+
           <div className="libro-item">
+          <Link to="/FichaLibro">
             <img
               className="libro-comunity-perso"
               src={img_libro5}
               alt="img_libro5"
             />
-            <h5 className="title-libro-section">
-              Como los gatos hacen anres de morir
-            </h5>
+            </Link>
+
+            <Link to="/FichaLibro" className="title-libro-section">
+            Como los gatos hacen anres de morir
+            </Link>
             <div className="rating-libro">
               <img 
                 src={estrella_rellena_icon} 

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import libro1_mi_perfil from '../static/img/23 Otoños Antes De Ti.jpg';
 import libro2_mi_perfil from '../static/img/Bajo la misma estrella.jpeg';
 import libro3_mi_perfil from '../static/img/BRUJA BLANCA, LA ASESINO DE BRUJAS 1.jpg';
@@ -29,63 +30,123 @@ function ModalAmigosMiPerfil() {
             <div className="modal-FeedLibro-content">
 
                 <div className="modal-FeedLibro-libros">
+                <Link to="/FichaLibro">
                   <img src={libro1_mi_perfil} alt="23 otoños antes de ti" className="modal-img-FeedLibro" />
-                  <p className="modal-title-FeedLibro">23 Otoños Antes De Ti</p>
+                  </Link>
+                  
+                  <Link to="/FichaLibro" className="modal-title-FeedLibro" >
+                  23 Otoños Antes De Ti
+                  </Link>
                 </div>
 
                 <div className="modal-FeedLibro-libros">
+                <Link to="/FichaLibro">
                   <img src={libro2_mi_perfil} alt="bajo la misma estrella" className="modal-img-FeedLibro" />
-                  <p className="modal-title-FeedLibro">Bajo la Misma Estrella</p>
+                  </Link>
+                  
+                  <Link to="/FichaLibro" className="modal-title-FeedLibro">
+                  Bajo la Misma Estrella
+                  </Link>
                 </div>
 
                 <div className="modal-FeedLibro-libros">
+                <Link to="/FichaLibro">
                   <img src={libro3_mi_perfil} alt="El asesino de brujas" className="modal-img-FeedLibro" />
-                  <p className="modal-title-FeedLibro">Bruja Blanca</p>
+                  </Link>
+
+                  <Link to="/FichaLibro" className="modal-title-FeedLibro">
+                  Bruja Blanca
+                  </Link>
                 </div>
 
                 <div className="modal-FeedLibro-libros">
+                <Link to="/FichaLibro">
                   <img src={libro4_mi_perfil} alt="ciudades de fuego" className="modal-img-FeedLibro" />
-                  <p className="modal-title-FeedLibro">Ciudades de Fuego</p>
+                  </Link>
+
+                  <Link to="/FichaLibro" className="modal-title-FeedLibro">
+                  Ciudades de Fuego
+                  </Link>
                 </div>
 
                 <div className="modal-FeedLibro-libros">
+                <Link to="/FichaLibro">
                   <img src={libro5_mi_perfil} alt="yo antes de ti" className="modal-img-FeedLibro" />
-                  <p className="modal-title-FeedLibro">Yo Antes de Ti</p>
+                  </Link>
+
+                  <Link to="/FichaLibro" className="modal-title-FeedLibro">
+                  Yo Antes de Ti
+                  </Link>
                 </div>
 
                 <div className="modal-FeedLibro-libros">
+                <Link to="/FichaLibro">
                   <img src={libro6_mi_perfil} alt="Tres meses" className="modal-img-FeedLibro" />
-                  <p className="modal-title-FeedLibro">Tres Meses</p>
+                  </Link>
+
+                  <Link to="/FichaLibro" className="modal-title-FeedLibro">
+                  Tres Meses
+                  </Link>
                 </div>
 
                 <div className="modal-FeedLibro-libros">
+                <Link to="/FichaLibro">
                   <img src={libro4_mi_perfil} alt="ciudades de fuego" className="modal-img-FeedLibro" />
-                  <p className="modal-title-FeedLibro">Ciudades de Fuego</p>
+                  </Link>
+
+                  <Link to="/FichaLibro" className="modal-title-FeedLibro">
+                  Ciudades de Fuego
+                  </Link>
                 </div>
 
                 <div className="modal-FeedLibro-libros">
+                <Link to="/FichaLibro">
                   <img src={libro5_mi_perfil} alt="yo antes de ti" className="modal-img-FeedLibro" />
-                  <p className="modal-title-FeedLibro">Yo Antes de Ti</p>
+                  </Link>
+
+                  <Link to="/FichaLibro" className="modal-title-FeedLibro">
+                  Yo Antes de Ti
+                  </Link>
                 </div>
 
                 <div className="modal-FeedLibro-libros">
+                <Link to="/FichaLibro">
                   <img src={libro6_mi_perfil} alt="Tres meses" className="modal-img-FeedLibro" />
-                  <p className="modal-title-FeedLibro">Tres Meses</p>
+                  </Link>
+
+                  <Link to="/FichaLibro" className="modal-title-FeedLibro">
+                  Tres Meses
+                  </Link>
                 </div>
 
                 <div className="modal-FeedLibro-libros">
+                <Link to="/FichaLibro">
                   <img src={libro4_mi_perfil} alt="ciudades de fuego" className="modal-img-FeedLibro" />
-                  <p className="modal-title-FeedLibro">Ciudades de Fuego</p>
+                  </Link>
+
+                  <Link to="/FichaLibro" className="modal-title-FeedLibro">
+                  Ciudades de Fuego
+                  </Link>
                 </div>
 
                 <div className="modal-FeedLibro-libros">
+                <Link to="/FichaLibro">
                   <img src={libro5_mi_perfil} alt="yo antes de ti" className="modal-img-FeedLibro" />
-                  <p className="modal-title-FeedLibro">Yo Antes de Ti</p>
+                  </Link>
+
+                  <Link to="/FichaLibro" className="modal-title-FeedLibro">
+                  Yo Antes de Ti
+                  </Link>
                 </div>
 
                 <div className="modal-FeedLibro-libros">
+                <Link to="/FichaLibro">
                   <img src={libro6_mi_perfil} alt="Tres meses" className="modal-img-FeedLibro" />
-                  <p className="modal-title-FeedLibro">Tres Meses</p>
+                  </Link>
+
+                  <Link to="/FichaLibro" className="modal-title-FeedLibro">
+                  Tres Meses
+                  </Link>
                 </div>
 
               

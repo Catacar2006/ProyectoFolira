@@ -29,7 +29,7 @@ function ModalAutoresMedievales() {
             <div className="modal-Autores-content">
 
               <div className="modal-autor-item">
-                <Link>
+              <Link to="/FichaAutor">
                 <img
                   className="modal-img-autores"
                   src={modal_autor6}
@@ -38,14 +38,14 @@ function ModalAutoresMedievales() {
 
                 </Link>
                 <Link
-                  to="perfil-william-shakespeare.html"
+                  to="/FichaAutor"
                   className="modal-title-autores"
                 >
                   William Shakespeare
                 </Link>
               </div>
               <div className="modal-profile-Autores">
-                <Link>
+              <Link to="/FichaAutor">
                 <img
                   className="modal-img-autores"
                   src={modal_autor7}
@@ -54,14 +54,14 @@ function ModalAutoresMedievales() {
                 </Link>
 
                 <Link
-                  to="perfil-dante-alighieri.html"
+                  to="/FichaAutor"
                   className="modal-title-autores"
                 >
                   Dante Alighieri
                 </Link>
               </div>
               <div className="modal-profile-Autores">
-                <Link>
+              <Link to="/FichaAutor">
                 <img
                   className="modal-img-autores"
                   src={modal_autor8}
@@ -70,14 +70,14 @@ function ModalAutoresMedievales() {
                 </Link>
 
                 <Link
-                  to="perfil-socrates.html"
+                  to="/FichaAutor"
                   className="modal-title-autores"
                 >
                   Socrates
                 </Link>
               </div>
               <div className="modal-profile-Autores">
-                <Link>
+              <Link to="/FichaAutor">
                 <img
                   className="modal-img-autores"
                   src={modal_autor9}
@@ -86,14 +86,14 @@ function ModalAutoresMedievales() {
                 </Link>
 
                 <Link
-                  to="perfil-miguel-de-cervantes.html"
+                  to="/FichaAutor"
                   className="modal-title-autores"
                 >
                   Miguel de Cervantes
                 </Link>
               </div>
               <div className="modal-profile-Autores">
-                <Link>
+              <Link to="/FichaAutor">
                 <img
                   className="modal-img-autores"
                   src={modal_autor10}
@@ -102,14 +102,14 @@ function ModalAutoresMedievales() {
                 </Link>
 
                 <Link
-                  to="perfil-luis-de-gongora.html"
+                  to="/FichaAutor"
                   className="modal-title-autores"
                 >
                   Luis de Góngora
                 </Link>
               </div>
               <div className="modal-profile-Autores">
-                <Link>
+              <Link to="/FichaAutor">
                 <img
                   className="modal-img-autores"
                   src={modal_autor6}
@@ -118,14 +118,14 @@ function ModalAutoresMedievales() {
                 </Link>
 
                 <Link
-                  to="perfil-william-shakespeare.html"
+                  to="/FichaAutor"
                   className="modal-title-autores"
                 >
                   William Shakespeare
                 </Link>
               </div>
               <div className="modal-profile-Autores">
-                <Link>
+              <Link to="/FichaAutor">
                 <img
                   className="modal-img-autores"
                   src={modal_autor7}
@@ -134,14 +134,14 @@ function ModalAutoresMedievales() {
                 </Link>
 
                 <Link
-                  to="perfil-dante-alighieri.html"
+                  to="/FichaAutor"
                   className="modal-title-autores"
                 >
                   Dante Alighieri
                 </Link>
               </div>
               <div className="modal-profile-Autores">
-                <Link>
+              <Link to="/FichaAutor">
                 <img
                   className="modal-img-autores"
                   src={modal_autor8}
@@ -150,14 +150,14 @@ function ModalAutoresMedievales() {
                 </Link>
 
                 <Link
-                  to="perfil-socrates.html"
+                  to="/FichaAutor"
                   className="modal-title-autores"
                 >
                   Socrates
                 </Link>
               </div>
               <div className="modal-profile-Autores">
-                <Link>
+              <Link to="/FichaAutor">
                 <img
                   className="modal-img-autores"
                   src={modal_autor9}
@@ -166,14 +166,14 @@ function ModalAutoresMedievales() {
                 </Link>
 
                 <Link
-                  to="perfil-miguel-de-cervantes.html"
+                  to="/FichaAutor"
                   className="modal-title-autores"
                 >
                   Miguel de Cervantes
                 </Link>
               </div>
               <div className="modal-profile-Autores">
-                <Link>
+              <Link to="/FichaAutor">
                 <img
                   className="modal-img-autores"
                   src={modal_autor10}
@@ -181,7 +181,7 @@ function ModalAutoresMedievales() {
                 />
                 </Link>
                 <Link
-                  to="perfil-luis-de-gongora.html"
+                  to="/FichaAutor"
                   className="modal-title-autores"
                 >
                   Luis de Góngora

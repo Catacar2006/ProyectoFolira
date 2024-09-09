@@ -3,6 +3,7 @@ import libro_reconocido1 from '../static/img/Trilogía Fuego 1_ Ciudades De Humo
 import libro_reconocido2 from '../static/img/Tres meses.jpeg';
 import libro_reconocido3 from '../static/img/Ciudades De Fuego.jpeg';
 import libro_reconocido4 from '../static/img/Después De Diciembre.jpeg';
+import { Link } from "react-router-dom";
 
 function LibrosRecomendadosFichaAutor (){
     return(
@@ -11,36 +12,58 @@ function LibrosRecomendadosFichaAutor (){
             <h2 className="title-section-ficha-autor">Libros reconocidos</h2>
             <div className="recomendacion-libros-autor">
               <div className="libros-ficha-autores">
+              <Link to="/FichaLibro">
                 <img
                   className="img-libro-ficha-autor"
                   src={libro_reconocido1}
                   alt="Ciudad de humo"
                 />
-                <p className="name-title-ficha-autor">Ciudad de humo</p>
+                </Link>
+
+                <Link to="" className="name-title-ficha-autor">
+                Ciudad de humo
+                </Link>
               </div>
+
               <div className="libros-ficha-autores">
+                <Link>
                 <img
                   className="img-libro-ficha-autor"
                   src={libro_reconocido2}
                   alt="Tres meses"
                 />
-                <p className="name-title-ficha-autor">Tres meses</p>
+                </Link>
+
+                <Link to="" className="name-title-ficha-autor">
+                Tres meses
+                </Link>
               </div>
               <div className="libros-ficha-autores">
+                <Link>
                 <img
                   className="img-libro-ficha-autor"
                   src={libro_reconocido3}
                   alt="Ciudad de fuego"
                 />
-                <p className="name-title-ficha-autor">Ciudad de fuego</p>
+                </Link>
+
+                <Link to="" className="name-title-ficha-autor">
+                Ciudad de fuego
+                </Link>
               </div>
               <div className="libros-ficha-autores">
+                <Link>
                 <img
                   className="img-libro-ficha-autor"
                   src={libro_reconocido4}
                   alt="Después de diciembre"
                 />
-                <p className="name-title-ficha-autor">Después de diciembre</p>
+                </Link>
+
+                <Link to="" className="name-title-ficha-autor">
+                Después de diciembre
+                </Link>
+                <p ></p>
               </div>
             </div>
           </section>

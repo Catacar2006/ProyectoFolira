@@ -24,7 +24,7 @@ function FichaLibro() {
           <LocacionFichaLibro />
           <CalificarAgregarFichaLibro />
           <AreaTextoBotonFichaLibro />
-          <ModalVerReseñas />
+          {/* <ModalVerReseñas /> */}
           <SeccionReseñasFichaLibro />
 
           </div>
