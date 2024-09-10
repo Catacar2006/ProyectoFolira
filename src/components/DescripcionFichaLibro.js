@@ -26,20 +26,20 @@ function DescripcionFichaLibro() {
             <strong style={{ color: "#503B31" }}>Categoría:</strong> Fantasía,
             Romance, Aventura y Drama
           </p>
+
           <div className="container-sinopsis-ficha-libro">
             <section className="sinopsis-libro-ficha">
-              <p>
+              <p className="text-details-ficha-libro">
                 <strong style={{ color: "#503B31" }}>Sinopsis:</strong>
               </p>
-              <p className="parrafo-ficha-libro">
+              <p className="text-details-ficha-libro">
                 Alice nunca ha salido al mundo. Su cena es a las nueve en punto,
                 su sueño dura exactamente ocho horas, jamás tiene una sola
                 arruga en la ropa, parpadea 86400 veces al día, respira 30000
                 veces al día, solo habla cuando le preguntan, jamás ha levantado
                 la voz y, lo más importante, jamás se ha preguntado qué pasaría
                 si todo cambiara.
-              </p>
-              <p className="parrafo-ficha-libro">
+
                 Pero, ¿y si eso ocurriera? En un mundo donde la libertad está
                 controlada, ¿Hasta dónde serías capaz de llegar para
                 recuperarla? ¿Hasta dónde serías capaz de llegar para
@@ -47,6 +47,7 @@ function DescripcionFichaLibro() {
               </p>
             </section>
           </div>
+          
           <p className="text-details-ficha-libro">
             <strong style={{ color: "#503B31" }}>Serie:</strong> Trilogía Fuego
           </p>
