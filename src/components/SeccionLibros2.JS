@@ -4,7 +4,6 @@ import img_libro8 from '../static/img/Romeo and Juliet.jpg';
 import img_libro9 from '../static/img/París despertaba tarde.jpeg';
 import img_libro10 from '../static/img/Cumbres borrascosas.jpg';
 import img_libro11 from '../static/img/La dependienta_ vivir para trabajar.jpeg';
-import img_libro12 from '../static/img/La Ladrona de Libros.jpeg';
 import estrella_rellena_icon from '../static/icons/estrella-rellena.png';
 import estrella_vacia_icon from '../static/icons/estrella-basia.png';
 import estrella_medio_icon from '../static/icons/estrella-medio-vacia.png';

@@ -138,7 +138,6 @@
     line-height: 70px;
     color: #323337;
     text-transform: uppercase;
-    padding: 0 250px;
     margin-bottom: 15px;
     text-transform: uppercase;
     margin: 0 auto 15px auto; /* Centra el título horizontalmente sin padding */
@@ -160,13 +159,13 @@
 .group-import-index {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 100px;
     margin-bottom: 20px;
 }
 
 .group-index {
     text-align: center; /* Asegura que el texto esté centrado debajo de la imagen */
-    margin: -50px -130px -50px -130px; /* Eliminamos el margen derecho para un mejor control con gap */
+    max-width: 500px;/* Eliminamos el margen derecho para un mejor control con gap */
 }
 
 .img-group-index {
@@ -904,6 +903,7 @@ input[type="search"]::-webkit-search-cancel-button {
     color: #503B31;
     margin-left: 10px;
     font-family: 'Poppins', sans-serif;
+    margin: revert;
 }
 
 .text-feed-autores{
@@ -932,7 +932,21 @@ input[type="search"]::-webkit-search-cancel-button {
 .ver-mas-Autores:hover{
     background-color:  #503b311a;
 }
-  
+.ver-mas-AutoresM{
+  position: relative;
+  left: 87%;
+  bottom: -114px;
+  font-size: 15px;
+  border: 1px solid  #503B31;
+  padding: 8px 15px 8px 15px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #503B31;
+}
+
+.ver-mas-AutoresM:hover{
+  background-color:  #503b311a;
+}
 .modal-overlay-Autores {
     position: fixed; /* Mantiene el modal fijo en la pantalla */
     top: 0;
@@ -1204,7 +1218,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .ver-mas-FeedLibro{
     position: relative;
     left: 90%;
-    top: -71vh;
+    top: -39vh;
     font-size: 15px;
     margin-right: 90px;
     border: 1px solid  #503B31;
@@ -1583,7 +1597,7 @@ input[type="search"]::-webkit-search-cancel-button {
     height: 200px;
     width: 200px;
     object-fit: cover;
-    
+    margin-top: auto;
 }
 
 .container-autores {
@@ -2132,6 +2146,10 @@ input[type="search"]::-webkit-search-cancel-button {
     font-size: 20px;
 }
 
+@media (max-white) {
+  
+}
+
 /* boton de enviar */
 .boton-enviar-ficha{
     padding: 12px 20px; /* Añadido padding a la derecha */
@@ -2370,7 +2388,7 @@ input[type="search"]::-webkit-search-cancel-button {
     background-color: #fff;
     margin: 115px auto 0 45px;
     max-height: 80%;
-    width: 160%;
+    width: 113%;
     height: auto;
     max-width: 122%;
     border-top-left-radius: 20px;
@@ -2710,10 +2728,10 @@ input[type="search"]::-webkit-search-cancel-button {
 /* biografia */
 
 .biografia-miperfil {
-    max-width: 95vh; /* Ajusta según el espacio disponible */
-    margin-top: -25vh; /* Opcional: agrega un margen superior para separar del contenedor */
-    margin-left: 85vh;
-    margin-right: 8vh;
+  max-width: 95vh;
+  margin-top: -18vh;
+  margin-left: 56vh;
+  margin-right: 8vh;
 }
   
 .text-briografia-miperfil {
@@ -2832,7 +2850,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .ver-mas-MiperfilLi{
     position: relative;
     left: 85.5%;
-    top: -40vh;
+    top: -71vh;
     font-size: 15px;
     margin-right: 90px;
     border: 1px solid  #503B31;
@@ -3010,7 +3028,6 @@ input[type="search"]::-webkit-search-cancel-button {
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si es necesario */
     gap: 15px; /* Espacio entre las fotos de perfil */
-    margin-left: -19vh;
     justify-content: center; /* Centra las fotos en la pantalla */
 }
 
@@ -3028,7 +3045,7 @@ input[type="search"]::-webkit-search-cancel-button {
     border: 1px solid #22223B;
     border-radius: 50%; /* Foto circular */
     object-fit: cover; /* Mantiene la imagen dentro del contenedor sin distorsión */
-    margin-top: 50px; /* Ajusta este valor según sea necesario */
+    margin-top: 77px; /* Ajusta este valor según sea necesario */
     margin-left: -8vh;
 }
 
@@ -3049,7 +3066,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .ver-mas-MiperfilA{
     position: relative;
     left: 92%;
-    top: -23vh;
+    top: -64vh;
     font-size: 15px;
     border: 1px solid  #503B31;
     padding: 8px 15px 8px 15px;
@@ -3200,7 +3217,6 @@ input[type="search"]::-webkit-search-cancel-button {
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si es necesario */
     gap: 15px; /* Espacio entre las fotos de perfil */
-    margin-left: -19vh;
     justify-content: center; /* Centra las fotos en la pantalla */
 }
 
@@ -3218,7 +3234,7 @@ input[type="search"]::-webkit-search-cancel-button {
     border: 1px solid #22223B;
     border-radius: 50%; /* Foto circular */
     object-fit: cover; /* Mantiene la imagen dentro del contenedor sin distorsión */
-    margin-top: 50px; /* Ajusta este valor según sea necesario */
+    margin-top: 77px; /* Ajusta este valor según sea necesario */
     margin-left: -8vh;
 }
 
@@ -3241,7 +3257,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .ver-mas-MiperfilC{
     position: relative;
     left: 88%;
-    top: -25vh;
+    top: -64vh;
     font-size: 15px;
     margin-right: 90px;
     border: 1px solid  #503B31;
@@ -3410,6 +3426,10 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 24px; /* Ajusta el tamaño de la imagen según sea necesario */
     height: 24px; /* Ajusta el tamaño de la imagen según sea necesario */
     margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.button-medalla-espacio-miperfil{
+  border:none;
 }
 
 
@@ -6211,17 +6231,22 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .main-reseña {
   background-color: #fff;
-  margin: 115px auto 0; /* Centrado horizontal y margen superior */
-  width: 100%;
+  margin: 115px auto 0px 66px; /* Centrado horizontal y margen superior */
+  width: 110%;
   height: 187%; /* Ajusta la altura al contenido */
-  max-width: 100%;
+  max-width: 115%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border: 0.5px solid #22223B;
-  padding: 20px;
+  padding: 21px;
   overflow: visible; /* Asegura que el contenido no se oculte */
 }
-
+@media (min-width: 1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+      max-width: 2040px !important;
+      overflow: hidden;
+  }
+}
 
 /* Estilos para la sección de reseñas izquierda*/
 .review-section-izquierda {
@@ -6266,8 +6291,8 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* Estilos para la sección de reseñas derecha */
 .review-section-derecha {
-    width: 50%;
-    max-width: 900px;
+    width: 60%;
+    max-width: 950px;
     margin: 0 auto;
     padding: 20px;
     border: 2px;
@@ -6279,13 +6304,14 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* Cuadro que encierra la reseña */
 .review-box-derecha {
-    padding: 20px;
+    padding: 25px;
     border: 2px solid #ccc;
     border-radius: 10px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-}
+    margin-top: 170px;
+    margin-left: 180px;
+  }
 
 /* Estilos para los elementos dentro de la reseña */
 .review-item-derecha {
@@ -6368,7 +6394,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .ver-mas-comunidades{
   position: relative;
   left: 87%;
-  top: -65vh;
+  bottom: 40px;
   font-size: 15px;
   border: 1px solid  #503B31;
   padding: 8px 15px 8px 15px;
@@ -6583,7 +6609,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .ver-mas-tus-comunidades{
   position: relative;
   left: 87%;
-  top: -65vh;
+  top: -70vh;
   font-size: 15px;
   border: 1px solid  #503B31;
   padding: 8px 15px 8px 15px;
@@ -6703,3 +6729,124 @@ input[type="search"]::-webkit-search-cancel-button {
 
 
   /* FINAL FEED COMUNIDADES */
+
+  /* notificaiones*/ 
+  .modal-overlay-notificaciones {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content-notificaciones {
+    background: white;
+    padding: 20px;
+    border-radius: 15px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 500px;
+    width: 100%;
+    border: none; /* Eliminar cualquier borde */
+  }
+  
+  .header-modal-notificaciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .close-btn-notificaciones {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .notificacion-item {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px; /* Esquinas redondeadas en cada notificación */
+    background-color: #f5f5f5; /* Fondo suave para las notificaciones */
+  }
+  
+  .notificacion-item:hover {
+    background-color: #e0e0e0; /* Efecto hover */
+  }
+  
+  .notificacion-mensaje {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .notificacion-fecha {
+    font-size: 12px;
+    color: #888;
+  }
+  .modal-overlay-notificaciones {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content-notificaciones {
+    background: white;
+    padding: 20px;
+    border-radius: 15px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 500px;
+    width: 100%;
+    border: none; /* Eliminar cualquier borde */
+  }
+  
+  .header-modal-notificaciones {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .close-btn-notificaciones {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .notificacion-item {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px; /* Esquinas redondeadas en cada notificación */
+    background-color: #f5f5f5; /* Fondo suave para las notificaciones */
+  }
+  
+  .notificacion-item:hover {
+    background-color: #e0e0e0; /* Efecto hover */
+  }
+  
+  .notificacion-mensaje {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .notificacion-fecha {
+    font-size: 12px;
+    color: #888;
+  }
+  .ver-mas-notificaciones{
+    border: none;
+    background-color: white;
+  }
+  .titulo-modal-notificaciones{
+    text-align: center;
+    margin-left: 25%;
+  }
+/* Fin notificaiones*/   

@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState  } from "react";
 import terror_icon from "../static/icons/cuchillo.png";
 import historia_icon from "../static/icons/historia.png";
 import desarrollo_personal_icon from "../static/icons/desarrollo_personal.png";
@@ -12,13 +11,81 @@ import ciencia_ficcion_icon from "../static/icons/ciencia-ficcion.png";
 import misterio_icon from "../static/icons/anonimo.png";
 import comedia_icon from "../static/icons/comedia.png";
 import corazon_icon from "../static/icons/corazon (1).png";
-import drama_icon from '../static/icons/mascara-de-teatro.png'
+import drama_icon from '../static/icons/mascara-de-teatro.png';
+import axios from "axios";
 
 function ModalPersonasAmigos() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    profilePhoto: null,
+    banner: null,
+    username: "",
+    biografia: "",
+    pais: "",
+    genero: "",
+    genres: [],
+  });
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
+  const handleInputChange = (e) => {
+    const { name, value, type, checked } = e.target;
+
+    if (type === "file") {
+      setFormData({
+        ...formData,
+        [name]: e.target.files[0],
+      });
+    } else if (type === "checkbox") {
+      if (checked) {
+        setFormData((prevState) => ({
+          ...prevState,
+          genres: [...prevState.genres, value],
+        }));
+      } else {
+        setFormData((prevState) => ({
+          ...prevState,
+          genres: prevState.genres.filter((genre) => genre !== value),
+        }));
+      }
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append("profilePhoto", formData.profilePhoto);
+      formDataToSend.append("banner", formData.banner);
+      formDataToSend.append("username", formData.username);
+      formDataToSend.append("biografia", formData.biografia);
+      formDataToSend.append("pais", formData.pais);
+      formDataToSend.append("genero", formData.genero);
+      formData.genres.forEach((genre) =>
+        formDataToSend.append("genres[]", genre)
+      );
+
+      const userId = localStorage.getItem('userId');
+      await axios.put(`http://localhost:9906/api/usuario/${userId}`, formDataToSend, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+
+      alert("Perfil actualizado con éxito");
+      closeModal();
+    } catch (error) {
+      console.error("Error al actualizar el perfil", error);
+      alert("Ocurrió un error al actualizar el perfil");
+    }
+  };
 
   return (
     <div>
@@ -32,22 +99,23 @@ function ModalPersonasAmigos() {
             className="modal-content-Miperfil"
             onClick={(e) => e.stopPropagation()}
           >
-            <div></div>
             <div className="Header-modal-Miperfil">
-              <button className="close-btn-Miperfil" onClick={closeModal}>&times;</button>
-              <h2 className="titulo-modal-Miperfil">Editar perfil</h2>
-              <button type="submit"className="guardar-cambios-btn-miperfil-usuario">
-                  Guardar
+              <button className="close-btn-Miperfil" onClick={closeModal}>
+                &times;
               </button>
-
+              <h2 className="titulo-modal-Miperfil">Editar perfil</h2>
+              <button
+                type="submit"
+                className="guardar-cambios-btn-miperfil-usuario"
+                onClick={handleSubmit}
+              >
+                Guardar
+              </button>
             </div>
 
             <div className="modal-Miperfil-content">
               <form className="edit-form-Miperfil">
-                <label
-                  htmlFor="profilePhoto"
-                  className="edit-form-label-Miperfil"
-                >
+                <label htmlFor="profilePhoto" className="edit-form-label-Miperfil">
                   Nueva Foto de Perfil
                 </label>
                 <input
@@ -55,6 +123,7 @@ function ModalPersonasAmigos() {
                   id="profilePhoto"
                   name="profilePhoto"
                   className="edit-form-input-Miperfil"
+                  onChange={handleInputChange}
                 />
 
                 <label htmlFor="banner" className="edit-form-label-Miperfil">
@@ -65,6 +134,7 @@ function ModalPersonasAmigos() {
                   id="banner"
                   name="banner"
                   className="edit-form-input-Miperfil"
+                  onChange={handleInputChange}
                 />
 
                 <label htmlFor="username" className="edit-form-label-Miperfil">
@@ -74,8 +144,8 @@ function ModalPersonasAmigos() {
                   type="text"
                   id="username"
                   name="username"
-                  defaultValue="Thebest_Kpop✨"
                   className="edit-form-input-Miperfil"
+                  onChange={handleInputChange}
                 />
 
                 <label htmlFor="biografia" className="edit-form-label-Miperfil">
@@ -85,7 +155,7 @@ function ModalPersonasAmigos() {
                   id="biografia"
                   name="biografia"
                   className="edit-form-textarea-Miperfil"
-                  defaultValue="books, kdramas, voley Army | Carat"
+                  onChange={handleInputChange}
                 />
 
                 <label htmlFor="pais" className="edit-form-label-Miperfil">
@@ -95,6 +165,7 @@ function ModalPersonasAmigos() {
                   id="pais"
                   name="pais"
                   className="edit-form-select-Miperfil"
+                  onChange={handleInputChange}
                 >
                   <option value="Argentina">Argentina</option>
                   <option value="Chile">Chile</option>
@@ -112,13 +183,12 @@ function ModalPersonasAmigos() {
                   id="genero"
                   name="genero"
                   className="edit-form-select-Miperfil"
+                  onChange={handleInputChange}
                 >
                   <option value="femenino">Femenino</option>
                   <option value="masculino">Masculino</option>
                   <option value="otro">Otro</option>
-                  <option value="prefiero_no_decirlo">
-                    Prefiero no decirlo
-                  </option>
+                  <option value="prefiero_no_decirlo">Prefiero no decirlo</option>
                 </select>
 
                 <div className="genre-preferences-container">
@@ -126,17 +196,16 @@ function ModalPersonasAmigos() {
                     Preferencias de Género
                   </label>
                   <div className="checkbox-group-Miperfil">
+                    {/* Aquí van los checkboxes de géneros literarios */}
                     <input
                       type="checkbox"
                       id="genre-fantasy"
                       name="genres"
-                      defaultValue="Fantasy"
+                      value="Fantasy"
                       className="genre-checkbox-Miperfil"
+                      onChange={handleInputChange}
                     />
-                    <label
-                      htmlFor="genre-fantasy"
-                      className="genre-label-Miperfil"
-                    >
+                    <label htmlFor="genre-fantasy" className="genre-label-Miperfil">
                       <img
                         src={fantasia_icon}
                         alt="Fantasía"
@@ -144,13 +213,13 @@ function ModalPersonasAmigos() {
                       />
                       Fantasía
                     </label>
-
                     <input
                       type="checkbox"
                       id="genre-scifi"
                       name="genres"
                       defaultValue="Science Fiction"
                       className="genre-checkbox-Miperfil"
+                      onChange={handleInputChange}
                     />
                     <label
                       htmlFor="genre-scifi"
@@ -170,6 +239,7 @@ function ModalPersonasAmigos() {
                       name="genres"
                       defaultValue="Mystery"
                       className="genre-checkbox-Miperfil"
+                      onChange={handleInputChange}
                     />
                     <label
                       htmlFor="genre-mystery"
@@ -189,6 +259,7 @@ function ModalPersonasAmigos() {
                       name="genres"
                       defaultValue="Terror"
                       className="genre-checkbox-Miperfil"
+                      onChange={handleInputChange}
                     />
                     <label
                       htmlFor="genre-romance"
@@ -208,6 +279,7 @@ function ModalPersonasAmigos() {
                       name="genres"
                       defaultValue="Comedy"
                       className="genre-checkbox-Miperfil"
+                      onChange={handleInputChange}
                     />
                     <label
                       htmlFor="genre-comedy"
@@ -227,6 +299,7 @@ function ModalPersonasAmigos() {
                       name="genres"
                       defaultValue="Suspense"
                       className="genre-checkbox-Miperfil"
+                      onChange={handleInputChange}
                     />
                     <label
                       htmlFor="genre-suspense"
@@ -246,6 +319,7 @@ function ModalPersonasAmigos() {
                       name="genres"
                       defaultValue="Romance"
                       className="genre-checkbox-Miperfil"
+                      onChange={handleInputChange}
                     />
                     <label
                       htmlFor="genre-romance"
@@ -265,6 +339,7 @@ function ModalPersonasAmigos() {
                       name="genres"
                       defaultValue="Historia"
                       className="genre-checkbox-Miperfil"
+                      onChange={handleInputChange}
                     />
                     <label
                       htmlFor="genre-historia"
@@ -284,6 +359,7 @@ function ModalPersonasAmigos() {
                       name="genres"
                       defaultValue="DesarrolloP"
                       className="genre-checkbox-Miperfil"
+                      onChange={handleInputChange}
                     />
                     <label
                       htmlFor="genre-desarrolloP"
@@ -303,6 +379,7 @@ function ModalPersonasAmigos() {
                       name="genres"
                       defaultValue="Negocios"
                       className="genre-checkbox-Miperfil"
+                      onChange={handleInputChange}
                     />
                     <label
                       htmlFor="genre-negocios"
@@ -322,6 +399,7 @@ function ModalPersonasAmigos() {
                       name="genres"
                       defaultValue="Economia"
                       className="genre-checkbox-Miperfil"
+                      onChange={handleInputChange}
                     />
                     <label
                       htmlFor="genre-negocios"
@@ -341,6 +419,7 @@ function ModalPersonasAmigos() {
                       name="genres"
                       defaultValue="Negocios"
                       className="genre-checkbox-Miperfil"
+                      onChange={handleInputChange}
                     />
                     <label
                       htmlFor="genre-negocios"
@@ -360,6 +439,7 @@ function ModalPersonasAmigos() {
                       name="genres"
                       defaultValue="Psicología"
                       className="genre-checkbox-Miperfil"
+                      onChange={handleInputChange}
                     />
                     <label
                       htmlFor="genre-psicología"
@@ -375,8 +455,6 @@ function ModalPersonasAmigos() {
                     {/* Otros géneros adicionales pueden ser añadidos de la misma manera */}
                   </div>
                 </div>
-
-                
               </form>
             </div>
           </div>

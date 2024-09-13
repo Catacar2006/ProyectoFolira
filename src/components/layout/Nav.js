@@ -6,8 +6,8 @@ import reseña_nav from '../../static/icons/reseñas_nav.svg';
 import comunidad_nav from '../../static/icons/comunidad-nav.svg';
 import denuncia_nav from '../../static/icons/denuncia-nav.svg';
 import lupa_nav from '../../static/icons/lupa-nav.svg';
-import noti_nav from '../../static/icons/noti-nav.svg';
 import perfil_nav from '../../static/icons/perfil-nav.svg';
+import ModalNotificaciones from '../ModalNotificaciones';
 import { Link } from "react-router-dom";
 
 
@@ -30,7 +30,7 @@ function Nav() {
         <img className="icon-lupa" src={lupa_nav} alt="lipa_nav" />
       </div>
       <div className="options-two">
-        <img className="option-two-nav" src={noti_nav} alt="notificacion_nav" />
+        <ModalNotificaciones />
         <Link to="/MiPerfil"><img className="option-two-nav" src={perfil_nav} alt="perfil_nav" /></Link>
       </div>
     </nav>

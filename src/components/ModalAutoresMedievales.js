@@ -14,7 +14,7 @@ function ModalAutoresMedievales() {
 
   return (
     <div>
-      <button className="ver-mas-Autores" onClick={openModal}>
+      <button className="ver-mas-AutoresM" onClick={openModal}>
         Ver Perfiles
       </button>
 
