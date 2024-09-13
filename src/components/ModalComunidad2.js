@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import modal_autor1 from "../static/img/Gabriel García Márquez.jpg";
-import modal_autor2 from "../static/img/burgos_julia.jpg";
-import modal_autor3 from "../static/img/Las frases de Mario Benedetti.jpg";
-import modal_autor4 from "../static/img/Mario Vargas Llosa.jpeg";
-import modal_autor5 from "../static/img/Laura-Restrepo.jpeg";
+
 
 function ModalFeedComunidad2() {
   const [isModalOpen, setIsModalOpen] = useState(false);

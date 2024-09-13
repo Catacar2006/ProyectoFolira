@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ContenidoGestionComunidad from "../components/ContenidoGestionComunidad";
 import ModalInactivarComunidad from "../components/ModalInactivarComunidad";
-import Nav from "../components/layout/Nav";
+import Nav2 from "../components/layout/Nav2";
 
 import banner_comuni from "../static/img/admi_banner_co.jpeg";
 import ModalActivarComunidad from "../components/ModalActivarComunidad";
@@ -16,7 +16,7 @@ function GestionComunidad() {
 
   return (
     <div>
-      <Nav />
+      <Nav2 />
       <div>
 
         <main className="main-gestion-comunidades">

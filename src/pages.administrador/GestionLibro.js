@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Nav from "../components/layout/Nav";
+import Nav2 from "../components/layout/Nav2";
 import ContenidoGestionLibro from "../components/ContenedorGestionLibro"; 
 import ModalInactivarLibro from "../components/ModalInactivarLibro"; 
 import banner_libro from "../static/img/admi_banner.jpeg";
@@ -30,7 +30,7 @@ function GestionLibro() {
 
   return (
     <div>
-      <Nav />
+      <Nav2 />
       <div>
 
         <main className="main-gestion-libro">

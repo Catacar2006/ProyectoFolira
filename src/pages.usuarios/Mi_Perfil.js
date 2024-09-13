@@ -26,6 +26,8 @@ function MiPerfil() {
   // Función para cerrar el modal
   const closeModal = () => setIsModalOpen(false);
 
+  
+
   return (
     <div>
       <Nav />

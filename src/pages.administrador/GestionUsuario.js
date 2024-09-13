@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ContenidoGestionUsuario from "../components/ContenidoGestionUsuario";
 import ModalInactivarUsuario from "../components/ModalInactivarUsuario";
-import Nav from "../components/layout/Nav";
+import Nav2 from "../components/layout/Nav2";
 
 import banner_usua from "../static/img/admi_banners_usua.jpeg";
 import ModalActivarUsuario from "../components/ModalActivarUsuario";
@@ -16,7 +16,7 @@ function GestionComunidad() {
 
   return (
     <div>
-      <Nav />
+      <Nav2 />
       <div>
     
         <main className="main-gestion-usuario">
