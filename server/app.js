@@ -27,6 +27,7 @@ import InsigniaRoutes from './routes/insignia.routes.js';
 import UsuarioInsigniaRoutes from './routes/usuarioInsignia.routes.js';
 import TiempoPantallaRoutes from './routes/tiempoPantalla.routes.js'
 import authRoutes from './routes/auth.routes.js';
+import UsuarioGeneroLiterario from './routes/usuarioGeneroLiterario.routes.js';
 
 // Obtener el directorio actual usando __filename y __dirname en módulos ES
 
@@ -40,6 +41,7 @@ app.use(cors());
 
 
 // Usar las rutas de la aplicación
+app.use(UsuarioGeneroLiterario);
 app.use(UsuarioRoutes);
 app.use(RolRoutes);
 app.use(SeguidorRoutes);

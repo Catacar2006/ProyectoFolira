@@ -57,7 +57,7 @@ class Notificacion extends Model {
 Notificacion.init({
  
     idNotificacion:{type: DataTypes.INTEGER, primaryKey:true, autoIncrement:true},
-    tipo:{type:ENUM('publicacion','like','comentario','mensaje','insignea','denuncias'), allowNull:false},
+    contenidoTipo:{type:ENUM('publicacion','like','comentario','mensaje','insignea','denuncias'), allowNull:false},
     mensaje:{type:  DataTypes.TEXT, allowNull:false},
     leido:{type:DataTypes.BOOLEAN, allowNull:false},
     fechaCreacion:{type: DataTypes.DATE,defaultValue:DataTypes.NOW, allowNull:false},

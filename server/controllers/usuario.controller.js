@@ -45,6 +45,7 @@ class UsuarioController{
             }
 
             let updateUsuario = {
+                idUsuario: req.body.idUsuario,
                 nombre: req.body.nombre,
                 correo: req.body.correo,
                 contrasena: req.body.contrasena,
@@ -220,6 +221,7 @@ class UsuarioController{
             }
 
             const usu = {
+                idUsuario: req.body.idUsuario,
                 nombre: req.body.nombre,
                 correo: req.body.correo,
                 contrasena: req.body.contrasena,

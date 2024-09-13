@@ -22,7 +22,7 @@ class AuthController {
           const token = jwt.sign(
             { id: usuario.idUsuario }, // Asegúrate de que 'idUsuario' sea el campo correcto
             process.env.JWT_SECRET,
-            { expiresIn: '1h' }
+            { expiresIn: '9h' }
           );
       
           return res.status(200).json({
@@ -46,6 +46,15 @@ class AuthController {
       res.status(500).json({ message: 'Error al iniciar sesión' });
     }
     sequelize.options.logging = console.log;
+  }
+  static async logout(req, res) {
+    try {
+      // Aquí puedes invalidar el token si es necesario (por ejemplo, en una lista negra)
+      return res.status(200).json({ message: 'Sesión cerrada exitosamente' });
+    } catch (error) {
+      console.error('Error al cerrar sesión:', error);
+      res.status(500).json({ message: 'Error al cerrar sesión' });
+    }
   }
   
 }
